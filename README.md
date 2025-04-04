@@ -343,6 +343,7 @@ sudo apt install uwsgi-plugin-python3
 Before performing a `helm install`, we need to create a `values.yaml` file that can be used to override default values specified in the Gen3 Helm templates. The Helm installation can begin by running:
 ```bash
 helm upgrade --install gen3-dev gen3/gen3 -f gen3/values.yaml 
+helm upgrade --install gen3-dev gen3/gen3 -f values.yaml
 ```
 In the above command, `gen3-dev` is the name of the release of the helm deployment. If the installation is successful, then a message similar to the following should be displayed in the terminal:
 ```bash
@@ -767,4 +768,7 @@ Now whenever a file is uploaded to the `gen3-bucket`, a message will be sent to 
 
 ![Uploaded File in READY State](public/assets/images/uploaded-file-in-ready-state.png "Uploaded File in READY State")   
 
-The above upload process works with an Amazon S3 bucket. We'd like to use a local bucket (with MinIO). To see how to setup a MinIO server on an Ubuntu machine, please refer to [this document](documentation/minio_on_single_linux_node.md).
+The above upload process works with an Amazon S3 bucket. We'd like to use a local bucket (with MinIO). To see how to setup a MinIO server on an Ubuntu machine, please refer to [this document](documentation/minio_on_single_linux_node.md).   
+
+## Acknowledgements
+The _eLwazi_ Open Data Science Platform is supported by the Office Of The Director, National Institutes Of Health (OD), National Institution of Biomedical Imaging and Bioengineering, and NIH award number 1 U2C EB 032224 . This work is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.   
