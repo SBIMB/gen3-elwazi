@@ -88,7 +88,7 @@ To confirm that the service is up and running, we can run:
 sudo systemctl status minio.service
 journalctl -f -u minio.service
 ```
-![Insecure MinIO Deployment](../public/assets/images/insecure-minio-deployment.png "Insecure MinIO Deployment")    
+![Insecure MinIO Deployment](../public/assets/images/insecure_minio_deployment.png "Insecure MinIO Deployment")    
 To ensure that MinIO starts up when the host is booted, we need to run:
 ```bash
 sudo systemctl enable minio.service
