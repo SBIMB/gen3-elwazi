@@ -69,20 +69,7 @@ In such a case, remember to delete the `.kube` directory so that there aren't an
 The above process installs and configures a single-node cluster. This single node acts as both a master and a worker node. To add additional worker nodes, please read [this document](documentation/adding_and_removing_a_worker_node.md) for more details.   
 
 ### Helm
-[Helm](https://helm.sh/) is a package manager for Kubernetes that allows for the installation or deployment of applications onto a Kubernetes cluster. We can install it as follows:
-```bash
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-```
-To see if Helm has been installed, we can run a simple `helm` command like:
-```bash
-helm list
-```
-and we should get an empty table as our output,
-| NAME          | NAMESPACE | REVISION  | UPDATED | STATUS  | CHART | APP VERSION |
-| ------------- | --------- | --------- | ------- | ------- | ----- | ----------- |
-|               |           |           |         |         |       |             |
+To successfully deploy the Gen3 services, we need to use [Helm](https://helm.sh/), which is a package manager for Kubernetes. Details for installing Helm can be found in this repo over [here](documentation/installing_helm.md).   
 
 ### Installing MetalLB Load Balancer with Helm
 Using Helm, we begin with:
@@ -202,124 +189,7 @@ When we install `gen3`, the `revproxy-service` will be the ingress of the Gen3 s
 kubectl delete deployment my-deployment
 kubectl delete service my-deployment
 kubectl delete ingress my-deployment-ingress
-```
-### Cert Manager
-The `cert-manager` manifest can be applied in order to install all the `cert-manager` resources:
-```bash
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.2/cert-manager.yaml
-```
-To confirm that the pods are running, use the command:
-```bash
-kubectl get pods -n cert-manager
-```
-| NAME                                     | READY | STATUS   | RESTARTS | AGE |
-| ---------------------------------------- | ----- | -------- | -------- | --- |
-| cert-manager-cainjector-665cd78979-4vldh | 1/1   | Running  | 0        | 7m  |
-| cert-manager-9f74c854d-t8gv2             | 1/1   | Running  | 0        | 7m  |
-| cert-manager-webhook-65767c6f65-6drjt    | 1/1   | Running  | 0        | 7m  |   
-
-We need to create a **ClusterIssuer** in order to issue certificates to the host domain that we configured in our ingress resource. We'll use the [Let's Encrypt](https://letsencrypt.org/docs/) certificate authority because it provides TLS certificates that are free. It also provides certificates from a staging server (which are useful for testing) and certificates from a production server (which rolls out TLS certificates that are verifiable).   
-
-The manifests for both the `staging-issuer.yaml` and `prod-issuer.yaml` can be found in this repository inside the `cert-manager` folder. They can be created as follows:
-```bash
-kubectl create -f cert-manager/staging-issuer.yaml
-kubectl create -f cert-manager/prod-issuer.yaml
-```
-
-The email address specified inside the two manifests will be used to register a staging and prod ACME account, and the respective private keys of each ACME account should be stored inside the corresponding Kubernetes secrets called `letsencrypt-staging` and `letsencrypt-prod`. These secrets can be seen with:
-```bash
-kubectl get secrets -n cert-manager
-```
-| NAME                    | TYPE   | DATA | AGE   |
-| ----------------------- | ------ | ---- | ----- |
-| cert-manager-webhook-ca | Opaque | 3    | 1h12m |
-| letsencrypt-staging     | Opaque | 1    | 10m   |
-| letsencrypt-prod        | Opaque | 1    | 10m   |
-
-The certificates will only be created after updating and annotating the ingress resource (`revproxy-dev`). The ingress should be updated by adding the following annotation (for testing):
-```bash
-cert-manager.io/cluster-issuer: "letsencrypt-staging"
-```
-The ingress manifest needs to be modified such that the following block appears underneath the `spec`:
-```bash
-  tls:
-  - hosts:
-    - cloud08.core.wits.ac.za
-    secretName: cloud08-tls-secret
-```
-After editing the ingress manifest, the certificate creation events can be seen when running the command:
-```bash
-kubectl describe ingress
-```
-Details of the certificate can be seen with:
-```bash
-kubectl describe certificate
-```
-The following command can be run to test if the connection to HTTPS is possible:
-```bash
-wget --save-headers -O- cloud08.core.wits.ac.za
-```
-The response should state that the domain name has been resolved and a connection has been established, however, there should be an error stating that the certificate could not be verified and that the flag `--no-check-certificate` can be used. If such is the case, then it's time to change the annotation in the ingress to `letsencrypt-prod`:
-```bash
-cert-manager.io/cluster-issuer: "letsencrypt-prod"
-```
-It may take a few minutes for the certificate to be issued.    
-
-**NOTE**: we are still having some issues, since the `cloud08-tls-secret` references a self-signed certificate, which is not trusted by the browser. The process of creating the `cloud08-tls-secret` has been documented over [here](documentation/debugging_networking_issues.md).    
-
-Cert-manager can also be installed with Helm:
-```bash
-# Label the cert-manager namespace to disable resource validation
-kubectl label namespace ingress-nginx cert-manager.io/disable-validation=true
-# Add the Jetstack Helm repository
-helm repo add jetstack https://charts.jetstack.io
-# Update your local Helm chart repository cache
-helm repo update
-# Install CRDs with kubectl
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.crds.yaml
-# Install the cert-manager Helm chart
-helm install cert-manager jetstack/cert-manager \
-  --namespace ingress-nginx \
-  --version v1.11.0
-```
-
-### ArgoCD
-[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) is a useful GitOps tool that allows for continuous delivery by automating application deployments to Kubernetes. It is open-source. Automated rollbacks, automatic synchronisation of deployed applications with a Git repository, and a web-based UI to manage the deployed applications are some of the features that are offered by ArgoCD.   
-
-Let us proceed to install ArgoCD on our cluster. First, we shall create a namespace:
-```bash
-kubectl create namespace
-```
-Then perform a `helm` deployment:
-```bash
-helm install argocd argo/argo-cd --namespace argocd
-```
-If the `helm` deployment completes successfully, the following message should be displayed:
-```bash
-NAME: argocd
-LAST DEPLOYED: Thu Feb 22 17:05:44 2024
-NAMESPACE: argocd
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-NOTES:
-In order to access the server UI you have the following options:
-
-1. kubectl port-forward service/argocd-server -n argocd 8080:443
-
-    and then open the browser on http://localhost:8080 and accept the certificate
-
-2. enable ingress in the values file `server.ingress.enabled` and either
-      - Add the annotation for ssl passthrough: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#option-1-ssl-passthrough
-      - Set the `configs.params."server.insecure"` in the values file and terminate SSL at your ingress: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#option-2-multiple-ingress-objects-and-hosts
-
-
-After reaching the UI the first time you can login with username: admin and the random password generated during the installation. You can find the password by running:
-
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
-
-(You should delete the initial secret afterwards as suggested by the Getting Started Guide: https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
-```
+```   
 
 ### Installing Gen3 Microservices with Helm
 The Helm charts for the Gen3 services can be found in the [uc-cdis/gen3-helm repository](https://github.com/uc-cdis/gen3-helm.git). We'd like to add the Gen3 Helm chart repository. To do this, we run:  
@@ -412,38 +282,35 @@ helm upgrade --reuse-values -f values.yaml gen3-dev gen3/gen3
 or 
 ```bash
 helm upgrade --reuse-values --set key1=newValue1,key2=newValue2 gen3-dev gen3/gen3
-```
+```   
 
-#### Mocking Google Authentication
-For testing purposes and for a quick setup of the Gen3 ecosystem, the authentication process can be mocked. The `fence` service is responsible for authenticating a user, so the `fence` config of the value file needs to be configured as follows:
-```yaml
-fence:
-  enabled: true
-  FENCE_CONFIG:
-    MOCK_AUTH: true
-```
-This will automatically login a user with username "test". If all the Gen3 services are up and running, the portal can be accessed in the browser by making use of the machine's IP address and the node port of the `revproxy-service` (since the `revproxy-service` is a service of type **NodePort**), e.g.   
+### Cert Manager
+Cert-Manager can be used to manage certificates in the Kubernetes cluster. However, this may not necessarily be needed if the number of certificates and/or clusters are small. In our case, we are only managing one cluster, so using `cert-manager` might be an example of "over-engineering". For those interested in looking at how we can use `cert-manager`, we have in this repo some documentation discussing [cert-manager with GoDaddy and Let's Encrypt](documentation/cert-manager_with_godaddy_and_lets_encrypt.md) and [cert-manager with ZeroSSL](documentation/cert-manager_with_zero_ssl.md).   
 
-![User Endpoint for Mock Authentication](public/assets/images/user-endpoint-for-mock-login.png "User Endpoint for Mock Authentication")    
-
-To upload a file to a custom AWS S3 bucket, the bucket name needs to be provided in the `fence` config of the `values.yaml` file:
-```yaml
-fence:
-  enabled: true
-  FENCE_CONFIG:
-    AWS_CREDENTIALS:
-      "gen3-user":
-        aws_access_key_id: "accessKeyIdForGen3User"
-        aws_secret_access_key: "secretAccessKeyForGen3User"
-    S3_BUCKETS:
-      # Name of the actual s3 bucket
-      gen3-bucket:
-        cred: "gen3-user"
-        region: us-east-1
-    # This is important for data upload.
-    DATA_UPLOAD_BUCKET: "gen3-bucket"
+Whether using `cert-manager` or not, the ingress manifest needs to be modified such that the following block appears underneath the `spec`:
+```bash
+  tls:
+  - hosts:
+    - cloud08.core.wits.ac.za
+    secretName: cloud08-tls-secret
 ```
-The other `fence` endpoints can be found over [here](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/uc-cdis/fence/master/openapis/swagger.yaml). 
+After editing the ingress manifest, the certificate creation events can be seen when running the command:
+```bash
+kubectl describe ingress
+```
+Details of the certificate can be seen with:
+```bash
+kubectl describe certificate
+```
+The following command can be run to test if the connection to HTTPS is possible:
+```bash
+wget --save-headers -O- cloud08.core.wits.ac.za
+```
+The response should state that the domain name has been resolved and a connection has been established, however, there should be an error stating that the certificate could not be verified and that the flag `--no-check-certificate` can be used. If such is the case, then it's time to change the annotation in the ingress to `letsencrypt-prod`:
+```bash
+cert-manager.io/cluster-issuer: "letsencrypt-prod"
+```
+It may take a few minutes for the certificate to be issued.     
 
 #### Google Authentication
 The `fence-service` is mainly responsible for Gen3 authentication. There are a variety of authentication providers. If [Google is to be used for authentication](https://github.com/uc-cdis/fence/blob/master/docs/google_architecture.md), then a project needs to be created in the [Google Cloud Console](https://console.cloud.google.com/). This project will need to be part of an organisation. In our case, the organisation is **wits.ac.za**, and the project is called **gen3-dev**.    
@@ -534,7 +401,10 @@ kubectl create configmap fence --from-file user.yaml
 
 # create a new job from the useryaml-job.yaml manifest found in this repo
 kubectl apply -f useryaml-job.yaml
-```
+```   
+
+The above process can be done more quickly by using a Bash script found in this repo over [here](bash_scripts/create_useryaml_job.sh).   
+
 To see if the roles and policies have been updated, restart the `arborist` deployment with
 ```bash
 kubectl rollout restart deployment arborist-deployment
@@ -545,6 +415,7 @@ kubectl logs <arborist-pod-name>
 ```
 ![Arborist Logs](public/assets/images/arborist-logs-for-user-roles.png "Arborist Logs") 
 
+#### Authorising the gen3-client Command Line Tool
 To authorise the `gen3-client` for uploading to the data commons, the following command needs to be run:
 ```bash
 gen3-client configure --profile=gen3-user --cred=gen3-credentials.json --apiendpoint=https://cloud08.core.wits.ac.za/
@@ -575,7 +446,9 @@ curl --location 'https://cloud08.core.wits.ac.za/user/credentials/cdis/access_to
 Once the access token has been obtained, then additional requests can be made using the access token as a bearer token inside the header of requests, e.g.
 ```bash
 --header 'Authorization: Bearer accessTokenReceivedFromPreviousRequest' \
-```
+```   
+
+#### Programs and Projects
 Before a file can be uploaded, a program and a project needs to be created. To create a program, append `/_root` to the base url of the data commons, i.e. 
 ```bash
 https://cloud08.core.wits.ac.za/_root
@@ -621,153 +494,7 @@ Uploading/Submitting is successful when using raw JSON or when using the UI dire
 
 ![Gen3 Files in Generating State](public/assets/images/gen3-files-in-generating-state.png "Gen3 Files in Generating State")  
 
-To successfully upload with the `gen3-client`, and have the metadata updated when the upload occurs, the `ssjdispatcher` needs to be configured to work with Amazon SQS and SNS, respectively. 
-
-In the Amazon console, an SNS topic (let's call it `ssj-topic`) should be created and have the following access policy:
-```json
-{
-  "Version": "2012-10-17",
-  "Id": "example-ID",
-  "Statement": [
-    {
-      "Sid": "Example SNS topic policy",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "s3.amazonaws.com"
-      },
-      "Action": [
-        "SNS:Subscribe",
-        "SNS:Receive",
-        "SNS:Publish",
-        "SNS:ListSubscriptionsByTopic",
-        "SNS:GetTopicAttributes"
-      ],
-      "Resource": "arn:aws:sns:us-east-1:ownerId:ssj-topic",
-      "Condition": {
-        "StringEquals": {
-          "aws:SourceAccount": "ownerId"
-        },
-        "ArnLike": {
-          "aws:SourceArn": "arn:aws:s3:*:*:gen3-bucket"
-        }
-      }
-    }
-  ]
-}
-```
-The SNS topic is configured to wait for an upload event from the S3 bucket, `gen3-bucket`.
-
-In the Amazon console, a queue (let's call it `Gen3Queue`) should be created and have the following access policy:
-```json
-{
-  "Version": "2012-10-17",
-  "Id": "__default_policy_ID",
-  "Statement": [
-    {
-      "Sid": "__owner_statement",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "*"
-      },
-      "Action": "SQS:*",
-      "Resource": "arn:aws:sqs:us-east-1:ownerId:Gen3Queue",
-      "Condition": {
-        "ArnEquals": {
-          "aws:SourceArn": "arn:aws:sns:us-east-1:ownerId:ssj-topic"
-        }
-      }
-    }
-  ]
-}
-```
-The SQS queue receives notifications from the SNS topic. When an upload occurs with the `gen3-client`, the message received by the queue should trigger the `ssjdispatcher` to create a Kubernetes job that will update the index of the uploaded file inside the `metadata` database (I think this is what's going on). Consequently, some additional updates needs to be made to some of the `gen3` resources.   
-
-Create a file called `credentials.json` with the following content:
-```json
-{
-    "AWS": {
-        "region": "us-east-1",
-        "aws_access_key_id": "",
-        "aws_secret_access_key": ""
-    },
-    "SQS": {
-        "url": "https://sqs.us-east-1.amazonaws.com/938659344479/Gen3Queue"
-    },
-    "JOBS": [
-        {
-            "name": "indexing",
-            "pattern": "s3://gen3-bucket/*",
-            "imageConfig": {
-                "url": "http://indexd-service/index",
-                "username": "fence",
-                "password": "fence password taken from indexd-service-creds secret",
-                "metadataService": {
-                    "url": "http://revproxy-service/mds",
-                    "username": "gateway",
-                    "password": "gateway password taken from metadata.env inside metadata-g3auto secret"
-                }
-            },
-            "RequestCPU": "500m",
-            "RequestMem": "0.5Gi"
-        }
-    ]
-}
-```
-This `credentials.json` file needs to be added as a key in the secret `ssjdispatcher-creds`. This can be done as follows:
-```bash
-kubectl delete secret ssjdispatcher-creds
-kubectl create secret generic ssjdispatcher-creds --from-file=credentials.json
-```
-After doing this, we also need to create a few resources for the `ssjdispatcher`. Create a file called `ssjdispatcher-rolebinding.yaml` and fill it with the following:
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: ssjdispatcher-job-sa
-  namespace: default
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
-metadata:
-  name: ssjdispatcher-binding
-  namespace: default
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: admin
-subjects:
-- kind: ServiceAccount
-  name: ssjdispatcher-service-account`
-```
-To create these resources, apply the manifest with
-```bash
-kubectl apply -f ssjdispatcher-rolebinding.yaml
-```
-We also need to create a service account called `ssjdispatcher-job-sa` with 
-```bash
-kubectl create sa ssjdispatcher-job-sa
-```
-The last thing to be done is to manually update the image referenced inside the `manifest-ssjdispatcher` config map:
-```bash 
-kubectl edit cm manifest-ssjdispatcher
-```
-Replace the `data` field with the following:
-```yaml
-data:
-  job_images: |-
-    {
-      "indexing": "quay.io/cdis/indexs3client:2022.08"
-    }
-```
-It would probably be a good idea to restart the `ssjdispatcher` deployment with
-```bash
-kubectl rollout restart deployment ssjdispatcher
-```
-Now whenever a file is uploaded to the `gen3-bucket`, a message will be sent to the SNS and SQS services that will then trigger the creation of a job which will then update the `metadata` database with the relevant metadata.   
-
-![Uploaded File in READY State](public/assets/images/uploaded-file-in-ready-state.png "Uploaded File in READY State")   
-
-The above upload process works with an Amazon S3 bucket. We'd like to use a local bucket (with MinIO). To see how to setup a MinIO server on an Ubuntu machine, please refer to [this document](documentation/minio_on_single_linux_node.md).   
+To successfully upload with the `gen3-client`, and have the metadata updated when the upload occurs, the `ssjdispatcher` needs to be configured to work with Amazon SQS and SNS, respectively. More information about using AMazon SQS and Amazon SNS with the `ssjdispatcher` can be found insided this repo over [here](documentation/updating_metadata_with_ssjdispatcher_with_Amazon_SQS_and_SNS.md).
 
 ## Acknowledgements
 ![eLwazi](public/assets/images/elwazi_logo.png "eLwazi")   
