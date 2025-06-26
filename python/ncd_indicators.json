@@ -1,0 +1,310 @@
+{
+    "weight_kg": {
+        "type": "string",
+        "description": "Weight in Kg"
+    },
+    "pregnant": {
+        "type": "string",
+        "description": "Woman is currently pregnant (at time of being weighed)"
+    },
+    "height_cm": {
+        "type": "string",
+        "description": "Height in CM"
+    },
+    "hip_cm": {
+        "type": "string",
+        "description": "To the nearest decimal point"
+    },
+    "waist_cm": {
+        "type": "string",
+        "description": "To the nearest decimal point"
+    },
+    "muac_cm": {
+        "type": "string",
+        "description": "To the nearest decimal point"
+    },
+    "dia_bp": {
+        "type": "string",
+        "description": "Diastolic blood pressure (BP) measurement result."
+    },
+    "sys_bp": {
+        "type": "string",
+        "description": "Systolic BP measurement result"
+    },
+    "highbp_hx": {
+        "type": "string",
+        "description": "History of hypertension diagnosis by a medical doctor"
+    },
+    "highbp_tx": {
+        "type": "string",
+        "description": "Receiving medicine from clinic for hypertension at time of interview"
+    },
+    "highbp_famhx": {
+        "type": "string",
+        "description": "Family history of high blood pressure (mother, father or blood sibling diagnosed and or treated for high blood pressure)"
+    },
+    "pulse": {
+        "type": "string",
+        "description": "pulse result"
+    },
+    "heartdis_famhx": {
+        "type": "string",
+        "description": "Family history of heart disease (mother, father or blood sibling diagnosed and or treated for heart disease)"
+    },
+    "diabetes_hx": {
+        "type": "string",
+        "description": "History of diabetes mellitus diagnosis by a medical doctor"
+    },
+    "diabetes_tx": {
+        "type": "string",
+        "description": "Receiving medicine from clinic for diabetes mellitus at the time of interview"
+    },
+    "diabetes_famhx": {
+        "type": "string",
+        "description": "Family history of diabetes (mother, father or blood sibling diagnosed and or treated for diabetes)"
+    },
+    "epilepsy_hx": {
+        "type": "string",
+        "description": "History of epilepsy diagnosis by a medical doctor"
+    },
+    "asthma_hx": {
+        "type": "string",
+        "description": "History of asthma diagnosis by a medical doctor"
+    },
+    "literate": {
+        "type": "string",
+        "description": "Literate (able to read and write)"
+    },
+    "educ_level": {
+        "type": "string",
+        "description": "Level of education completed"
+    },
+    "educ_level_site": {
+        "type": "string",
+        "description": "Level of education completed"
+    },
+    "ever_tobacco": {
+        "type": "string",
+        "description": "The individual has ever used tobacco (include cigarettes- manufactured or rolled, pipes, cigars, snuff or chewing tobacco)"
+    },
+    "age_start_tobac": {
+        "type": "string",
+        "description": "Age started regular tobacco use (include cigarettes, pipes, cigars, snuff or chewing tobacco)"
+    },
+    "yr_start_tobac": {
+        "type": "string",
+        "description": "Year started regular tobacco use"
+    },
+    "cur_tobac": {
+        "type": "string",
+        "description": "Currently uses tobacco (include any of manufactured or hand rolled cigarettes, pipes, cigars, snuff or chewing tobacco,)."
+    },
+    "age_stop_tobac": {
+        "type": "string",
+        "description": "Age the individual stopped using all tobacco products (including manufactured or hand rolled cigarettes, pipes, cigars, snuff or chewing tobacco)."
+    },
+    "past_cig_num": {
+        "type": "string",
+        "description": "For past tobacco users, the number of cigarettes (manufactured or rolled) that were smoked per day"
+    },
+    "past_snuff_num": {
+        "type": "string",
+        "description": "For past tobacco users, the number of times per day snuff (oral or nasal) was used"
+    },
+    "past_othsmk_num": {
+        "type": "string",
+        "description": "For past tobacco users, the number of pipes-full of tobacco or cigars smoked per day"
+    },
+    "cur_cig_num": {
+        "type": "string",
+        "description": "For current tobacco users, the number of manufactured or hand rolled cigarettes currently smoked per day"
+    },
+    "cur_snuff_num": {
+        "type": "string",
+        "description": "For current tobacco users, the number of times per day nasal snuff or oral snuff (chewing) is currently used"
+    },
+    "cur_othsmk_num": {
+        "type": "string",
+        "description": "For current tobacco users, the number of pipes-full of tobacco or cigars currently smoked per day"
+    },
+    "ever_alcohol": {
+        "type": "string",
+        "description": "The individual has ever consumed alcohol"
+    },
+    "alcohol_pastyr": {
+        "type": "string",
+        "description": "How frequently alcohol was consumed in the past 12 months"
+    },
+    "alcohol_number": {
+        "type": "string",
+        "description": "Number of standard alcoholic drinks in the past 7 days"
+    },
+    "fast_blood": {
+        "type": "string",
+        "description": "Fasted prior to blood collection"
+    },
+    "totchol_mmol": {
+        "type": "string",
+        "description": "Total cholesterol blood measurement."
+    },
+    "ldl_mmol": {
+        "type": "string",
+        "description": "Low density lipoprotein measurement. To the nearest decimal point"
+    },
+    "hdl_mmol": {
+        "type": "string",
+        "description": "High density lipoprotein measurement."
+    },
+    "trigs_mmol": {
+        "type": "string",
+        "description": "Triglyceride measurement. To the nearest decimal point"
+    },
+    "phys_activity": {
+        "type": "string",
+        "description": "Level of physical activity score"
+    },
+    "met_minweek": {
+        "type": "string",
+        "description": "Total Physical Activity MET- minutes/week"
+    },
+    "bg_mmol": {
+        "type": "string",
+        "description": "Blood glucose"
+    },
+    "bg_vene": {
+        "type": "string",
+        "description": "Blood glucose collected via venepuncture or finger prick"
+    },
+    "bg_fast": {
+        "type": "string",
+        "description": "Blood glucose collected after fasting (no food or drink other than water)"
+    },
+    "age_menarche": {
+        "type": "string",
+        "description": "Age started first menstrual period"
+    },
+    "age_menopause": {
+        "type": "string",
+        "description": "Age stopped menstrual period"
+    },
+    "Q7_EverHadStroke": {
+        "type": "string",
+        "description": "ever Had stroke"
+    },
+    "Q8_EverReceiveStrokeRx": {
+        "type": "string",
+        "description": "receiving stroke medication"
+    },
+    "Q10_HeartFailure": {
+        "type": "string",
+        "description": "heart failure"
+    },
+    " Q11_ReceivedHeartFailureRx": {
+        "type": "string",
+        "description": "receiving heart failure medication"
+    },
+    "Q13_Angina": {
+        "type": "string",
+        "description": "Angina"
+    },
+    "Q14_ReceiveAnginaRx": {
+        "type": "string",
+        "description": "receiving angina medication"
+    },
+    " Q16_HeartAttack": {
+        "type": "string",
+        "description": "heart attack"
+    },
+    " Q17_ReceivedHeartAttackRx": {
+        "type": "string",
+        "description": "receiving heart attack medication"
+    },
+    "Q23_AttendedPublicClinic": {
+        "type": "string",
+        "description": "attended public clinic"
+    },
+    "arkp1_ckd_kidney": {
+        "type": "string",
+        "description": "heard of chronic kidney disease/kidney\nfailure"
+    },
+    "arkp1_ckd_fam_cpn": {
+        "type": "string",
+        "description": "has member of family with chest pain or angina"
+    },
+    "arkp1_ckd_fam_chol": {
+        "type": "string",
+        "description": "has member of family with high cholesterol"
+    },
+    "arkp1_ckd_fam_ckd": {
+        "type": "string",
+        "description": "has member of family with chronic kidney or kidney failure"
+    },
+    "arkp1_ckd_fam_cva": {
+        "type": "string",
+        "description": "has member of family with stroke"
+    },
+    "arkp1_ckd_ckd_dx": {
+        "type": "string",
+        "description": " ever told you that\nyou have kidney disease"
+    },
+    "arkp1_ckd_ckd_med": {
+        "type": "string",
+        "description": "receiving kidney disease medication"
+    },
+    "arkp1_ckd_uti_dx": {
+        "type": "string",
+        "description": "ever experienced this or been told by a\ndoctor or other health care worker that you have\nan infection in your bladder or kidneys"
+    },
+    "arkp1_ckd_uti_age": {
+        "type": "string",
+        "description": "age when bladder or kidney happened"
+    },
+    "arkp1_ckd_uti_freq": {
+        "type": "string",
+        "description": "frequency of times you experience bladder or kidney disease"
+    },
+    "arkp1_ckd_calc_dx": {
+        "type": "string",
+        "description": " ever been told by a doctor or other\nhealth care worker that you have a stone/s in\nyour kidney"
+    },
+    "arkp1_ckd_calc_age": {
+        "type": "string",
+        "description": "age when this happened"
+    },
+    "arkp1_ckd_calc_freq": {
+        "type": "string",
+        "description": "How many times has this happened"
+    },
+    "arkp1_ckd_calc_fam": {
+        "type": "string",
+        "description": "Has any family member ever been told by a\ndoctor or other health care worker that they\nhave kidney stones"
+    },
+    "arkp1_ckd_bil_bld": {
+        "type": "string",
+        "description": " ever seen blood in your urine"
+    },
+    "arkp1_ckd_bil_12m": {
+        "type": "string",
+        "description": " seen blood in your urine in the last 12\nmonths"
+    },
+    "arkp1_ckd_bil_exp": {
+        "type": "string",
+        "description": "ever swum in the rivers in the area,\ncollected water from the river or washed clothes\nin the river"
+    },
+    "arkp1_ckd_bil_msr": {
+        "type": "string",
+        "description": "ever tested your urine for bilharzia"
+    },
+    "arkp1_ckd_bil_dx": {
+        "type": "string",
+        "description": "Has a doctor or health worker ever told you that\nyou have bilharzia in your urine?"
+    },
+    "arkp1_ckd_bil_rx": {
+        "type": "string",
+        "description": "receiving bilharzia treatment"
+    },
+    "arkp1_ckd_bil_rx_freq": {
+        "type": "string",
+        "description": "How many times have you received treatment"
+    }
+}
