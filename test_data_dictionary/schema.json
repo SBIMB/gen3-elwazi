@@ -2414,6 +2414,7 @@
       "data_type"
     ],
     "properties": {
+      "$ref": "_definitions.yaml#/ubiquitous_properties",
       "type": {
         "enum": [
           "dummy_file"
