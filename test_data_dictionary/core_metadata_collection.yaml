@@ -1,0 +1,31 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "core_metadata_collection"
+title: "Core Metadata Collection"
+type: "object"
+category: "metadata"
+program: "*"
+project: "*"
+description: "A dummy node to stop the portal compiler from crashing."
+additionalProperties: false
+submittable: true
+
+links:
+  - name: projects
+    backref: core_metadata_collections
+    label: member_of
+    target_type: "project"
+    multiplicity: "many_to_one"
+    required: true
+
+required:
+  - type
+  - submitter_id
+  - projects
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  
+  type:
+    enum: [core_metadata_collection]
+  submitter_id:
+    type: string
