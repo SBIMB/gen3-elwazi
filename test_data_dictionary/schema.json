@@ -2436,6 +2436,9 @@
       "data_type": {
         "type": "string"
       },
+      "data_category": {
+        "type": "string"
+      },
       "object_id": {
         "type": "string"
       },
@@ -2452,9 +2455,25 @@
     "category": "metadata",
     "program": "*",
     "project": "*",
-    "description": "A dummy node to stop the portal compiler from crashing.",
+    "description": "Core metadata collection node for MADIVA.",
     "additionalProperties": false,
     "submittable": true,
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
+    ],
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ],
     "links": [
       {
         "name": "projects",
