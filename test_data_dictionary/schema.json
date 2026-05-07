@@ -24,9 +24,17 @@
     "required": [
       "submitter_id",
       "type",
+      "subjects",
       "sex",
       "ethnicity",
       "home_language"
+    ],
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
@@ -44,15 +52,15 @@
       },
       "ethnicity": {
         "type": "string",
-        "decsription": "The ethnic or tribal affiliation of the indivial."
+        "description": "The ethnic or tribal affiliation of the indivial."
       },
       "mother_ethnicity": {
         "type": "string",
-        "decsription": "The ethnic or tribal affiliation of the indivial's mother."
+        "description": "The ethnic or tribal affiliation of the indivial's mother."
       },
       "father_ethnicity": {
         "type": "string",
-        "decsription": "The ethnic or tribal affiliation of the indivial's father."
+        "description": "The ethnic or tribal affiliation of the indivial's father."
       },
       "mat_gmother_ethnicity": {
         "type": "string",
@@ -74,7 +82,16 @@
         "type": "string",
         "description": "The father's primary language spoken at home"
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "project.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -105,11 +122,15 @@
       "name",
       "dbgap_accession_number"
     ],
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
+    ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "type": {
-        "type": "string"
-      },
       "code": {
         "type": "string",
         "description": "Short code for the project (e.g., MADIVA-01)"
@@ -144,7 +165,19 @@
         "type": "string",
         "format": "date"
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "code"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "_definitions.yaml": {
     "id": "_definitions",
@@ -525,6 +558,7 @@
     "description": "Individual-level socioeconomic indicators and employment data.",
     "additionalProperties": false,
     "submittable": true,
+    "validators": null,
     "links": [
       {
         "name": "subjects",
@@ -541,6 +575,13 @@
       "subjects",
       "currently_working",
       "education_level"
+    ],
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
@@ -589,7 +630,16 @@
         "type": "string",
         "description": "Primary type of work or occupation."
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "_settings.yaml": {
     "enable_case_cache": false,
@@ -2346,6 +2396,13 @@
       "projects",
       "hdss_name"
     ],
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
+    ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
       "submitter_id": {
@@ -2387,7 +2444,16 @@
         "type": "string",
         "description": "Unique identifier for the individual's father."
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "dummy_file.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
