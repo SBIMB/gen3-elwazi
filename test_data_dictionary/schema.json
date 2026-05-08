@@ -2393,7 +2393,6 @@
     "required": [
       "submitter_id",
       "type",
-      "projects",
       "hdss_name"
     ],
     "systemProperties": [
