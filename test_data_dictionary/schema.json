@@ -2404,6 +2404,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "projects": {
+        "$ref": "_definitions.yaml#/to_one_project"
+      },
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
