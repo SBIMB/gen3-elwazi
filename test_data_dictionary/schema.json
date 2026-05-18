@@ -38,9 +38,6 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
-        "$ref": "_definitions.yaml#/to_one_subject"
-      },
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -951,9 +948,6 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
-        "$ref:": "_definitions.yaml#/to_one_subject"
-      },
       "submitter_id": {
         "type": "string"
       },
@@ -1095,1431 +1089,1429 @@
       "created_datetime",
       "updated_datetime"
     ],
-    "properties": [
-      {
-        "$ref": "_definitions.yaml#/ubiquitous_properties",
-        "submitter_id": {
-          "type": "string"
-        },
-        "obs_date": {
-          "type": "string",
-          "format": "date",
-          "description": "Date of observation"
-        },
-        "trad_rx_ever": {
-          "description": "Ever taken traditional medicine",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know"
-          ]
-        },
-        "trad_rx_12m": {
-          "description": "Traditional medicine taken in the last 12 months",
-          "enum": [
-            "0-once",
-            "1-twice",
-            "2-three",
-            "3-more than three times",
-            "4- not in the last 12 months",
-            "333-don't know",
-            "999-missing"
-          ]
-        },
-        "adv_stp_smk": {
-          "description": "Advice to stop smoking (general - not attached to a condition)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "888-not applicable"
-          ]
-        },
-        "adv_stp_alcohol": {
-          "description": "Advice to stop taking alcohol (general - not attached to a condition)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "888-not applicable"
-          ]
-        },
-        "adv_ex": {
-          "description": "Advice to exercise/increase physical activity (general - not attached to a condition)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "888-not applicable"
-          ]
-        },
-        "adv_wt_loss": {
-          "description": "Advice to lose weight (general - derive from issues attached to a condition)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "888-not applicable"
-          ]
-        },
-        "adv_change_diet": {
-          "description": "Advice to change diet (general - derive from issues attached to a condition)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "888-not applicable"
-          ]
-        },
-        "sex_ever": {
-          "description": "Ever had sex",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sex_age_first": {
-          "description": "Age of patient first time had sex",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "sex_never_reason": {
-          "description": "Any reason for choosing to wait",
-          "enum": [
-            "1-Too young",
-            "2-Religious beliefs",
-            "3-Waiting to marry",
-            "4-Too afraid to get HIV\"",
-            "5-Prioritise study",
-            "996-Other",
-            "888-Not Applicable"
-          ]
-        },
-        "sex_partners_24m": {
-          "description": "Number of sexual partners in the last 24 months",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "sex_4_money_ever": {
-          "description": "Sex in exchange for money, drugs, goods or services",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sex_4_money_condom": {
-          "description": "Was a condom used when having sex for money",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sex_violence": {
-          "description": "Have you ever been forced to have sex against your will or through the use of violence",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sex_violence_nocondom": {
-          "description": "Have you ever been coerced (forced) to have vaginal or anal sex without a condom",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sex_importance_choose_partner": {
-          "description": "Which of the following items is most important to you when choosing a sexual partner?",
-          "enum": [
-            "1-Knowing whether or not the partner has HIV",
-            "2-Knowing whether or not the partner is having sex with other people besides you",
-            "3-Feeling I have to have sex (not because I want to) because the partner took me to restaurants and/or bought me gifts",
-            "4-Feeling I have to have sex (not because I want to) because I am married to the partner or in a committed relationship",
-            "5-Feeling sexually or physically attracted to that partner"
-          ]
-        },
-        "sex_partners_no_ever": {
-          "description": "Total number of sexual partners",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "sex_choose_start": {
-          "description": "Did you choose to first start having sex at that age, or was there some circumstance which forced you to have sex for the first time?",
-          "enum": [
-            "1-There was some circumstance which forced me to have sex at that age",
-            "2-I chose to start having sex at that age",
-            "3-I refuse to answer",
-            "999-missing"
-          ]
-        },
-        "sex_no_condom_hiv_person": {
-          "description": "Have you ever had sex without a condom with someone you know if HIV positive",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_ever": {
-          "description": "Has the individual ever used tobacco (including cigarettes, manufactured or rolled, pipes, cigars, snuff or chewing tobacco)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_cur": {
-          "description": "Is the individual currently using tobacco (including cigarettes, manufactured or rolled, pipes, cigars, snuff or chewing tobacco)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_freq": {
-          "description": "How often do you smoke tobacco products",
-          "enum": [
-            "1-Daily",
-            "2-5-6 days per week",
-            "3-1-4 days per week",
-            "4-1-3 days per month",
-            "5-Less than once per month",
-            "6-when I get a chance",
-            "888-Not Applicable"
-          ]
-        },
-        "tobac_daily": {
-          "description": "Do you currently smoke tobacco products daily",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_freq_30d": {
-          "description": "How frequently have you smoked any tobacco products in the last 30 days",
-          "enum": [
-            "1-Daily",
-            "2-5-6 days per week",
-            "3-1-4 days per week",
-            "4-1-3 days per month",
-            "5-Less than once per month",
-            "6-when I get a chance",
-            "888-Not Applicable"
-          ]
-        },
-        "tobac_smkls_ever": {
-          "description": "Smokeless tobacco use ever",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_smkls_cur": {
-          "description": "Do you currently use smokeless tobacco proudcts",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_smkls_daily": {
-          "description": "Do you currently use smokeless tobacco proudcts daily",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_smkls_freq_cat": {
-          "description": "How often do you use smokeless tobacco proudcts",
-          "enum": [
-            "0-daily",
-            "1-2 to 3 x per week",
-            "2-once per week",
-            "3-Once a months",
-            "4-when gets a chance",
-            "888-Not Applicable"
-          ]
-        },
-        "tobac_start_age": {
-          "description": "Age started regular tobacco use (including cigarettes, pipes, cigars, snuff or chewing tobacco)",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "tobac_start_age_cat": {
-          "description": "Age started regular tobacco use (including cigarettes, pipes, cigars, snuff or chewing tobacco)",
-          "enum": [
-            "1-younger than 18 years old",
-            "2-18 years or older",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "tobac_c_cig": {
-          "description": "For current tobacco users, the number of manufactured or hand rolled cigarettes currently smoked per day",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "tobac_c_snf": {
-          "description": "For current tobacco users, the number of times per day nasal snuff or oral snuff (chewing) is currently used",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "tobac_c_pi": {
-          "description": "For current tobacco users, the number of pipes-full of tobacco or cigars currently smoked per day",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "tobac_age_stp": {
-          "description": "Age the individual stopped using all tobacco products (including manufactured or hand rolled cigarettes, pipes, cigars, snuff or chewing tobacco)",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "tobac_p_daily": {
-          "description": "In the past did you ever smoke daily",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "smk_start_yrs": {
-          "description": "Age the individual started smoking",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "smk_stop": {
-          "description": "Have you stopped smoking",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "smk_stop_days": {
-          "description": "How long ago in days did the individual stop smoking",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "smk_stop_year": {
-          "description": "Year quit/stopped smoking",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "alco_ever": {
-          "description": "Has the individual ever consumed alcohol",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_12m": {
-          "description": "Has the individual ever consumed alcohol within the past 12 months",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_30d": {
-          "description": "Has the individual ever consumed alcohol within the last 30 days",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_cur": {
-          "description": "Does the individual consume alcohol currently",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_type": {
-          "description": "Main type of alcohol consumed by the individual",
-          "enum": [
-            "1-beer",
-            "2-wine",
-            "3-spirits",
-            "4-home brew",
-            "5-other",
-            "444-refused",
-            "333-don't know",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_freq": {
-          "description": "Alcohol consumption frequency",
-          "enum": [
-            "1-Daily",
-            "2-5-6 days per week",
-            "3-1-4 days per week",
-            "4-1-3 days per month",
-            "5-Less than once per month",
-            "6-when I get a chance",
-            "888-not applicable"
-          ]
-        },
-        "alco_freq_12m": {
-          "description": "Alcohol consumption frequency in the past 12 months",
-          "enum": [
-            "1-Daily",
-            "2-5-6 days per week",
-            "3-1-4 days per week",
-            "4-1-3 days per month",
-            "5-Less than once per month",
-            "6-when I get a chance",
-            "888-not applicable"
-          ]
-        },
-        "alco_freq_30d": {
-          "description": "Alcohol consumption frequency in the past 30 days",
-          "enum": [
-            "1-Daily",
-            "2-5-6 days per week",
-            "3-1-4 days per week",
-            "4-1-3 days per month",
-            "5-Less than once per month",
-            "6-when I get a chance",
-            "888-not applicable"
-          ]
-        },
-        "alco_num_7d": {
-          "description": "Number of standard alcoholic drinks in the past 7 days",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "alco_num_drnk": {
-          "description": "On days you drink, how many alcoholic drinks do you have",
-          "enum": [
-            "1-Less than 1",
-            "2-1-2",
-            "3-3-4",
-            "4-5 or more",
-            "888-not applicable"
-          ]
-        },
-        "alco_bing_y": {
-          "description": "Binge drinking (6 or more drinks per day) in the past year",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_with_meals_30d": {
-          "description": "During the past 30 days, when you consumed an alcoholic drink, how often was it with meals? Do not count snacks.",
-          "enum": [
-            "1-Usually with meals",
-            "2-Sometimes with meals",
-            "3-Rarely with meals",
-            "4-Never with meals"
-          ]
-        },
-        "alco_hangov": {
-          "description": "Does the individual drink first thing in the morning",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_cutdown": {
-          "description": "Have you ever felt that you should cut down on your drinking",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alco_last_take": {
-          "description": "When last did you take an alcoholic drink",
-          "enum": [
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "drug_ever": {
-          "description": "Currently or ever used other drugs (e.g. marijuana)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "drugs_injected": {
-          "description": "Injected with drugs",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "alcohol_drugs_fam": {
-          "description": "Have you ever had a husband, wife, partner or child who has been addicted to drugs or alcohol",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "drnk_suc": {
-          "description": "Number of sugar drinks per week",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "drnk_juice": {
-          "description": "Number of juice drinks per week",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "soft_drink_12m": {
-          "description": "In the past 12 months have you ever taken a soft drink",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "water_freq": {
-          "description": "How often do you take plain water in a day",
-          "enum": [
-            "1- Never",
-            "2-Less than once",
-            "3-Once",
-            "4-2 to 3 times",
-            "5-4 to 5 times",
-            "6-More than 5 times"
-          ]
-        },
-        "sugar_add": {
-          "description": "Do you add sugar to your beverages",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "sugar_tea_spoon": {
-          "description": "How many spoons of sugar do you usually add to tea or coffee",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "sugar_per_day": {
-          "description": "How many spoons of sugar do you take on an average day?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_vpa": {
-          "description": "Does your work involve vigorous activity",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "actv_vpa_days": {
-          "description": "In a typical week, on how many days do you do vigorous/intensity activities as part of your work?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_vpa_hrs": {
-          "description": "How much time do you spend doing vigorous-intensity activities at work on a typical day,Hours?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_vpa_minutes": {
-          "description": "How much time do you spend doing vigorous-intensity activities at work on a typical day,Minutes?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_mpa": {
-          "description": "Does your work involve moderate-intensity activity",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "actv_mpa_days": {
-          "description": "In a typical week, on how many days do you do moderate-intensity activities as part of your work?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_mpa_hrs": {
-          "description": "How much time do you spend doing moderate-intensity activities at work on a typical day, hours?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_mpa_minutes": {
-          "description": "How much time do you spend doing moderate-intensity activities at work on a typical day, minutes?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_mvpa": {
-          "description": "Moderate and vigorous physical activity (work-related, transport-related and leisure related) (calculated in minutes per week)",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_sitting_or_standing": {
-          "description": "Does your work involve mostly sitting or standing still, or walking for very short periods (less than 10 minutes)",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "actv_walk_bicycle_days": {
-          "description": "In a typical week, on how many days do you walk or cycle for at least 10 minutes continuously to get to and from places?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_walk_bicycle_hrs": {
-          "description": "How much time do you spend walking or cycling for travel on a typical day, hours?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_walk_bicycle_min": {
-          "description": "How much time do you spend walking or cycling for travel on a typical day, minutes?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_vigorous_sports": {
-          "description": "Do you do any vigorous-intensity sports, fitness or recreational (leisure) activities that cause large increases in breathing or heart rate like running or football for at least 10 minutes continuously? ",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "actv_vigorous_sports_days": {
-          "description": "In a typical week, on how many days do you do vigorous-intensity sports, fitness or recreational (leisure) activities?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_vigorous_sports_min": {
-          "description": "How much time do you spend doing vigorous-intensity sports, fitness or recreational (leisure) activities in a typical day, minutes?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_moderate_sports_days": {
-          "description": "In a typical week, on how many days do you do moderate-intensity sports, fitness or recreational (leisure) activities?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_moderate_sports_hrs": {
-          "description": "How much time do you spend doing moderate-intensity sports, fitness or recreational activities on a typical day?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_moderate_sports_min": {
-          "description": "How much time do you spend doing moderate-intensity sports, fitness or recreational activities on a typical day? (min)",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_sitting_min": {
-          "description": "How much time do you usually spend sitting or reclining on a typical day, minutes?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "actv_sleeping_hrs": {
-          "description": "How many hours do you usually spend sleeping in a typical 24 hour day?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "fd_fruit_days": {
-          "description": "In a typical week on how many days do you eat fruit?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "fd_fruitservings": {
-          "description": "How many servings of fruit do you eat on one of those days?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "fd_veg_days": {
-          "description": "In a typical week on how many days do you eat vegetables?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "fd_veg_servings": {
-          "description": "How many servings of veg do you eat on one of those days?",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "fd_veg_salt_cooking": {
-          "description": "Do you add salt to vegetables while cooking?",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "fd_veg_salt_eating": {
-          "description": "Do you add salt to your food when you are eating?",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "fd_red_meat_freq": {
-          "description": "How often do you eat red meat?",
-          "enum": [
-            "1-Daily",
-            "2-5 to 6 days per week",
-            "3-1 to 4 days per week",
-            "4-1 to 3 days per week",
-            "5-Less than once a month",
-            "6-2 to 3 times a year",
-            "7-Once a year",
-            "8-Never"
-          ]
-        },
-        "fd_chips_freq": {
-          "description": "How often do you eat chips?",
-          "enum": [
-            "1-More than once a day",
-            "2-Once daily",
-            "3-5 to 6 days a week",
-            "4-3 to 4 days a week",
-            "5-1 to 2 times a week",
-            "6-2 to 3 times a month",
-            "7-Once a month",
-            "8-Less than once a month",
-            "9-Never"
-          ]
-        },
-        "fd_mandazi": {
-          "description": "How often do you eat mandazi?",
-          "enum": [
-            "1-More than once a day",
-            "2-Once daily",
-            "3-5 to 6 days a week",
-            "4-3 to 4 days a week",
-            "5-1 to 2 times a week",
-            "6-2 to 3 times a month",
-            "7-Once a month",
-            "8-Less than once a month",
-            "9-Never"
-          ]
-        },
-        "fd_samosa": {
-          "description": "How often do you eat samosa?",
-          "enum": [
-            "1-More than once a day",
-            "2-Once daily",
-            "3-5 to 6 days a week",
-            "4-3 to 4 days a week",
-            "5-1 to 2 times a week",
-            "6-2 to 3 times a month",
-            "7-Once a month",
-            "8-Less than once a month",
-            "9-Never"
-          ]
-        },
-        "fd_fried_chicken": {
-          "description": "How often do you eat fried chicken?",
-          "enum": [
-            "1-More than once a day",
-            "2-Once daily",
-            "3-5 to 6 days a week",
-            "4-3 to 4 days a week",
-            "5-1 to 2 times a week",
-            "6-2 to 3 times a month",
-            "7-Once a month",
-            "8-Less than once a month",
-            "9-Never"
-          ]
-        },
-        "fd_fried_fish": {
-          "description": "How often do you eat fried fish?",
-          "enum": [
-            "1-More than once a day",
-            "2-Once daily",
-            "3-5 to 6 days a week",
-            "4-3 to 4 days a week",
-            "5-1 to 2 times a week",
-            "6-2 to 3 times a month",
-            "7-Once a month",
-            "8-Less than once a month",
-            "9-Never"
-          ]
-        },
-        "fd_oil_type": {
-          "description": "What type of oil or fat is most often used for meal preparation in your household?",
-          "enum": [
-            "1-Vegetable oil",
-            "2-Lard or suet",
-            "3-Butter or ghee",
-            "4-Margarine",
-            "5-other",
-            "6-None in particular",
-            "7-None used",
-            "333-Don\u2019t know"
-          ]
-        },
-        "fd_meals_out_home_ave": {
-          "description": "On average, how many meals per week do you eat that were not prepared at a home? By meal, I mean breakfast, lunch and dinner.",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "work_difficulty": {
-          "description": "Overall in the last 30 days, how much difficulty did you have with work or household activities?",
-          "enum": [
-            "1-None",
-            "2-Mild",
-            "3-Severe",
-            "4-Extreme"
-          ]
-        },
-        "avg_sleep": {
-          "description": "Average hours of sleep per night (average of weekdays and weekends sleep) (calculated)",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "pesticide_xp": {
-          "description": "Exposed to pesticides or insecticides?",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        },
-        "pesticide_xp_region": {
-          "description": "Live in region of exposure to pesticides or insecticides?",
-          "enum": [
-            "0-no",
-            "1-yes",
-            "333-don't know",
-            "444-refused",
-            "888-not applicable",
-            "999-missing"
-          ]
-        }
+    "properties": {
+      "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "submitter_id": {
+        "type": "string"
+      },
+      "obs_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date of observation"
+      },
+      "trad_rx_ever": {
+        "description": "Ever taken traditional medicine",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know"
+        ]
+      },
+      "trad_rx_12m": {
+        "description": "Traditional medicine taken in the last 12 months",
+        "enum": [
+          "0-once",
+          "1-twice",
+          "2-three",
+          "3-more than three times",
+          "4- not in the last 12 months",
+          "333-don't know",
+          "999-missing"
+        ]
+      },
+      "adv_stp_smk": {
+        "description": "Advice to stop smoking (general - not attached to a condition)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "888-not applicable"
+        ]
+      },
+      "adv_stp_alcohol": {
+        "description": "Advice to stop taking alcohol (general - not attached to a condition)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "888-not applicable"
+        ]
+      },
+      "adv_ex": {
+        "description": "Advice to exercise/increase physical activity (general - not attached to a condition)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "888-not applicable"
+        ]
+      },
+      "adv_wt_loss": {
+        "description": "Advice to lose weight (general - derive from issues attached to a condition)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "888-not applicable"
+        ]
+      },
+      "adv_change_diet": {
+        "description": "Advice to change diet (general - derive from issues attached to a condition)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "888-not applicable"
+        ]
+      },
+      "sex_ever": {
+        "description": "Ever had sex",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sex_age_first": {
+        "description": "Age of patient first time had sex",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "sex_never_reason": {
+        "description": "Any reason for choosing to wait",
+        "enum": [
+          "1-Too young",
+          "2-Religious beliefs",
+          "3-Waiting to marry",
+          "4-Too afraid to get HIV\"",
+          "5-Prioritise study",
+          "996-Other",
+          "888-Not Applicable"
+        ]
+      },
+      "sex_partners_24m": {
+        "description": "Number of sexual partners in the last 24 months",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "sex_4_money_ever": {
+        "description": "Sex in exchange for money, drugs, goods or services",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sex_4_money_condom": {
+        "description": "Was a condom used when having sex for money",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sex_violence": {
+        "description": "Have you ever been forced to have sex against your will or through the use of violence",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sex_violence_nocondom": {
+        "description": "Have you ever been coerced (forced) to have vaginal or anal sex without a condom",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sex_importance_choose_partner": {
+        "description": "Which of the following items is most important to you when choosing a sexual partner?",
+        "enum": [
+          "1-Knowing whether or not the partner has HIV",
+          "2-Knowing whether or not the partner is having sex with other people besides you",
+          "3-Feeling I have to have sex (not because I want to) because the partner took me to restaurants and/or bought me gifts",
+          "4-Feeling I have to have sex (not because I want to) because I am married to the partner or in a committed relationship",
+          "5-Feeling sexually or physically attracted to that partner"
+        ]
+      },
+      "sex_partners_no_ever": {
+        "description": "Total number of sexual partners",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "sex_choose_start": {
+        "description": "Did you choose to first start having sex at that age, or was there some circumstance which forced you to have sex for the first time?",
+        "enum": [
+          "1-There was some circumstance which forced me to have sex at that age",
+          "2-I chose to start having sex at that age",
+          "3-I refuse to answer",
+          "999-missing"
+        ]
+      },
+      "sex_no_condom_hiv_person": {
+        "description": "Have you ever had sex without a condom with someone you know if HIV positive",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_ever": {
+        "description": "Has the individual ever used tobacco (including cigarettes, manufactured or rolled, pipes, cigars, snuff or chewing tobacco)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_cur": {
+        "description": "Is the individual currently using tobacco (including cigarettes, manufactured or rolled, pipes, cigars, snuff or chewing tobacco)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_freq": {
+        "description": "How often do you smoke tobacco products",
+        "enum": [
+          "1-Daily",
+          "2-5-6 days per week",
+          "3-1-4 days per week",
+          "4-1-3 days per month",
+          "5-Less than once per month",
+          "6-when I get a chance",
+          "888-Not Applicable"
+        ]
+      },
+      "tobac_daily": {
+        "description": "Do you currently smoke tobacco products daily",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_freq_30d": {
+        "description": "How frequently have you smoked any tobacco products in the last 30 days",
+        "enum": [
+          "1-Daily",
+          "2-5-6 days per week",
+          "3-1-4 days per week",
+          "4-1-3 days per month",
+          "5-Less than once per month",
+          "6-when I get a chance",
+          "888-Not Applicable"
+        ]
+      },
+      "tobac_smkls_ever": {
+        "description": "Smokeless tobacco use ever",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_smkls_cur": {
+        "description": "Do you currently use smokeless tobacco proudcts",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_smkls_daily": {
+        "description": "Do you currently use smokeless tobacco proudcts daily",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_smkls_freq_cat": {
+        "description": "How often do you use smokeless tobacco proudcts",
+        "enum": [
+          "0-daily",
+          "1-2 to 3 x per week",
+          "2-once per week",
+          "3-Once a months",
+          "4-when gets a chance",
+          "888-Not Applicable"
+        ]
+      },
+      "tobac_start_age": {
+        "description": "Age started regular tobacco use (including cigarettes, pipes, cigars, snuff or chewing tobacco)",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "tobac_start_age_cat": {
+        "description": "Age started regular tobacco use (including cigarettes, pipes, cigars, snuff or chewing tobacco)",
+        "enum": [
+          "1-younger than 18 years old",
+          "2-18 years or older",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "tobac_c_cig": {
+        "description": "For current tobacco users, the number of manufactured or hand rolled cigarettes currently smoked per day",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "tobac_c_snf": {
+        "description": "For current tobacco users, the number of times per day nasal snuff or oral snuff (chewing) is currently used",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "tobac_c_pi": {
+        "description": "For current tobacco users, the number of pipes-full of tobacco or cigars currently smoked per day",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "tobac_age_stp": {
+        "description": "Age the individual stopped using all tobacco products (including manufactured or hand rolled cigarettes, pipes, cigars, snuff or chewing tobacco)",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "tobac_p_daily": {
+        "description": "In the past did you ever smoke daily",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "smk_start_yrs": {
+        "description": "Age the individual started smoking",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "smk_stop": {
+        "description": "Have you stopped smoking",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "smk_stop_days": {
+        "description": "How long ago in days did the individual stop smoking",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "smk_stop_year": {
+        "description": "Year quit/stopped smoking",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "alco_ever": {
+        "description": "Has the individual ever consumed alcohol",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_12m": {
+        "description": "Has the individual ever consumed alcohol within the past 12 months",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_30d": {
+        "description": "Has the individual ever consumed alcohol within the last 30 days",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_cur": {
+        "description": "Does the individual consume alcohol currently",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_type": {
+        "description": "Main type of alcohol consumed by the individual",
+        "enum": [
+          "1-beer",
+          "2-wine",
+          "3-spirits",
+          "4-home brew",
+          "5-other",
+          "444-refused",
+          "333-don't know",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_freq": {
+        "description": "Alcohol consumption frequency",
+        "enum": [
+          "1-Daily",
+          "2-5-6 days per week",
+          "3-1-4 days per week",
+          "4-1-3 days per month",
+          "5-Less than once per month",
+          "6-when I get a chance",
+          "888-not applicable"
+        ]
+      },
+      "alco_freq_12m": {
+        "description": "Alcohol consumption frequency in the past 12 months",
+        "enum": [
+          "1-Daily",
+          "2-5-6 days per week",
+          "3-1-4 days per week",
+          "4-1-3 days per month",
+          "5-Less than once per month",
+          "6-when I get a chance",
+          "888-not applicable"
+        ]
+      },
+      "alco_freq_30d": {
+        "description": "Alcohol consumption frequency in the past 30 days",
+        "enum": [
+          "1-Daily",
+          "2-5-6 days per week",
+          "3-1-4 days per week",
+          "4-1-3 days per month",
+          "5-Less than once per month",
+          "6-when I get a chance",
+          "888-not applicable"
+        ]
+      },
+      "alco_num_7d": {
+        "description": "Number of standard alcoholic drinks in the past 7 days",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "alco_num_drnk": {
+        "description": "On days you drink, how many alcoholic drinks do you have",
+        "enum": [
+          "1-Less than 1",
+          "2-1-2",
+          "3-3-4",
+          "4-5 or more",
+          "888-not applicable"
+        ]
+      },
+      "alco_bing_y": {
+        "description": "Binge drinking (6 or more drinks per day) in the past year",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_with_meals_30d": {
+        "description": "During the past 30 days, when you consumed an alcoholic drink, how often was it with meals? Do not count snacks.",
+        "enum": [
+          "1-Usually with meals",
+          "2-Sometimes with meals",
+          "3-Rarely with meals",
+          "4-Never with meals"
+        ]
+      },
+      "alco_hangov": {
+        "description": "Does the individual drink first thing in the morning",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_cutdown": {
+        "description": "Have you ever felt that you should cut down on your drinking",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alco_last_take": {
+        "description": "When last did you take an alcoholic drink",
+        "enum": [
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "drug_ever": {
+        "description": "Currently or ever used other drugs (e.g. marijuana)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "drugs_injected": {
+        "description": "Injected with drugs",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "alcohol_drugs_fam": {
+        "description": "Have you ever had a husband, wife, partner or child who has been addicted to drugs or alcohol",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "drnk_suc": {
+        "description": "Number of sugar drinks per week",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "drnk_juice": {
+        "description": "Number of juice drinks per week",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "soft_drink_12m": {
+        "description": "In the past 12 months have you ever taken a soft drink",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "water_freq": {
+        "description": "How often do you take plain water in a day",
+        "enum": [
+          "1- Never",
+          "2-Less than once",
+          "3-Once",
+          "4-2 to 3 times",
+          "5-4 to 5 times",
+          "6-More than 5 times"
+        ]
+      },
+      "sugar_add": {
+        "description": "Do you add sugar to your beverages",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "sugar_tea_spoon": {
+        "description": "How many spoons of sugar do you usually add to tea or coffee",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "sugar_per_day": {
+        "description": "How many spoons of sugar do you take on an average day?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_vpa": {
+        "description": "Does your work involve vigorous activity",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "actv_vpa_days": {
+        "description": "In a typical week, on how many days do you do vigorous/intensity activities as part of your work?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_vpa_hrs": {
+        "description": "How much time do you spend doing vigorous-intensity activities at work on a typical day,Hours?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_vpa_minutes": {
+        "description": "How much time do you spend doing vigorous-intensity activities at work on a typical day,Minutes?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_mpa": {
+        "description": "Does your work involve moderate-intensity activity",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "actv_mpa_days": {
+        "description": "In a typical week, on how many days do you do moderate-intensity activities as part of your work?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_mpa_hrs": {
+        "description": "How much time do you spend doing moderate-intensity activities at work on a typical day, hours?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_mpa_minutes": {
+        "description": "How much time do you spend doing moderate-intensity activities at work on a typical day, minutes?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_mvpa": {
+        "description": "Moderate and vigorous physical activity (work-related, transport-related and leisure related) (calculated in minutes per week)",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_sitting_or_standing": {
+        "description": "Does your work involve mostly sitting or standing still, or walking for very short periods (less than 10 minutes)",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "actv_walk_bicycle_days": {
+        "description": "In a typical week, on how many days do you walk or cycle for at least 10 minutes continuously to get to and from places?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_walk_bicycle_hrs": {
+        "description": "How much time do you spend walking or cycling for travel on a typical day, hours?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_walk_bicycle_min": {
+        "description": "How much time do you spend walking or cycling for travel on a typical day, minutes?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_vigorous_sports": {
+        "description": "Do you do any vigorous-intensity sports, fitness or recreational (leisure) activities that cause large increases in breathing or heart rate like running or football for at least 10 minutes continuously? ",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "actv_vigorous_sports_days": {
+        "description": "In a typical week, on how many days do you do vigorous-intensity sports, fitness or recreational (leisure) activities?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_vigorous_sports_min": {
+        "description": "How much time do you spend doing vigorous-intensity sports, fitness or recreational (leisure) activities in a typical day, minutes?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_moderate_sports_days": {
+        "description": "In a typical week, on how many days do you do moderate-intensity sports, fitness or recreational (leisure) activities?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_moderate_sports_hrs": {
+        "description": "How much time do you spend doing moderate-intensity sports, fitness or recreational activities on a typical day?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_moderate_sports_min": {
+        "description": "How much time do you spend doing moderate-intensity sports, fitness or recreational activities on a typical day? (min)",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_sitting_min": {
+        "description": "How much time do you usually spend sitting or reclining on a typical day, minutes?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "actv_sleeping_hrs": {
+        "description": "How many hours do you usually spend sleeping in a typical 24 hour day?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "fd_fruit_days": {
+        "description": "In a typical week on how many days do you eat fruit?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "fd_fruitservings": {
+        "description": "How many servings of fruit do you eat on one of those days?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "fd_veg_days": {
+        "description": "In a typical week on how many days do you eat vegetables?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "fd_veg_servings": {
+        "description": "How many servings of veg do you eat on one of those days?",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "fd_veg_salt_cooking": {
+        "description": "Do you add salt to vegetables while cooking?",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "fd_veg_salt_eating": {
+        "description": "Do you add salt to your food when you are eating?",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "fd_red_meat_freq": {
+        "description": "How often do you eat red meat?",
+        "enum": [
+          "1-Daily",
+          "2-5 to 6 days per week",
+          "3-1 to 4 days per week",
+          "4-1 to 3 days per week",
+          "5-Less than once a month",
+          "6-2 to 3 times a year",
+          "7-Once a year",
+          "8-Never"
+        ]
+      },
+      "fd_chips_freq": {
+        "description": "How often do you eat chips?",
+        "enum": [
+          "1-More than once a day",
+          "2-Once daily",
+          "3-5 to 6 days a week",
+          "4-3 to 4 days a week",
+          "5-1 to 2 times a week",
+          "6-2 to 3 times a month",
+          "7-Once a month",
+          "8-Less than once a month",
+          "9-Never"
+        ]
+      },
+      "fd_mandazi": {
+        "description": "How often do you eat mandazi?",
+        "enum": [
+          "1-More than once a day",
+          "2-Once daily",
+          "3-5 to 6 days a week",
+          "4-3 to 4 days a week",
+          "5-1 to 2 times a week",
+          "6-2 to 3 times a month",
+          "7-Once a month",
+          "8-Less than once a month",
+          "9-Never"
+        ]
+      },
+      "fd_samosa": {
+        "description": "How often do you eat samosa?",
+        "enum": [
+          "1-More than once a day",
+          "2-Once daily",
+          "3-5 to 6 days a week",
+          "4-3 to 4 days a week",
+          "5-1 to 2 times a week",
+          "6-2 to 3 times a month",
+          "7-Once a month",
+          "8-Less than once a month",
+          "9-Never"
+        ]
+      },
+      "fd_fried_chicken": {
+        "description": "How often do you eat fried chicken?",
+        "enum": [
+          "1-More than once a day",
+          "2-Once daily",
+          "3-5 to 6 days a week",
+          "4-3 to 4 days a week",
+          "5-1 to 2 times a week",
+          "6-2 to 3 times a month",
+          "7-Once a month",
+          "8-Less than once a month",
+          "9-Never"
+        ]
+      },
+      "fd_fried_fish": {
+        "description": "How often do you eat fried fish?",
+        "enum": [
+          "1-More than once a day",
+          "2-Once daily",
+          "3-5 to 6 days a week",
+          "4-3 to 4 days a week",
+          "5-1 to 2 times a week",
+          "6-2 to 3 times a month",
+          "7-Once a month",
+          "8-Less than once a month",
+          "9-Never"
+        ]
+      },
+      "fd_oil_type": {
+        "description": "What type of oil or fat is most often used for meal preparation in your household?",
+        "enum": [
+          "1-Vegetable oil",
+          "2-Lard or suet",
+          "3-Butter or ghee",
+          "4-Margarine",
+          "5-other",
+          "6-None in particular",
+          "7-None used",
+          "333-Don\u2019t know"
+        ]
+      },
+      "fd_meals_out_home_ave": {
+        "description": "On average, how many meals per week do you eat that were not prepared at a home? By meal, I mean breakfast, lunch and dinner.",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "work_difficulty": {
+        "description": "Overall in the last 30 days, how much difficulty did you have with work or household activities?",
+        "enum": [
+          "1-None",
+          "2-Mild",
+          "3-Severe",
+          "4-Extreme"
+        ]
+      },
+      "avg_sleep": {
+        "description": "Average hours of sleep per night (average of weekdays and weekends sleep) (calculated)",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "pesticide_xp": {
+        "description": "Exposed to pesticides or insecticides?",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
+      },
+      "pesticide_xp_region": {
+        "description": "Live in region of exposure to pesticides or insecticides?",
+        "enum": [
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
+        ]
       }
-    ]
+    }
   },
   "vital_signs.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2557,9 +2549,6 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
-        "$ref": "_definitions.yaml#/to_one"
-      },
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -4775,25 +4764,25 @@
           "3-three",
           "4-more than three",
           "888-Not Applicable"
-        ],
-        "births": {
-          "description": "Number of live births",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "births": {
+        "description": "Number of live births",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "bp_measured_ever": {
         "description": "Have you ever had your blood pressure measured by a doctor, nurse or other health worker?",
@@ -5385,25 +5374,25 @@
           "444-refused",
           "888-not applicable",
           "999-missing"
-        ],
-        "stroke_first_year": {
-          "description": "In what year was your first stroke",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "stroke_first_year": {
+        "description": "In what year was your first stroke",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "stroke_trans_isc_ever": {
         "description": "Ever diagnosed with ministroke or transient ischemic attack ",
@@ -5668,25 +5657,25 @@
           "444-refused",
           "888-not applicable",
           "999-missing"
-        ],
-        "angina_diag_year": {
-          "description": "In what year was your first stroke",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "angina_diag_year": {
+        "description": "In what year was your first stroke",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "angina_rx_ever": {
         "description": "Have you ever been treated for angina?",
@@ -5934,25 +5923,25 @@
           "444-refused",
           "888-not applicable",
           "999-missing"
-        ],
-        "hrt_atck_year_diagnosed": {
-          "description": "Year diagnosed with Heart attack",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "hrt_atck_year_diagnosed": {
+        "description": "Year diagnosed with Heart attack",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "hrt_atck_rx_ever": {
         "description": "Have you ever received medication for heart attack?",
@@ -5996,25 +5985,25 @@
           "444-refused",
           "888-not applicable",
           "999-missing"
-        ],
-        "hrt_other_diag_year": {
-          "description": "Year diagnosed with any other heart disease",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "hrt_other_diag_year": {
+        "description": "Year diagnosed with any other heart disease",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "hrt_fhx": {
         "description": "Family history of heart disease (mother, father or blood sibling diagnosed and or treated for heart disease)",
@@ -6369,25 +6358,25 @@
           "444-refused",
           "888-not applicable",
           "999-missing"
-        ],
-        "kidney_fail_diag_year": {
-          "description": "Year diagnosed with any other heart disease",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        }
+        ]
+      },
+      "kidney_fail_diag_year": {
+        "description": "Year diagnosed with any other heart disease",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
       },
       "kidney_rx": {
         "description": "Receiving kidney disease medication",
