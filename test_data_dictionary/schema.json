@@ -2555,338 +2555,339 @@
       "created_datetime",
       "updated_datetime"
     ],
-    "properties": [
-      {
-        "$ref": "_definitions.yaml#/ubiquitous_properties",
-        "submitter_id": {
-          "type": "string",
-          "description": "Unique identifier for the individual (Individual ID)"
-        },
-        "obs_date": {
-          "type": "string",
-          "format": "date",
-          "description": "Date of Interview/Observation Date"
-        },
-        "height_cm": {
-          "description": "Height in CM with status codes",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "weight_kg": {
-          "description": "Weight in Kg with status codes",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "waist_cm": {
-          "description": "Waist circumference in CM with status codes",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "bmi": {
-          "description": "Body Mass Index with status codes",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "hip_cm": {
-          "description": "Hip circumference in CM with status codes",
-          "anyOf": [
-            {
-              "type": "number",
-              "minimum": 0
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "health_rating": {
-          "description": "Patient's self-rated health",
-          "type": "integer",
-          "enum": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            999
-          ]
-        },
-        "preg": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333
-          ],
-          "description": "Patient is currently pregnant at time of observation with status codes"
-        },
-        "pulse": {
-          "description": "Pulse result",
-          "anyOf": [
-            {
-              "type": "number"
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "bp_sys": {
-          "description": "Systolic BP measurement result with status codes",
-          "anyOf": [
-            {
-              "type": "number"
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "bp_dia": {
-          "description": "Diastolic BP measurement result with status codes",
-          "anyOf": [
-            {
-              "type": "number"
-            },
-            {
-              "type": "integer",
-              "enum": [
-                -333,
-                -444,
-                -888,
-                -999
-              ]
-            }
-          ]
-        },
-        "mens_today": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Patient is currently menstruating at time of observation with status codes"
-        },
-        "hiv_status_self_rpt": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Patient's self-reported HIV status"
-        },
-        "fd_eat_drink-12h": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Has the patient eaten or drank anything in the past 12 hours"
-        },
-        "poor_vision": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Patient's vision"
-        },
-        "amputation": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of amputation in the patient"
-        },
-        "body_swelling": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of swelling in the patient"
-        },
-        "oedema": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of oedema in the patient"
-        },
-        "diff_brthng_cur": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Difficulty breathing"
-        },
-        "fever": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of fever in the patient"
-        },
-        "dehydrated": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of dehydration in the patient"
-        },
-        "convulsion": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of fits or convulsions in the patient"
-        },
-        "injury": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Presence of injury in the patient"
-        },
-        "any_rx_12h": {
-          "type": "integer",
-          "enum": [
-            0,
-            1,
-            333,
-            444,
-            888,
-            999
-          ],
-          "description": "Has the patient taken any medication in the past 12 hours"
-        }
+    "properties": {
+      "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
+      "submitter_id": {
+        "type": "string",
+        "description": "Unique identifier for the individual (Individual ID)"
+      },
+      "obs_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date of Interview/Observation Date"
+      },
+      "height_cm": {
+        "description": "Height in CM with status codes",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "weight_kg": {
+        "description": "Weight in Kg with status codes",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "waist_cm": {
+        "description": "Waist circumference in CM with status codes",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "bmi": {
+        "description": "Body Mass Index with status codes",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "hip_cm": {
+        "description": "Hip circumference in CM with status codes",
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "health_rating": {
+        "description": "Patient's self-rated health",
+        "type": "integer",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          999
+        ]
+      },
+      "preg": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333
+        ],
+        "description": "Patient is currently pregnant at time of observation with status codes"
+      },
+      "pulse": {
+        "description": "Pulse result",
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "bp_sys": {
+        "description": "Systolic BP measurement result with status codes",
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "bp_dia": {
+        "description": "Diastolic BP measurement result with status codes",
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer",
+            "enum": [
+              -333,
+              -444,
+              -888,
+              -999
+            ]
+          }
+        ]
+      },
+      "mens_today": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Patient is currently menstruating at time of observation with status codes"
+      },
+      "hiv_status_self_rpt": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Patient's self-reported HIV status"
+      },
+      "fd_eat_drink-12h": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Has the patient eaten or drank anything in the past 12 hours"
+      },
+      "poor_vision": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Patient's vision"
+      },
+      "amputation": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of amputation in the patient"
+      },
+      "body_swelling": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of swelling in the patient"
+      },
+      "oedema": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of oedema in the patient"
+      },
+      "diff_brthng_cur": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Difficulty breathing"
+      },
+      "fever": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of fever in the patient"
+      },
+      "dehydrated": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of dehydration in the patient"
+      },
+      "convulsion": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of fits or convulsions in the patient"
+      },
+      "injury": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Presence of injury in the patient"
+      },
+      "any_rx_12h": {
+        "type": "integer",
+        "enum": [
+          0,
+          1,
+          333,
+          444,
+          888,
+          999
+        ],
+        "description": "Has the patient taken any medication in the past 12 hours"
       }
-    ]
+    }
   },
   "_terms.yaml": {
     "id": "_terms",
