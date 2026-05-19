@@ -2744,7 +2744,7 @@
         ],
         "description": "Patient's self-reported HIV status"
       },
-      "fd_eat_drink-12h": {
+      "fd_eat_drink_12h": {
         "type": "integer",
         "enum": [
           0,
