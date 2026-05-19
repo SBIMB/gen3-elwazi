@@ -20,6 +20,7 @@ authz:
     - a0045661@wits.ac.za
     - regancannell@gmail.com
     - gen3-user
+    - a0092790@wits.ac.za
 
   # can create/update/delete indexd records
   - name: indexd_admins
@@ -29,6 +30,7 @@ authz:
     - a0045661@wits.ac.za
     - regancannell@gmail.com
     - gen3-user
+    - a0092790@wits.ac.za
 
   resources:
   - name: workspace
@@ -292,6 +294,18 @@ users:
     tags:
       name: Regan Cannell
       email: regancannell@gmail.com
+    policies:
+    - services.sheepdog-admin
+    - data_upload
+    - workspace
+    - open_data_reader
+    - all_programs_reader
+    - ReganTestProject_submitter
+    - gen3Project502_submitter
+  a0092790@wits.ac.za:
+    tags:
+      name: Leia S
+      email: a0092790@wits.ac.za
     policies:
     - services.sheepdog-admin
     - data_upload

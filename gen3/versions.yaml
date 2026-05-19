@@ -1,0 +1,36 @@
+arborist:
+  image: 
+    repository: quay.io/cdis/arborist
+    tag: "2026.04"
+fence: 
+  image: 
+    repository: quay.io/cdis/fence
+    tag: "2026.04"
+indexd:
+  image: 
+    repository: quay.io/cdis/indexd
+    tag: "2026.04"
+sheepdog:
+  image: 
+    repository: quay.io/cdis/sheepdog
+    tag: "2026.04"
+peregrine:
+  image: 
+    repository: quay.io/cdis/peregrine
+    tag: "2026.04"
+guppy:
+  image: 
+    repository: quay.io/cdis/guppy
+    tag: "2026.04"
+portal:
+  image:
+    repository:  quay.io/cdis/data-portal
+    tag: "2026.04"
+hatchery:
+  image: 
+    repository: quay.io/cdis/hatchery
+    tag: "2026.04"
+revproxy:
+  image: 
+    repository: quay.io/cdis/nginx
+    tag: "2026.04"

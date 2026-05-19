@@ -1,0 +1,12 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: manual-jupyter-bridge
+  namespace: default
+spec:
+  prefix: /lw-workspace/proxy/
+  rewrite: /lw-workspace/proxy/
+  service: h-a0092790-40wits-2eac-2eza-s.jupyter-pods-default.svc.cluster.local:80
+  timeout_ms: 300000
+  use_websocket: true
+  bypass_auth: true

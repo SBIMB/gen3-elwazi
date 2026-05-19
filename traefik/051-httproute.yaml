@@ -1,0 +1,18 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: gen3-core-route
+  namespace: default
+spec: 
+  parentRefs:
+  - name: traefik-gateway
+  hostnames:
+  - "gen3-dev.core.wits.ac.za"
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: revproxy-service
+      port: 80

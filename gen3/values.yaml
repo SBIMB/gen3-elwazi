@@ -1,35 +1,40 @@
-global:
-  dev: true
+global: 
+#rev 19/05/2026
+  dev: false
   postgres:
     dbCreate: true
     master:
       username: postgres
       password: postgres
-      host:
+      host: "gen3-db-postgresql"
       port: "5432"
-  hostname: cloud08.core.wits.ac.za
+  hostname: gen3-dev.core.wits.ac.za
   revproxyArn: arn:aws:acm:us-east-1:123456:certificate
-  dictionaryUrl: https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json
+  dictionaryUrl: "https://raw.githubusercontent.com/SBIMB/gen3-elwazi/refs/heads/main/test_data_dictionary/schema.json"
+  #changing to custom test dictionary for madiva "https://s3.amazonaws.com/dictionary-artifacts/datadictionary/develop/schema.json"
   portalApp: gitops
   publicDataSets: true
   tierAccessLevel: libre
   tierAccessLimit: 1000
-  netPolicy: true
+  netPolicy: 
+    enabled: false
   dispatcherJobNum: 10
   ddEnabled: false
 
 ambassador:
   enabled: true
-  image:
-    repository:
-    tag:
+  jupyterNamespace: "jupyter-pods-default"
+  image: 
+    repository: quay.io/datawire/ambassador
+    tag: "1.14.2"
+  resources:
+    limits: 
+      memory: "800Mi"
+    requests:
+      memory: "200Mi"
 
 arborist:
   enabled: true
-  image:
-    repository: quay.io/cdis/arborist
-    pullPolicy: IfNotPresent
-    tag: ""
 
 argo-wrapper:
   enabled: true
@@ -61,20 +66,16 @@ etl:
 
 fence:
   enabled: true
-  image:
-    repository:
-    pullPolicy:
-    tag:
   FENCE_CONFIG:
     APP_NAME: 'Gen3 Data Commons with K3s'
     OPENID_CONNECT:
       google:
-        client_id: ""
-        client_secret: ""
+        client_id: "dummy_id_for_github"
+        client_secret: "dummy_secret_for_github"
     AWS_CREDENTIALS:
       "gen3-user":
-        aws_access_key_id: ""
-        aws_secret_access_key: ""
+        aws_access_key_id: "dummy-key"
+        aws_secret_access_key: "dummy-secret"
     S3_BUCKETS:
       # Name of the actual s3 bucket
       gen3-bucket:
@@ -84,13 +85,337 @@ fence:
         cred: "gen3-user"
         region: us-east-1
       gen3-local-bucket:
-        cred: "minio-user"
-        MINIO_ROOT_USER: "",
+        cred: "gen3-user"
+        endpoint_url: "http://revproxy-service/s3"
+        MINIO_ROOT_USER: ""
         MINIO_ROOT_PASSWORD: ""
     # This is important for data upload.
     DATA_UPLOAD_BUCKET: "gen3-bucket"
   # -- (string) USER YAML. Passed in as a multiline string.
-  USER_YAML:
+  USER_YAML: |-
+    authz:
+      anonymous_policies:
+        - open_data_reader
+      all_users_policies: []
+      groups:
+        - name: data_submitters
+          policies:
+            - services.sheepdog-admin
+            - data_upload
+            - workspace
+            - open_data_reader
+            - all_programs_reader
+            - ReganTestProject_submitter
+            - gen3Project502_submitter
+          users:
+            - a0045661@wits.ac.za
+            - regancannell@gmail.com
+            - gen3-user
+            - a0092790@wits.ac.za
+        - name: indexd_admins
+          policies:
+            - indexd_admin
+          users:
+            - a0045661@wits.ac.za
+            - regancannell@gmail.com
+            - gen3-user
+            - a0092790@wits.ac.za
+      resources:
+        - name: workspace
+        - name: data_file
+        - name: services
+          subresources:
+            - name: sheepdog
+              subresources:
+                - name: submission
+                  subresources:
+                    - name: program
+                    - name: project
+            - name: 'indexd'
+              subresources:
+                - name: 'admin'
+                - name: 'bundles'
+            - name: audit
+              subresources:
+                - name: presigned_url
+                - name: login
+        - name: open
+        - name: programs
+          subresources:
+            - name: ReganTestProgram
+              subresources:
+                - name: projects
+                  subresources:
+                    - name: ReganTestProject
+            - name: gen3Program502
+              subresources:
+                - name: projects
+                  subresources:
+                    - name: P502
+            - name: MADIVA
+              subresources:
+                - name: projects
+                  subresources:
+                    - name: Agincourt
+                    - name: Nairobi
+      policies:
+        - id: workspace
+          description: be able to use workspace
+          resource_paths:
+            - /workspace
+          role_ids:
+            - workspace_user
+        - id: data_upload
+          description: upload raw data files to S3
+          role_ids:
+            - file_uploader
+          resource_paths:
+            - /data_file
+        - id: services.sheepdog-admin
+          description: CRUD access to programs and projects
+          role_ids:
+            - sheepdog_admin
+          resource_paths:
+            - /services/sheepdog/submission/program
+            - /services/sheepdog/submission/project
+        - id: indexd_admin
+          description: full access to indexd API
+          role_ids:
+            - indexd_admin
+          resource_paths:
+            - /programs
+            - /services/indexd/admin
+        - id: open_data_reader
+          description: data open to all users
+          role_ids:
+            - guppy_reader
+            - fence_reader
+            - fence_storage_reader
+            - peregrine_reader
+            - sheepdog_reader
+          resource_paths:
+            - /open
+        - id: all_programs_reader
+          role_ids:
+            - open_data_reader
+            - peregrine_reader
+            - guppy_reader
+            - fence_storage_reader
+          resource_paths:
+            - /programs
+        - id: ReganTestProject_submitter
+          role_ids:
+            - creator
+            - updater
+            - deleter
+            - storage_writer
+          resource_paths:
+            - /programs
+        - id: gen3Project502_submitter
+          role_ids:
+            - reader
+            - creator
+            - updater
+            - deleter
+            - storage_reader
+            - storage_writer
+          resource_paths:
+            - /programs/gen3Program502/projects/P502
+        - id: madiva_admin
+          description: full access to MADIVA and child projects
+          role_ids:
+            - reader
+            - creator
+            - updater
+            - deleter
+            - storage_reader
+            - storage_writer
+          resource_paths:
+            - /programs/MADIVA 
+            - /programs/MADIVA/projects/Agincourt
+            - /programs/MADIVA/projects/Nairobi
+          
+      roles:
+        - id: file_uploader
+          permissions:
+            - id: file_upload
+              action:
+                service: fence
+                method: file_upload
+        - id: workspace_user
+          permissions:
+            - id: workspace_access
+              action:
+                service: jupyterhub
+                method: access
+        - id: sheepdog_admin
+          description: CRUD access to programs and projects
+          permissions:
+            - id: sheepdog_admin_action
+              action:
+                service: sheepdog
+                method: '*'
+        - id: indexd_admin
+          description: full access to indexd API
+          permissions:
+            - id: indexd_admin
+              action:
+                service: indexd
+                method: '*'
+        - id: admin
+          permissions:
+            - id: admin
+              action:
+                service: '*'
+                method: '*'
+        - id: creator
+          permissions:
+            - id: creator
+              action:
+                service: '*'
+                method: create
+        - id: reader
+          permissions:
+            - id: reader
+              action:
+                service: '*'
+                method: read
+        - id: updater
+          permissions:
+            - id: updater
+              action:
+                service: '*'
+                method: update
+        - id: deleter
+          permissions:
+            - id: deleter
+              action:
+                service: '*'
+                method: delete
+        - id: storage_writer
+          permissions:
+            - id: storage_creator
+              action:
+                service: '*'
+                method: write-storage
+        - id: storage_reader
+          permissions:
+            - id: storage_reader
+              action:
+                service: '*'
+                method: read-storage
+        - id: open_data_reader
+          permissions:
+            - id: open_data_reader
+              action:
+                service: '*'
+                method: '*'
+        - id: guppy_reader
+          permissions:
+            - id: guppy_reader
+              action:
+                service: 'guppy'
+                method: read
+        - id: fence_storage_reader
+          permissions:
+            - id: fence_storage_reader
+              action:
+                method: read-storage
+                service: fence
+        - id: fence_reader
+          permissions:
+            - id: fence_reader
+              action:
+                service: fence
+                method: read
+        - id: peregrine_reader
+          permissions:
+            - id: peregrine_reader
+              action:
+                service: 'peregrine'
+                method: read
+        - id: sheepdog_reader
+          permissions:
+            - id: sheepdog_reader
+              action:
+                service: 'sheepdog'
+                method: read
+    clients:
+      wts:
+        policies:
+          - all_programs_reader
+          - open_data_reader
+    users:
+      a0045661@wits.ac.za:
+        tags:
+          name: Regan Cannell
+          email: a0045661@wits.ac.za
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - all_programs_reader
+          - ReganTestProject_submitter
+          - gen3Project502_submitter
+      scott.hazelhurst@wits.ac.za:
+        tags:
+          name: Scott Hazelhurst
+          email: scott.hazelhurst@wits.ac.za
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - all_programs_reader
+          - ReganTestProject_submitter
+          - gen3Project502_submitter
+      shaun.aron@wits.ac.za:
+        tags:
+          name: Shaun Aron
+          email: shaun.aron@wits.ac.za
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - all_programs_reader
+          - ReganTestProject_submitter
+          - gen3Project502_submitter
+      gen3-user:
+        tags:
+          name: Regan Cannell
+          email: a0045661@wits.ac.za
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - all_programs_reader
+          - ReganTestProject_submitter
+          - gen3Project502_submitter
+      regancannell@gmail.com:
+        tags:
+          name: Regan Cannell
+          email: regancannell@gmail.com
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - all_programs_reader
+          - ReganTestProject_submitter
+          - gen3Project502_submitter
+      a0092790@wits.ac.za:
+        tags:
+          name: Leia S
+          email: a0092790@wits.ac.za
+        policies:
+          - services.sheepdog-admin
+          - data_upload
+          - workspace
+          - open_data_reader
+          - madiva_admin
   # -- (map) Configuration options for usersync cronjob.
   usersync:
     # -- (bool) Whether to run Fence usersync or not.
@@ -122,26 +447,29 @@ guppy:
   enabled: false
   image:
     repository:
-    tag:
+#    tag:
 
 hatchery:
   enabled: true
-  image:
-    repository:
-    tag:
-
+  jupyterNamespace: "jupyter-pods-default"
   hatchery:
+    user-namespace: "jupyter-pods-default" 
     sidecarContainer:
       # -- (string) The maximum amount of CPU the sidecar container can use
-      cpu-limit: '0.1'
+      cpu-limit: '0.8'
       # -- (string) The maximum amount of memory the sidecar container can use
       memory-limit: 256Mi
       # -- (string) The sidecar image.
       image: quay.io/cdis/ecs-ws-sidecar:master
       # -- (map) Environment variables to pass to the sidecar container
       env:
-        NAMESPACE: "{{ .Release.Namespace }}"
-        HOSTNAME: "{{ .Values.global.hostname }}"
+         AMBASSADOR_NAMESPACE: "default"
+         GEN3_ENDPOINT: "fence-service.default.svc.cluster.local"
+         HOSTNAME: "gen3-dev.core.wits.ac.za"
+         #NAMESPACE: "jupyter-pods-gen3-dev"
+         NAMESPACE: "jupyter-pods-default"  
+        # "{{ .Release.Namespace }}"
+        #HOSTNAME: "fence-service.default.svc.cluster.local" #"{{ .Values.global.hostname }}"
       # -- (list) Arguments to pass to the sidecare container.
       args: []
       # -- (list) Commands to run for the sidecar container.
@@ -163,24 +491,31 @@ hatchery:
       # -- (string) memory limit of workspace container
       memory-limit: 2Gi
       # -- (string) name of workspace
-      name: "(Tutorials) Example Analysis Jupyter Lab Notebooks"
+      name: "(Tutorials) Example Analysis Lab Notebooks"
       # -- (string) docker image for workspace
       image: quay.io/cdis/heal-notebooks:combined_tutorials__latest
       # -- environment variables for workspace container
       env:
         FRAME_ANCESTORS: https://{{ .Values.global.hostname }}
+        JUPYTER_ENABLE_LAB: "true"
       args:
-      - "--NotebookApp.base_url=/lw-workspace/proxy/"
-      - "--NotebookApp.default_url=/lab"
-      - "--NotebookApp.password=''"
-      - "--NotebookApp.token=''"
-      - "--NotebookApp.shutdown_no_activity_timeout=5400"
-      - "--NotebookApp.quit_button=False"
+      - "--ServerApp.base_url=/lw-workspace/proxy/"
+      - "--ServerApp.default_url=/lab"
+      - "--ServerApp.password=''"
+      - "--ServerApp.token=''"
+      - "--ServerApp.shutdown_no_activity_timeout=5400"
+      - "--ServerApp.quit_button=False"
+      - "--ServerApp.notebook_dir='/home/jovyan/pd'"
       command:
       - start-notebook.sh
-      path-rewrite: "/lw-workspace/proxy/"
+      path-rewrite: ""
       use-tls: 'false'
       ready-probe: "/lw-workspace/proxy/"
+      probe-config:
+        initialDelaySeconds: 15
+        timeoutSeconds: 1
+        successThreshold: 1
+        failureThreshold: 3
       lifecycle-post-start:
       - "/bin/sh"
       - "-c"
@@ -192,9 +527,6 @@ hatchery:
 
 indexd:
   enabled: true
-  image:
-    repository:
-    tag:
   defaultPrefix: "PREFIX/"
 
 
@@ -212,10 +544,6 @@ metadata:
 
 peregrine:
   enabled: true
-  image:
-    repository:
-    pullPolicy:
-    tag:
 
 pidgin:
   enabled: true
@@ -225,13 +553,46 @@ pidgin:
 
 portal:
   enabled: true
-  image:
-    repository:
-    tag:
 
-gitops:
+  gitops:
   # -- (string) multiline string - gitops.json
-  json:
+    json: |
+      {
+        "components": {
+          "appName": "MADIVA Commons"
+        },
+        "graphql": {
+          "boardCounts": [
+            { "graphql": "_subject_count", "name": "Subject", "plural": "Subjects" },
+            { "graphql": "_demographic_count", "name": "Demographic", "plural": "Demographics" }
+          ],
+        "chartCounts": [
+            { "graphql": "_subject_count", "name": "Subject" },
+            { "graphql": "_demographic_count", "name": "Demographic" }
+          ],         
+        "projectDetails": [
+            { "graphql": "_subject_count", "name": "Subject", "plural": "Subjects" },
+            { "graphql": "_demographic_count", "name": "Demographic", "plural": "Demographics" }         
+         ]
+        },
+        "explorerConfig": [
+          {
+            "tabTitle": "MADIVA Subjects",
+            "filters": {
+              "tabs": [
+                { "title": "Basic Info", "fields": ["project_id"] }
+               ]
+              },
+              "guppyConfig": {
+                "dataType": "subject",
+                "nodeCountTitle": "Subjects",
+                "fieldMapping": [
+                  { "field": "project_id", "name": "Project ID" }
+                ]
+              }
+            }
+          ]
+        }
   # -- (string) - favicon in base64
   favicon:
   # -- (string) - multiline string - gitops.css
@@ -251,9 +612,6 @@ requestor:
 
 revproxy:
   enabled: true
-  image:
-    repository:
-    tag:
   ingress:
     enabled: false
     className: ""
@@ -268,9 +626,6 @@ revproxy:
 
 sheepdog:
   enabled: true
-  image:
-    repository:
-    tag:
 
 ssjdispatcher:
   enabled: false
@@ -314,7 +669,9 @@ secrets:
 
 # Disable persistence by default so we can spin up and down ephemeral environments
 postgresql:
+  enabled: true
   primary:
     persistence:
       # -- (bool) Option to persist the dbs data.
-      enabled: false
+      enabled: true
+      size: 50Gi

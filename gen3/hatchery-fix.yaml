@@ -1,0 +1,9 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: hatchery-kernel-fix
+  namespace: default
+spec:
+  prefix: /lw-workspace/proxy/api/status
+  rewrite: /lw-workspace/proxy/api/kernels
+  service: h-a0092790-40wits-2eac-2eza-s.jupyter-pods-default.svc.cluster.local:80
