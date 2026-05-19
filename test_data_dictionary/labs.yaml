@@ -1,0 +1,256 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "ncd_lab"
+title: "NCD Labs"
+type: "object"
+category: "clinical"
+program: "*"
+project: "*"
+description: "Clinical measurements recorded through lab testing"
+additionalProperties: false
+submittable: true
+validators: null
+
+links:
+  - name: subjects
+    backref: NCD_labs
+    label: describes
+    target_type: "subject"
+    multiplicity: "many_to_one"
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+
+systemProperties:
+  - id 
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+
+  submitter_id:
+    type: "string"
+
+  obs_date:
+    type: "string"
+    format: "date"
+    description: "Date of observation"
+
+  poc_hb:
+    description: "POC haemoglobin in g/dl"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  insulin_fasting:
+    description: "Insulin measurement in blood (fasting)"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  bg_mmol_fst:
+    description: "Blood glucose (fasting)"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-111, -222, -333, -444, -888, -999]
+
+  bg_mmol_random:
+    description: "Blood glucose (random)"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  ldl_mmol:
+    description: "Low density lipoprotein measurement to the nearest decimal point"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  hdl_mmol:
+    description: "High density lipoprotein measurement to the nearest decimal point"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  trigs_mmol:
+    description: "Triglyceride measurement to the nearest decimal point"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  pi_acr:
+    type: "number"
+    description: "ACR (albumin:creatinine ratio)"
+
+  specimen_taken_h:
+    description: "Time of day blood specimen taken (24 hour clock), hours"
+    anyOf:
+      - type: "integer"
+        minimum: 0
+        maximum: 23
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  specimen_taken_m:
+    description: "Time of day blood specimen taken (24 hour clock), minutes"
+    anyOf:
+      - type: "integer"
+        minimum: 0
+        maximum: 23
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+# Categorical data/results
+
+  hiv_test_result:
+    description: "HIV test result or status"
+    enum: 
+      - "0-no" 
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  bil_urine_test_result:
+    description: "BIL (bilirubin) test result or status"
+    enum:
+      - "1-negative"
+      - "2-1+"
+      - "3-2+"
+      - "4-3+"
+      - "999-missing"
+
+  urine_preg_tst:
+    description: "Urine pregnancy test"
+    enum: 
+      - "0-negative"
+      - "1-positive"
+      - "999-missing"
+
+  urine_sg:
+    description: "Urine SG"
+    enum: 
+      - "1-1.000"
+      - "2-1.005"
+      - "3-1.010"
+      - "4-1.015"
+      - "5-1.020"
+      - "6-1.025"
+      - "7-1.030"
+      - "999-missing"
+
+  urine_ph:
+    description: "Urine pH"
+    enum: 
+      - "5-5"
+      - "6-6"
+      - "7-7"
+      - "8-8"
+      - "9-9"
+      - "999-missing"
+
+  urine_leuk:
+    description: "Urine leucocytes"
+    enum: 
+      - "1-negative"
+      - "2-1+"
+      - "3-2+"
+      - "4-3+"
+      - "999-missing"
+
+  urine_nit:
+    description: "Urine nitrites"
+    enum: 
+      - "0-negative"
+      - "1-positive"
+      - "999-missing"
+
+  urine_pro:
+    description: "Urine protein"
+    enum: 
+      - "1-negative"
+      - "2-1+"
+      - "3-2+"
+      - "4-3+"
+      - "999-missing"
+
+  urine_ket:
+    description: "Urine ketones"
+    enum: 
+      - "1-negative"
+      - "2-1+"
+      - "3-2+"
+      - "4-3+"
+      - "999-missing"
+
+  urine_uro:
+    description: "Urine urobilinogen"
+    enum: 
+      - "0-negative"
+      - "1-1+"
+      - "2-2+"
+      - "3-3+"
+      - "4-4+"
+      - "999-missing" 
+
+  urine_ery:
+    description: "Urine erythrocytes"
+    enum: 
+      - "0-negative"
+      - "1-1+"
+      - "2-2+"
+      - "3-3+"
+      - "4-4+"
+      - "999-missing"
+
+  schistosom:
+    description: "Was schistosoma haematobium identified"
+    enum: 
+      - "0-no"
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  anaemia:
+    description: "Presence of anaemia in the patient"
+    enum: 
+      - "0-no"
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  oedema:
+    description: "Severity of oedema in the patient"
+    enum: 
+      - "1-mild"
+      - "2-moderate"
+      - "3-severe"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"

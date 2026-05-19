@@ -12,7 +12,8 @@ id: _terms
 
 a260_a280_ratio:
   description: >
-    Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm, used to determine a measure of DNA purity.
+    Numeric value that represents the sample ratio of nucleic acid absorbance at 260 nm and 280 nm,
+    used to determine a measure of DNA purity.
   termDef:
     term: Nucleic Acid Absorbance at 260 And Absorbance at 280 DNA Purity Ratio Value
     source: caDSR
@@ -22,10 +23,12 @@ a260_a280_ratio:
 
 adapter_name: # TOREVIEW
   description: >
-    Name of the sequencing adapter. #magic___^_^___line
+    Name of the sequencing adapter.
+
 adapter_sequence: # TOREVIEW
   description: >
-    Base sequence of the sequencing adapter. #magic___^_^___line
+    Base sequence of the sequencing adapter.
+
 age_at_diagnosis:
   description: >
     Age at the time of diagnosis expressed in number of days since birth.
@@ -38,7 +41,8 @@ age_at_diagnosis:
 
 ajcc_clinical_m:
   description: >
-    Extent of the distant metastasis for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
+    Extent of the distant metastasis for the cancer based on evidence obtained from clinical
+    assessment parameters determined prior to treatment.
   termDef:
     term: Neoplasm American Joint Committee on Cancer Clinical Distant Metastasis M Stage
     source: caDSR
@@ -48,7 +52,8 @@ ajcc_clinical_m:
 
 ajcc_clinical_n:
   description: >
-    Extent of the regional lymph node involvement for the cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
+    Extent of the regional lymph node involvement for the cancer based on evidence obtained from
+    clinical assessment parameters determined prior to treatment.
   termDef:
     term: Neoplasm American Joint Committee on Cancer Clinical Regional Lymph Node N Stage
     source: caDSR
@@ -58,7 +63,8 @@ ajcc_clinical_n:
 
 ajcc_clinical_stage:
   description: >
-    Stage group determined from clinical information on the tumor (T), regional node (N) and metastases (M) and by grouping cases with similar prognosis for cancer.
+    Stage group determined from clinical information on the tumor (T), regional node (N) and
+    metastases (M) and by grouping cases with similar prognosis for cancer.
   termDef:
     term: Neoplasm American Joint Committee on Cancer Clinical Group Stage
     source: caDSR
@@ -68,7 +74,8 @@ ajcc_clinical_stage:
 
 ajcc_clinical_t:
   description: >
-    Extent of the primary cancer based on evidence obtained from clinical assessment parameters determined prior to treatment.
+    Extent of the primary cancer based on evidence obtained from clinical assessment parameters
+    determined prior to treatment.
   termDef:
     term: Neoplasm American Joint Committee on Cancer Clinical Primary Tumor T Stage
     source: caDSR
@@ -78,7 +85,9 @@ ajcc_clinical_t:
 
 ajcc_pathologic_m:
   description: >
-    Code to represent the defined absence or presence of distant spread or metastases (M) to locations via vascular channels or lymphatics beyond the regional lymph nodes, using criteria established by the American Joint Committee on Cancer (AJCC).
+    Code to represent the defined absence or presence of distant spread or metastases (M) to
+    locations via vascular channels or lymphatics beyond the regional lymph nodes, using
+    criteria established by the American Joint Committee on Cancer (AJCC).
   termDef:
     term: American Joint Committee on Cancer Metastasis Stage Code
     source: caDSR
@@ -88,7 +97,8 @@ ajcc_pathologic_m:
 
 ajcc_pathologic_n:
   description: >
-    The codes that represent the stage of cancer based on the nodes present (N stage) according to criteria based on multiple editions of the AJCC's Cancer Staging Manual.
+    The codes that represent the stage of cancer based on the nodes present (N stage) according
+    to criteria based on multiple editions of the AJCC's Cancer Staging Manual.
   termDef:
     term: Neoplasm Disease Lymph Node Stage American Joint Committee on Cancer Code
     source: caDSR
@@ -98,7 +108,8 @@ ajcc_pathologic_n:
 
 ajcc_pathologic_stage:
   description: >
-    The extent of a cancer, especially whether the disease has spread from the original site to other parts of the body based on AJCC staging criteria.
+    The extent of a cancer, especially whether the disease has spread from the original site to
+    other parts of the body based on AJCC staging criteria.
   termDef:
     term: Neoplasm Disease Stage American Joint Committee on Cancer Code
     source: caDSR
@@ -108,7 +119,9 @@ ajcc_pathologic_stage:
 
 ajcc_pathologic_t:
   description: >
-    Code of pathological T (primary tumor) to define the size or contiguous extension of the primary tumor (T), using staging criteria from the American Joint Committee on Cancer (AJCC).
+    Code of pathological T (primary tumor) to define the size or contiguous extension of the
+    primary tumor (T), using staging criteria from the American Joint Committee on Cancer
+    (AJCC).
   termDef:
     term: American Joint Committee on Cancer Tumor Stage Code
     source: caDSR
@@ -118,7 +131,8 @@ ajcc_pathologic_t:
 
 alcohol_history:
   description: >
-    A response to a question that asks whether the participant has consumed at least 12 drinks of any kind of alcoholic beverage in their lifetime.
+    A response to a question that asks whether the participant has consumed at least 12 drinks of
+    any kind of alcoholic beverage in their lifetime.
   termDef:
     term: Alcohol Lifetime History Indicator
     source: caDSR
@@ -138,7 +152,8 @@ alcohol_intensity:
 
 aliquot_quantity:
   description: >
-    The quantity in micrograms (ug) of the aliquot(s) derived from the analyte(s) shipped for sequencing and characterization.
+    The quantity in micrograms (ug) of the aliquot(s) derived from the analyte(s) shipped for
+    sequencing and characterization.
   termDef:
     term: Biospecimen Aliquot Quantity
     source: null
@@ -148,7 +163,8 @@ aliquot_quantity:
 
 aliquot_volume:
   description: >
-    The volume in microliters (ml) of the aliquot(s) derived from the analyte(s) shipped for sequencing and characterization.
+    The volume in microliters (ml) of the aliquot(s) derived from the analyte(s) shipped for
+    sequencing and characterization.
   termDef:
     term: Biospecimen Aliquot Volume
     source: null
@@ -158,10 +174,12 @@ aliquot_volume:
 
 amount: # TOREVIEW
   description: >
-    Weight in grams or volume in mL. #magic___^_^___line
+    Weight in grams or volume in mL.
+
 analyte_quantity:
   description: >
-    The quantity in micrograms (ug) of the analyte(s) derived from the analyte(s) shipped for sequencing and characterization.
+    The quantity in micrograms (ug) of the analyte(s) derived from the analyte(s) shipped for
+    sequencing and characterization.
   termDef:
     term: Biospecimen Analyte Quantity
     source: null
@@ -191,7 +209,8 @@ analyte_type_id:
 
 analyte_volume:
   description: >
-    The volume in microliters (ml) of the analyte(s) derived from the analyte(s) shipped for sequencing and characterization.
+    The volume in microliters (ml) of the analyte(s) derived from the analyte(s) shipped for
+    sequencing and characterization.
   termDef:
     term: Biospecimen Analyte Volume
     source: null
@@ -201,7 +220,8 @@ analyte_volume:
 
 ann_arbor_b_symptoms:
   description: >
-    Text term to signify whether lymphoma B-symptoms are present as noted in the patient's medical record.
+    Text term to signify whether lymphoma B-symptoms are present as noted in the patient's medical
+    record.
   termDef:
     term: Lymphoma B-Symptoms Medical Record Documented Indicator
     source: caDSR
@@ -211,7 +231,8 @@ ann_arbor_b_symptoms:
 
 ann_arbor_clinical_stage:
   description: >
-    The classification of the clinically confirmed anatomic disease extent of lymphoma (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The classification of the clinically confirmed anatomic disease extent of lymphoma (Hodgkin's
+    and Non-Hodgkins) based on the Ann Arbor Staging System.
   termDef:
     term: Ann Arbor Clinical Stage
     source: null
@@ -221,7 +242,8 @@ ann_arbor_clinical_stage:
 
 ann_arbor_extranodal_involvement:
   description: >
-    Indicator that identifies whether a patient with malignant lymphoma has lymphomatous involvement of an extranodal site.
+    Indicator that identifies whether a patient with malignant lymphoma has lymphomatous involvement
+    of an extranodal site.
   termDef:
     term: Lymphomatous Extranodal Site Involvement Indicator
     source: caDSR
@@ -231,7 +253,8 @@ ann_arbor_extranodal_involvement:
 
 ann_arbor_pathologic_stage:
   description: >
-    The classification of the pathologically confirmed anatomic disease extent of lymphoma (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The classification of the pathologically confirmed anatomic disease extent of lymphoma
+    (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
   termDef:
     term: Ann Arbor Pathologic Stage
     source: null
@@ -241,7 +264,8 @@ ann_arbor_pathologic_stage:
 
 ann_arbor_tumor_stage:
   description: >
-    The classification of the anatomic disease extent of lymphoma (Hodgkin's and Non-Hodgkins) based on the Ann Arbor Staging System.
+    The classification of the anatomic disease extent of lymphoma (Hodgkin's and Non-Hodgkins) based
+    on the Ann Arbor Staging System.
   termDef:
     term: Ann Arbor Tumor Stage
     source: null
@@ -251,10 +275,12 @@ ann_arbor_tumor_stage:
 
 base_caller_name: # TOREVIEW
   description: >
-    Name of the base caller. #magic___^_^___line
+    Name of the base caller.
+
 base_caller_version: # TOREVIEW
   description: >
-    Version of the base caller. #magic___^_^___line
+    Version of the base caller.
+
 biomarker_name:
   description: >
     The name of the biomarker being tested for this specimen and set of test results.
@@ -262,7 +288,7 @@ biomarker_name:
     term: Biomarker Name
     source: caDSR
     cde_id: 5473
-    cde_version: 11.0
+    cde_version: 11.0 
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5473&version=2.31"
 
 biomarker_result:
@@ -307,7 +333,8 @@ bmi:
 
 burkitt_lymphoma_clinical_variant:
   description: >
-    Burkitt's lymphoma categorization based on clinical features that differ from other forms of the same disease.
+    Burkitt's lymphoma categorization based on clinical features that differ from other forms of the
+    same disease.
   termDef:
     term: Burkitt Lymphoma Clinical Variant Type
     source: caDSR
@@ -327,7 +354,8 @@ cause_of_death:
 
 cea_level_preoperative:
   description: >
-    Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery. [Manually- curated]
+    Numeric value of the Carcinoembryonic antigen or CEA at the time before surgery. [Manually-
+    curated]
   termDef:
     term: Preoperative Carcinoembryonic Antigen Result Value
     source: caDSR
@@ -347,7 +375,9 @@ cigarettes_per_day:
 
 circumferential_resection_margin:
   description: >
-    A value in millimeters indicating the measured length between a malignant lesion of the colon or rectum and the nearest radial (or circumferential) border of tissue removed during cancer surgery.
+    A value in millimeters indicating the measured length between a malignant lesion of the
+    colon or rectum and the nearest radial (or circumferential) border of tissue removed during
+    cancer surgery.
   termDef:
     term: Colorectal Surgical Margin Circumferential Distance Measurement
     source: caDSR
@@ -357,7 +387,8 @@ circumferential_resection_margin:
 
 classification_of_tumor:
   description: >
-    Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint.
+    Text that describes the kind of disease present in the tumor specimen as related to a specific
+    timepoint.
   termDef:
     term: Tumor Tissue Disease Description Type
     source: caDSR
@@ -367,7 +398,8 @@ classification_of_tumor:
 
 colon_polyps_history:
   description: >
-    Yes/No indicator to describe if the subject had a previous history of colon polyps as noted in the history/physical or previous endoscopic report (s).
+    Yes/No indicator to describe if the subject had a previous history of colon polyps as noted
+    in the history/physical or previous endoscopic report (s).
   termDef:
     term: Colon Carcinoma Polyp Occurrence Indicator
     source: caDSR
@@ -387,7 +419,8 @@ composition:
 
 concentration:
   description: >
-    Numeric value that represents the concentration of an analyte or aliquot extracted from the sample or sample portion, measured in milligrams per milliliter.
+    Numeric value that represents the concentration of an analyte or aliquot extracted from the
+    sample or sample portion, measured in milligrams per milliliter.
   termDef:
     term: Biospecimen Analyte or Aliquot Extracted Concentration Milligram per Milliliter Value
     source: caDSR
@@ -417,22 +450,28 @@ current_weight:
 
 data_category: # TOREVIEW
   description: >
-    Broad categorization of the contents of the data file. #magic___^_^___line
+    Broad categorization of the contents of the data file.
+
 data_file_error_type: # TOREVIEW
   description: >
-    Type of error for the data file object. #magic___^_^___line
+    Type of error for the data file object.
+
 data_format: # TOREVIEW
   description: >
-    Format of the data files. #magic___^_^___line
+    Format of the data files.
+
 data_type: # TOREVIEW
   description: >
-    Specific content type of the data file. #magic___^_^___line
+    Specific content type of the data file.
+
 datetime:
   description: >
-    A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] #magic___^_^___line
+    A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
+
 days_to_birth:
   description: >
-    Time interval from a person's date of birth to the date of initial pathologic diagnosis, represented as a calculated negative number of days.
+    Time interval from a person's date of birth to the date of initial pathologic diagnosis,
+    represented as a calculated negative number of days.
   termDef:
     term: Person Birth Date Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -442,7 +481,8 @@ days_to_birth:
 
 days_to_collection:
   description: >
-    Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from the date of biospecimen collection to the date of initial pathologic
+    diagnosis, represented as a calculated number of days.
   termDef:
     term: Biospecimen Collection Date Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -452,7 +492,8 @@ days_to_collection:
 
 days_to_death:
   description: >
-    Time interval from a person's date of death to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from a person's date of death to the date of initial pathologic diagnosis,
+    represented as a calculated number of days.
   termDef:
     term: Death Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -462,7 +503,8 @@ days_to_death:
 
 days_to_hiv_diagnosis:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the date of human immunodeficiency diagnosis, represented as a calculated number of days.
+    Time interval from the date of the initial pathologic diagnosis to the date of human
+    immunodeficiency diagnosis, represented as a calculated number of days.
   termDef:
     term: Human Immunodeficiency Virus Diagnosis Subtract Initial Pathologic Diagnosis Time Duration Day Calculation Value
     source: caDSR
@@ -472,7 +514,8 @@ days_to_hiv_diagnosis:
 
 days_to_last_follow_up:
   description: >
-    Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from the date of last follow up to the date of initial pathologic diagnosis,
+    represented as a calculated number of days.
   termDef:
     term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -482,7 +525,8 @@ days_to_last_follow_up:
 
 days_to_last_known_disease_status:
   description: >
-    Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from the date of last follow up to the date of initial pathologic diagnosis,
+    represented as a calculated number of days.
   termDef:
     term: Last Communication Contact Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -492,7 +536,9 @@ days_to_last_known_disease_status:
 
 days_to_new_event:
   description: >
-    Time interval from the date of new tumor event including progression, recurrence and new primary malignacies to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from the date of new tumor event including progression, recurrence and new
+    primary malignacies to the date of initial pathologic diagnosis, represented as a calculated
+    number of days.
   termDef:
     term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -502,7 +548,9 @@ days_to_new_event:
 
 days_to_recurrence:
   description: >
-    Time interval from the date of new tumor event including progression, recurrence and new primary malignancies to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    Time interval from the date of new tumor event including progression, recurrence and new primary
+    malignancies to the date of initial pathologic diagnosis, represented as a calculated number of
+    days.
   termDef:
     term: New Tumor Event Less Initial Pathologic Diagnosis Date Calculated Day Value
     source: caDSR
@@ -512,7 +560,9 @@ days_to_recurrence:
 
 days_to_sample_procurement:
   description: >
-    The number of days from the date the patient was diagnosed to the date of the procedure that produced the sample. #magic___^_^___line
+    The number of days from the date the patient was diagnosed to the date of the procedure that
+    produced the sample.
+
 days_to_treatment:
   description: >
     Number of days from date of initial pathologic diagnosis that treatment began.
@@ -525,7 +575,8 @@ days_to_treatment:
 
 days_to_treatment_end:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the date of treatment end, represented as a calculated number of days.
+    Time interval from the date of the initial pathologic diagnosis to the date of treatment end,
+    represented as a calculated number of days.
   termDef:
     term: Treatment End Subtract First Pathologic Diagnosis Day Calculation Value
     source: caDSR
@@ -535,7 +586,8 @@ days_to_treatment_end:
 
 days_to_treatment_start:
   description: >
-    Time interval from the date of the initial pathologic diagnosis to the start of treatment, represented as a calculated number of days.
+    Time interval from the date of the initial pathologic diagnosis to the start of treatment,
+    represented as a calculated number of days.
   termDef:
     term: Treatment Start Subtract First Pathologic Diagnosis Time Day Calculation Value
     source: caDSR
@@ -545,7 +597,9 @@ days_to_treatment_start:
 
 diagnosis_pathologically_confirmed:
   description: >
-    The histologic description of tissue or cells confirmed by a pathology review of frozen or formalin fixed slide(s) completed after the diagnostic pathology review of the tumor sample used to extract analyte(s).
+    The histologic description of tissue or cells confirmed by a pathology review of frozen or
+    formalin fixed slide(s) completed after the diagnostic pathology review of the tumor sample used
+    to extract analyte(s).
   termDef:
     term: Post-Diagnostic Pathology Review Confirmation
     source: null
@@ -555,7 +609,8 @@ diagnosis_pathologically_confirmed:
 
 dlco_ref_predictive_percent:
   description: >
-    The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide detected in a patient's lungs.
+    The value, as a percentage of predicted lung volume, measuring the amount of carbon monoxide
+    detected in a patient's lungs.
   termDef:
     term: Lung Carbon Monoxide Diffusing Capability Test Assessment Predictive Value Percentage Value
     source: caDSR
@@ -563,7 +618,7 @@ dlco_ref_predictive_percent:
     cde_version: 1.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=2180255&version=1.0"
 
-encoding:
+encoding: 
   description: >
     Version of ASCII encoding of quality values found in the file.
   termDef:
@@ -595,7 +650,9 @@ estrogen_receptor_result_ihc:
 
 ethnicity:
   description: >
-    An individual's self-described social and cultural grouping, specifically whether an individual describes themselves as Hispanic or Latino. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    An individual's self-described social and cultural grouping, specifically whether an individual
+    describes themselves as Hispanic or Latino. The provided values are based on the categories
+    defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
   termDef:
     term: Ethnic Group Category Text
     source: caDSR
@@ -605,16 +662,20 @@ ethnicity:
 
 experiment_name: # TOREVIEW
   description: >
-    Submitter-defined name for the experiment. #magic___^_^___line
+    Submitter-defined name for the experiment.
+
 experimental_strategy: # TOREVIEW
   description: >
-    The sequencing strategy used to generate the data file. #magic___^_^___line
+    The sequencing strategy used to generate the data file.
+
 fastq_name: # TOREVIEW
   description: >
-    Names of FASTQs. #magic___^_^___line
+    Names of FASTQs.
+
 fev1_ref_post_bronch_percent:
   description: >
-    The percentage comparison to a normal value reference range of the volume of air that a patient can forcibly exhale from the lungs in one second post-bronchodilator.
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second post-bronchodilator.
   termDef:
     term: Post Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
     source: caDSR
@@ -624,7 +685,8 @@ fev1_ref_post_bronch_percent:
 
 fev1_ref_pre_bronch_percent:
   description: >
-    The percentage comparison to a normal value reference range of the volume of air that a patient can forcibly exhale from the lungs in one second pre-bronchodilator.
+    The percentage comparison to a normal value reference range of the volume of air that a
+    patient can forcibly exhale from the lungs in one second pre-bronchodilator.
   termDef:
     term: Pre Bronchodilator Lung Forced Expiratory Volume 1 Test Lab Percentage Value
     source: caDSR
@@ -634,7 +696,8 @@ fev1_ref_pre_bronch_percent:
 
 fev1_fvc_post_bronch_percent:
   description: >
-    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided by the Forced Vital Capacity (FVC) post-bronchodilator.
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) post-bronchodilator.
   termDef:
     term: Post Bronchodilator FEV1/FVC Percent Value
     source: caDSR
@@ -644,7 +707,8 @@ fev1_fvc_post_bronch_percent:
 
 fev1_fvc_pre_bronch_percent:
   description: >
-    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided by the Forced Vital Capacity (FVC) pre-bronchodilator.
+    Percentage value to represent result of Forced Expiratory Volume in 1 second (FEV1) divided
+    by the Forced Vital Capacity (FVC) pre-bronchodilator.
   termDef:
     term: Pre Bronchodilator FEV1/FVC Percent Value
     source: caDSR
@@ -654,7 +718,9 @@ fev1_fvc_pre_bronch_percent:
 
 figo_stage:
   description: >
-    The extent of a cervical or endometrial cancer within the body, especially whether the disease has spread from the original site to other parts of the body, as described by the International Federation of Gynecology and Obstetrics (FIGO) stages.
+    The extent of a cervical or endometrial cancer within the body, especially whether the
+    disease has spread from the original site to other parts of the body, as described by the
+    International Federation of Gynecology and Obstetrics (FIGO) stages.
   termDef:
     term: Gynecologic Tumor Grouping Cervical Endometrial FIGO 2009 Stage
     source: caDSR
@@ -664,16 +730,20 @@ figo_stage:
 
 file_name: # TOREVIEW
   description: >
-    The name (or part of a name) of a file (of any type). #magic___^_^___line
+    The name (or part of a name) of a file (of any type).
+
 file_size: # TOREVIEW
   description: >
-    The size of the data file (object) in bytes. #magic___^_^___line
+    The size of the data file (object) in bytes.
+
 file_state: # TOREVIEW
   description: >
-    The current state of the data file object. #magic___^_^___line
+    The current state of the data file object.
+
 flow_cell_barcode: # TOREVIEW
   description: >
-    Flow Cell Barcode. #magic___^_^___line
+    Flow Cell Barcode.
+
 freezing_method:
   description: >
     Text term that represents the method used for freezing the sample.
@@ -686,7 +756,9 @@ freezing_method:
 
 gender:
   description: >
-    Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]
+    Text designations that identify gender. Gender is described as the assemblage of properties that
+    distinguish people on the basis of their societal roles. [Explanatory Comment 1: Identification
+    of gender is based upon self-report and may come from a form, questionnaire, interview, etc.]
   termDef:
     term: Person Gender Text Type
     source: caDSR
@@ -726,7 +798,9 @@ her2_erbb2_result_fish:
 
 her2_erbb2_result_ihc:
   description: >
-    Text term to signify the result of the medical procedure that involves testing a sample of blood or tissue for HER2 by histochemical localization of immunoreactive substances using labeled antibodies as reagents.
+    Text term to signify the result of the medical procedure that involves testing a sample of
+    blood or tissue for HER2 by histochemical localization of immunoreactive substances using
+    labeled antibodies as reagents.
   termDef:
     term: Laboratory Procedure HER2/neu Immunohistochemistry Receptor Status
     source: caDSR
@@ -746,7 +820,8 @@ hiv_positive:
 
 hpv_positive_type:
   description: >
-    Text classification to represent the strain or type of human papillomavirus identified in an individual.
+    Text classification to represent the strain or type of human papillomavirus identified in an
+    individual.
   termDef:
     term: Human Papillomavirus Type
     source: caDSR
@@ -766,7 +841,8 @@ hpv_status:
 
 includes_spike_ins: # TOREVIEW
   description: >
-    Spike-in included? #magic___^_^___line
+    Spike-in included?
+
 initial_weight:
   description: >
     Numeric value that represents the initial weight of the sample, measured in milligrams.
@@ -779,7 +855,8 @@ initial_weight:
 
 instrument_model:
   description: >
-    Numeric value that represents the sample dimension that is greater than the shortest dimension and less than the longest dimension, measured in millimeters.
+    Numeric value that represents the sample dimension that is greater than the shortest
+    dimension and less than the longest dimension, measured in millimeters.
   termDef:
     term: Tissue Sample Intermediate Dimension Millimeter Measurement
     source: caDSR
@@ -789,10 +866,12 @@ instrument_model:
 
 intermediate_dimension: # TOREVIEW
   description: >
-    Intermediate dimension of the sample, in millimeters. #magic___^_^___line
+    Intermediate dimension of the sample, in millimeters.
+
 is_ffpe:
   description: >
-    Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in paraffin (FFPE).
+    Indicator to signify whether or not the tissue sample was fixed in formalin and embedded in
+    paraffin (FFPE).
   termDef:
     term: Specimen Processing Formalin Fixed Paraffin Embedded Tissue Indicator
     source: caDSR
@@ -802,7 +881,8 @@ is_ffpe:
 
 is_paired_end: # TOREVIEW
   description: >
-    Are the reads paired end? #magic___^_^___line
+    Are the reads paired end?
+
 last_known_disease_status:
   description: >
     Text term that describes the last known state or condition of an individual's neoplasm.
@@ -825,7 +905,8 @@ laterality:
 
 ldh_level_at_diagnosis:
   description: >
-    The 2 decimal place numeric laboratory value measured, assigned or computed related to the assessment of lactate dehydrogenase in a specimen.
+    The 2 decimal place numeric laboratory value measured, assigned or computed related to the
+    assessment of lactate dehydrogenase in a specimen.
   termDef:
     term: Laboratory Procedure Lactate Dehydrogenase Result Integer::2 Decimal Place Value
     source: caDSR
@@ -835,7 +916,8 @@ ldh_level_at_diagnosis:
 
 ldh_normal_range_upper:
   description: >
-    The top value of the range of statistical characteristics that are supposed to represent accepted standard, non-pathological pattern for lactate dehydrogenase (units not specified).
+    The top value of the range of statistical characteristics that are supposed to represent
+    accepted standard, non-pathological pattern for lactate dehydrogenase (units not specified).
   termDef:
     term: Laboratory Procedure Lactate Dehydrogenase Result Upper Limit of Normal Value
     source: caDSR
@@ -845,28 +927,36 @@ ldh_normal_range_upper:
 
 library_strategy: # TOREVIEW
   description: >
-    Library strategy. #magic___^_^___line
+    Library strategy.
+
 library_selection: # TOREVIEW
   description: >
-    Library Selection Method #magic___^_^___line
+    Library Selection Method
+
 library_name: # TOREVIEW
   description: >
-    Name of the library. #magic___^_^___line
+    Name of the library.
+
 library_preparation_kit_name: # TOREVIEW
   description: >
-    Name of Library Preparation Kit #magic___^_^___line
+    Name of Library Preparation Kit
+
 library_preparation_kit_vendor: # TOREVIEW
   description: >
-    Vendor of Library Preparation Kit #magic___^_^___line
+    Vendor of Library Preparation Kit
+
 library_preparation_kit_catalog_number: # TOREVIEW
   description: >
-    Catalog of Library Preparation Kit #magic___^_^___line
+    Catalog of Library Preparation Kit
+
 library_preparation_kit_version: # TOREVIEW
   description: >
-    Version of Library Preparation Kit #magic___^_^___line
+    Version of Library Preparation Kit
+
 library_strand: # TOREVIEW
   description: >
-    Library stranded-ness. #magic___^_^___line
+    Library stranded-ness.
+
 longest_dimension:
   description: >
     Numeric value that represents the longest dimension of the sample, measured in millimeters.
@@ -889,7 +979,8 @@ lymph_nodes_positive:
 
 lymphatic_invasion_present:
   description: >
-    A yes/no indicator to ask if small or thin-walled vessel invasion is present, indicating lymphatic involvement
+    A yes/no indicator to ask if small or thin-walled vessel invasion is present, indicating
+    lymphatic involvement
   termDef:
     term: Lymphatic/Small vessel Invasion Ind
     source: caDSR
@@ -919,7 +1010,9 @@ method_of_sample_procurement:
 
 md5sum: # TOREVIEW
   description: >
-    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital fingerprint. #magic___^_^___line
+    The 128-bit hash value expressed as a 32 digit hexadecimal number used as a file's digital
+    fingerprint.
+
 microsatellite_instability_abnormal:
   description: >
     The yes/no indicator to signify the status of a tumor for microsatellite instability.
@@ -932,7 +1025,13 @@ microsatellite_instability_abnormal:
 
 morphology:
   description: >
-    The third edition of the International Classification of Diseases for Oncology, published in 2000 used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms. The study of the structure of the cells and their arrangement to constitute tissues and, finally, the association among these to form organs. In pathology, the microscopic process of identifying normal and abnormal morphologic characteristics in tissues, by employing various cytochemical and immunocytochemical stains. A system of numbered categories for representation of data.
+    The third edition of the International Classification of Diseases for Oncology, published in
+    2000 used principally in tumor and cancer registries for coding the site (topography) and the
+    histology (morphology) of neoplasms. The study of the structure of the cells and their
+    arrangement to constitute tissues and, finally, the association among these to form organs. In
+    pathology, the microscopic process of identifying normal and abnormal morphologic
+    characteristics in tissues, by employing various cytochemical and immunocytochemical stains. A
+    system of numbered categories for representation of data.
   termDef:
     term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Histology Code
     source: caDSR
@@ -962,7 +1061,8 @@ new_event_type:
 
 normal_tumor_genotype_snp_match:
   description: >
-    Text term that represents whether or not the genotype of the normal tumor matches or if the data is not available.
+    Text term that represents whether or not the genotype of the normal tumor matches or if the data
+    is not available.
   termDef:
     term: Normal Tumor Genotype Match Indicator
     source: caDSR
@@ -972,7 +1072,8 @@ normal_tumor_genotype_snp_match:
 
 number_proliferating_cells:
   description: >
-    Numeric value that represents the count of proliferating cells determined during pathologic review of the sample slide(s).
+    Numeric value that represents the count of proliferating cells determined during pathologic
+    review of the sample slide(s).
   termDef:
     term: Pathology Review Slide Proliferating Cell Count
     source: caDSR
@@ -992,7 +1093,8 @@ oct_embedded:
 
 pack_years_smoked:
   description: >
-    Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked per day x number of years smoked divided by 20.
+    Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes
+    smoked per day x number of years smoked divided by 20.
   termDef:
     term: Person Cigarette Smoking History Pack Year Value
     source: caDSR
@@ -1002,7 +1104,8 @@ pack_years_smoked:
 
 percent_eosinophil_infiltration:
   description: >
-    Numeric value to represent the percentage of infiltration by eosinophils in a tumor sample or specimen.
+    Numeric value to represent the percentage of infiltration by eosinophils in a tumor sample or
+    specimen.
   termDef:
     term: Specimen Eosinophilia Percentage Value
     source: caDSR
@@ -1022,7 +1125,8 @@ percent_gc_content:
 
 percent_granulocyte_infiltration:
   description: >
-    Numeric value to represent the percentage of infiltration by granulocytes in a tumor sample or specimen.
+    Numeric value to represent the percentage of infiltration by granulocytes in a tumor sample or
+    specimen.
   termDef:
     term: Specimen Granulocyte Infiltration Percentage Value
     source: caDSR
@@ -1032,7 +1136,9 @@ percent_granulocyte_infiltration:
 
 percent_inflam_infiltration:
   description: >
-    Numeric value to represent local response to cellular injury, marked by capillary dilatation, edema and leukocyte infiltration; clinically, inflammation is manifest by reddness, heat, pain, swelling and loss of function, with the need to heal damaged tissue.
+    Numeric value to represent local response to cellular injury, marked by capillary dilatation,
+    edema and leukocyte infiltration; clinically, inflammation is manifest by reddness, heat, pain,
+    swelling and loss of function, with the need to heal damaged tissue.
   termDef:
     term: Specimen Inflammation Change Percentage Value
     source: caDSR
@@ -1042,7 +1148,8 @@ percent_inflam_infiltration:
 
 percent_lymphocyte_infiltration:
   description: >
-    Numeric value to represent the percentage of infiltration by lymphocytes in a solid tissue normal sample or specimen.
+    Numeric value to represent the percentage of infiltration by lymphocytes in a solid tissue
+    normal sample or specimen.
   termDef:
     term: Specimen Lymphocyte Infiltration Percentage Value
     source: caDSR
@@ -1072,7 +1179,8 @@ percent_necrosis:
 
 percent_neutrophil_infiltration:
   description: >
-    Numeric value to represent the percentage of infiltration by neutrophils in a tumor sample or specimen.
+    Numeric value to represent the percentage of infiltration by neutrophils in a tumor sample or
+    specimen.
   termDef:
     term: Malignant Neoplasm Neutrophil Infiltration Percentage Cell Value
     source: caDSR
@@ -1082,7 +1190,8 @@ percent_neutrophil_infiltration:
 
 percent_normal_cells:
   description: >
-    Numeric value to represent the percentage of normal cell content in a malignant tumor sample or specimen.
+    Numeric value to represent the percentage of normal cell content in a malignant tumor sample or
+    specimen.
   termDef:
     term: Malignant Neoplasm Normal Cell Percentage Value
     source: caDSR
@@ -1092,7 +1201,8 @@ percent_normal_cells:
 
 percent_stromal_cells:
   description: >
-    Numeric value to represent the percentage of reactive cells that are present in a malignant tumor sample or specimen but are not malignant such as fibroblasts, vascular structures, etc.
+    Numeric value to represent the percentage of reactive cells that are present in a malignant
+    tumor sample or specimen but are not malignant such as fibroblasts, vascular structures, etc.
   termDef:
     term: Malignant Neoplasm Stromal Cell Percentage Value
     source: caDSR
@@ -1122,7 +1232,8 @@ percent_tumor_nuclei:
 
 perineural_invasion_present:
   description: >
-    a yes/no indicator to ask if perineural invasion or infiltration of tumor or cancer is present.
+    a yes/no indicator to ask if perineural invasion or infiltration of tumor or cancer is
+    present.
   termDef:
     term: Tumor Perineural Invasion Ind
     source: caDSR
@@ -1132,7 +1243,8 @@ perineural_invasion_present:
 
 platform: # TOREVIEW
   description: >
-    Name of the platform used to obtain data. #magic___^_^___line
+    Name of the platform used to obtain data.
+
 portion_number:
   description: >
     Numeric value that represents the sequential number assigned to a portion of the sample.
@@ -1175,7 +1287,8 @@ primary_diagnosis:
 
 prior_malignancy:
   description: >
-    Text term to describe the patient's history of prior cancer diagnosis and the spatial location of any previous cancer occurrence.
+    Text term to describe the patient's history of prior cancer diagnosis and the spatial location
+    of any previous cancer occurrence.
   termDef:
     term: Prior Cancer Diagnosis Occurrence Description Text
     source: caDSR
@@ -1185,7 +1298,8 @@ prior_malignancy:
 
 prior_treatment:
   description: >
-    A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected.
+    A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents
+    received before the body specimen was collected.
   termDef:
     term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown Not Applicable Indicator
     source: caDSR
@@ -1195,7 +1309,8 @@ prior_treatment:
 
 progesterone_receptor_percent_positive_ihc:
   description: >
-    Classification to represent Progesterone Receptor Positive results expressed as a percentage value.
+    Classification to represent Progesterone Receptor Positive results expressed as a percentage
+    value.
   termDef:
     term: Progesterone Receptor Level Cell Percentage Category
     source: caDSR
@@ -1215,7 +1330,8 @@ progesterone_receptor_result_ihc:
 
 progression_or_recurrence:
   description: >
-    Yes/No/Unknown indicator to identify whether a patient has had a new tumor event after initial treatment.
+    Yes/No/Unknown indicator to identify whether a patient has had a new tumor event
+    after initial treatment.
   termDef:
     term: New Neoplasm Event Post Initial Therapy Indicator
     source: caDSR
@@ -1225,10 +1341,13 @@ progression_or_recurrence:
 
 project_id: # TOREVIEW
   description: >
-    Unique ID for any specific defined piece of work that is undertaken or attempted to meet a single requirement. #magic___^_^___line
+    Unique ID for any specific defined piece of work that is undertaken or attempted to
+    meet a single requirement.
+
 qc_metric_state:
   description: >
-    State classification given by FASTQC for the metric. Metric specific details about the states are available on their website.
+    State classification given by FASTQC for the metric. Metric specific details about the states
+    are available on their website.
   termDef:
     term: QC Metric State
     source: FastQC
@@ -1238,7 +1357,11 @@ qc_metric_state:
 
 race:
   description: >
-    An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution. The provided values are based on the categories defined by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
+    An arbitrary classification of a taxonomic group that is a division of a species. It usually
+    arises as a consequence of geographical isolation within a species and is characterized by
+    shared heredity, physical attributes and behavior, and in the case of humans, by common history,
+    nationality, or geographic distribution. The provided values are based on the categories defined
+    by the U.S. Office of Management and Business and used by the U.S. Census Bureau.
   termDef:
     term: Race Category Text
     source: caDSR
@@ -1248,10 +1371,12 @@ race:
 
 read_length: # TOREVIEW
   description: >
-    The length of the reads. #magic___^_^___line
+    The length of the reads.
+
 read_group_name: # TOREVIEW
   description: >
-    The name of the read group. #magic___^_^___line
+    The name of the read group.
+
 relationship_age_at_diagnosis:
   description: >
     The age (in years) when the patient's relative was first diagnosed.
@@ -1264,7 +1389,8 @@ relationship_age_at_diagnosis:
 
 relationship_type:
   description: >
-    The subgroup that describes the state of connectedness between members of the unit of society organized around kinship ties.
+    The subgroup that describes the state of connectedness between members of the unit of society
+    organized around kinship ties.
   termDef:
     term: Family Member Relationship Type
     source: caDSR
@@ -1274,7 +1400,8 @@ relationship_type:
 
 relative_with_cancer_history:
   description: >
-    Indicator to signify whether or not an individual's biological relative has been diagnosed with another type of cancer.
+    Indicator to signify whether or not an individual's biological relative has been diagnosed with
+    another type of cancer.
   termDef:
     term: Other Cancer Biological Relative History Indicator
     source: caDSR
@@ -1294,7 +1421,8 @@ residual_disease:
 
 RIN:
   description: >
-    A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the RNA sample including the presence or absence of degradation products.
+    A numerical assessment of the integrity of RNA based on the entire electrophoretic trace of the
+    RNA sample including the presence or absence of degradation products.
   termDef:
     term: Biospecimen RNA Integrity Number Value
     source: caDSR
@@ -1314,13 +1442,16 @@ sample_type:
 
 sample_type_id: # TOREVIEW
   description: >
-    The accompanying sample type id for the sample type. #magic___^_^___line
+    The accompanying sample type id for the sample type.
+
 section_location: # TOREVIEW
   description: >
-    Tissue source of the slide. #magic___^_^___line
+    Tissue source of the slide.
+
 sequencing_center: # TOREVIEW
   description: >
-    Name of the center that provided the sequence files. #magic___^_^___line
+    Name of the center that provided the sequence files.
+
 shortest_dimension:
   description: >
     Numeric value that represents the shortest dimension of the sample, measured in millimeters.
@@ -1333,7 +1464,11 @@ shortest_dimension:
 
 site_of_resection_or_biopsy:
   description: >
-    The third edition of the International Classification of Diseases for Oncology, published in 2000, used principally in tumor and cancer registries for coding the site (topography) and the histology (morphology) of neoplasms. The description of an anatomical region or of a body part. Named locations of, or within, the body. A system of numbered categories for representation of data.
+    The third edition of the International Classification of Diseases for Oncology, published in
+    2000, used principally in tumor and cancer registries for coding the site (topography) and the
+    histology (morphology) of neoplasms. The description of an anatomical region or of a body part.
+    Named locations of, or within, the body. A system of numbered categories for representation of
+    data.
   termDef:
     term: International Classification of Diseases for Oncology, Third Edition ICD-O-3 Site Code
     source: caDSR
@@ -1343,7 +1478,8 @@ site_of_resection_or_biopsy:
 
 size_selection_range: # TOREVIEW
   description: >
-    Range of size selection. #magic___^_^___line
+    Range of size selection.
+
 smoking_history:
   description: >
     Category describing current smoking status and smoking history as self-reported by a patient.
@@ -1356,7 +1492,8 @@ smoking_history:
 
 smoking_intensity:
   description: >
-    Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes smoked per day x number of years smoked divided by 20
+    Numeric computed value to represent lifetime tobacco exposure defined as number of cigarettes
+    smoked per day x number of years smoked divided by 20
   termDef:
     term: Person Cigarette Smoking History Pack Year Value
     source: caDSR
@@ -1366,10 +1503,12 @@ smoking_intensity:
 
 source_center: # TOREVIEW
   description: >
-    Name of the center that provided the item. #magic___^_^___line
+    Name of the center that provided the item.
+
 spectrophotometer_method:
   description: >
-    Name of the method used to determine the concentration of purified nucleic acid within a solution.
+    Name of the method used to determine the concentration of purified nucleic acid within a
+    solution.
   termDef:
     term: Purification Nucleic Acid Solution Concentration Determination Method Type
     source: caDSR
@@ -1379,28 +1518,36 @@ spectrophotometer_method:
 
 spike_ins_fasta: # TOREVIEW
   description: >
-    Name of the FASTA file that contains the spike-in sequences. #magic___^_^___line
+    Name of the FASTA file that contains the spike-in sequences.
+
 spike_ins_concentration: # TOREVIEW
   description: >
-    Spike in concentration. #magic___^_^___line
+    Spike in concentration.
+
 state: # TOREVIEW
   description: >
-    The current state of the object. #magic___^_^___line
+    The current state of the object.
+
 target_capture_kit_name: # TOREVIEW
   description: >
-    Name of Target Capture Kit. #magic___^_^___line
+    Name of Target Capture Kit.
+
 target_capture_kit_vendor: # TOREVIEW
   description: >
-    Vendor of Target Capture Kit. #magic___^_^___line
+    Vendor of Target Capture Kit.
+
 target_capture_kit_catalog_number: # TOREVIEW
   description: >
-    Catalog of Target Capture Kit. #magic___^_^___line
+    Catalog of Target Capture Kit.
+
 target_capture_kit_version: # TOREVIEW
   description: >
-    Version of Target Capture Kit. #magic___^_^___line
+    Version of Target Capture Kit.
+
 target_capture_kit_target_region: # TOREVIEW
   description: >
-    Target Capture Kit BED file. #magic___^_^___line
+    Target Capture Kit BED file.
+
 therapeutic_agents:
   description: >
     Text identification of the individual agent(s) used as part of a prior treatment regimen.
@@ -1413,7 +1560,8 @@ therapeutic_agents:
 
 time_between_clamping_and_freezing:
   description: >
-    Numeric representation of the elapsed time between the surgical clamping of blood supply and freezing of the sample, measured in minutes.
+    Numeric representation of the elapsed time between the surgical clamping of blood supply and
+    freezing of the sample, measured in minutes.
   termDef:
     term: Tissue Sample Clamping and Freezing Elapsed Minute Time
     source: caDSR
@@ -1423,7 +1571,8 @@ time_between_clamping_and_freezing:
 
 time_between_excision_and_freezing:
   description: >
-    Numeric representation of the elapsed time between the excision and freezing of the sample, measured in minutes.
+    Numeric representation of the elapsed time between the excision and freezing of the sample,
+    measured in minutes.
   termDef:
     term: Tissue Sample Excision and Freezing Elapsed Minute Time
     source: caDSR
@@ -1443,7 +1592,8 @@ tissue_or_organ_of_origin:
 
 tissue_type:
   description: >
-    Text term that represents a description of the kind of tissue collected with respect to disease status or proximity to tumor tissue.
+    Text term that represents a description of the kind of tissue collected with respect to disease
+    status or proximity to tumor tissue.
   termDef:
     term: Tissue Sample Description Type
     source: caDSR
@@ -1453,7 +1603,8 @@ tissue_type:
 
 to_trim_adapter_sequence: # TOREVIEW
   description: >
-    Does the user suggest adapter trimming? #magic___^_^___line
+    Does the user suggest adapter trimming?
+
 tobacco_smoking_onset_year:
   description: >
     The year in which the participant began smoking.
@@ -1476,7 +1627,8 @@ tobacco_smoking_quit_year:
 
 tobacco_smoking_status:
   description: >
-    Category describing current smoking status and smoking history as self-reported by a patient.
+    Category describing current smoking status and smoking history as self-reported by a
+    patient.
   termDef:
     term: Patient Smoking History Category
     source: caDSR
@@ -1516,7 +1668,8 @@ treatment_intent_type:
 
 treatment_or_therapy:
   description: >
-    A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents received before the body specimen was collected.
+    A yes/no/unknown/not applicable indicator related to the administration of therapeutic agents
+    received before the body specimen was collected.
   termDef:
     term: Therapeutic Procedure Prior Specimen Collection Administered Yes No Unknown Not Applicable Indicator
     source: caDSR
@@ -1546,7 +1699,8 @@ treatment_type:
 
 tumor_grade:
   description: >
-    Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation and aggressiveness.
+    Numeric value to express the degree of abnormality of cancer cells, a measure of differentiation
+    and aggressiveness.
   termDef:
     term: Neoplasm Histologic Grade
     source: caDSR
@@ -1556,13 +1710,16 @@ tumor_grade:
 
 tumor_code: # TOREVIEW
   description: >
-    Diagnostic tumor code of the tissue sample source. #magic___^_^___line
+    Diagnostic tumor code of the tissue sample source.
+
 tumor_code_id: # TOREVIEW
   description: >
-    BCR-defined id code for the tumor sample. #magic___^_^___line
+    BCR-defined id code for the tumor sample.
+
 tumor_descriptor:
   description: >
-    Text that describes the kind of disease present in the tumor specimen as related to a specific timepoint.
+    Text that describes the kind of disease present in the tumor specimen as related to a specific
+    timepoint.
   termDef:
     term: Tumor Tissue Disease Description Type
     source: caDSR
@@ -1572,7 +1729,11 @@ tumor_descriptor:
 
 tumor_stage:
   description: >
-    The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system. These items should accompany the tumor_stage value as associated metadata.
+    The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether
+    lymph nodes contain cancer, and whether the cancer has spread from the original site to other
+    parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and
+    accepted staging system. These items should accompany the tumor_stage value as associated
+    metadata.
   termDef:
     term: Tumor Stage
     source: NCIt
@@ -1582,7 +1743,10 @@ tumor_stage:
 
 UUID:
   description: >
-    A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be different. Its relatively small size lends itself well to sorting, ordering, and hashing of all sorts, storing in databases, simple allocation, and ease of programming in general.
+    A 128-bit identifier. Depending on the mechanism used to generate it, it is either guaranteed to
+    be different from all other UUIDs/GUIDs generated until 3400 AD or extremely likely to be
+    different. Its relatively small size lends itself well to sorting, ordering, and hashing of all
+    sorts, storing in databases, simple allocation, and ease of programming in general.
   termDef:
     term: Universally Unique Identifier
     source: NCIt
@@ -1592,7 +1756,8 @@ UUID:
 
 vascular_invasion_present:
   description: >
-    The yes/no indicator to ask if large vessel or venous invasion was detected by surgery or presence in a tumor specimen.
+    The yes/no indicator to ask if large vessel or venous invasion was detected by surgery or
+    presence in a tumor specimen.
   termDef:
     term: Tumor Vascular Invasion Ind-3
     source: caDSR
@@ -1622,7 +1787,8 @@ weight:
 
 well_number:
   description: >
-    Numeric value that represents the the well location within a plate for the analyte or aliquot from the sample.
+    Numeric value that represents the the well location within a plate for the analyte or
+    aliquot from the sample.
   termDef:
     term: Biospecimen Analyte or Aliquot Plate Well Number
     source: caDSR
@@ -1632,7 +1798,8 @@ well_number:
 
 workflow_type:
   description: >
-    Generic name for the workflow used to analyze a data set. #magic___^_^___line
+    Generic name for the workflow used to analyze a data set.
+
 year_of_birth:
   description: >
     Numeric value to represent the calendar year in which an individual was born.

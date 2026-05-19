@@ -13,15 +13,15 @@ submittable: false
 validators: null
 
 systemProperties:
-- id
+  - id
 
 required:
-- name
-- dbgap_accession_number
+  - name
+  - dbgap_accession_number
 
 uniqueKeys:
-- [id]
-- [name]
+  - [id]
+  - [name]
 
 links: []
 
