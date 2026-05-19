@@ -181,7 +181,7 @@
   },
   "labs.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "NCD_lab",
+    "id": "ncd_lab",
     "title": "NCD Labs",
     "type": "object",
     "category": "clinical",
@@ -196,7 +196,7 @@
         "name": "subjects",
         "backref": "NCD_labs",
         "label": "describes",
-        "target_type": "Subject",
+        "target_type": "subject",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -1072,7 +1072,7 @@
         "name": "subjects",
         "backref": "NCD_lifestyle_exposures",
         "label": "describes",
-        "target_type": "Subject",
+        "target_type": "subject",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -2515,7 +2515,7 @@
   },
   "vital_signs.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "NCD_vital",
+    "id": "ncd_vital",
     "title": "NCD Vitals",
     "type": "object",
     "category": "clinical",
@@ -2530,7 +2530,7 @@
         "name": "subjects",
         "backref": "NCD_vitals",
         "label": "describes",
-        "target_type": "Subject",
+        "target_type": "subject",
         "multiplicity": "many_to_one",
         "required": true
       }
