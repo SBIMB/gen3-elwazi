@@ -10,3 +10,8 @@ because a default helm chart was deployed, overlaying both deployments.
 2. **Break the Portal**: We delete the duplicate traefik-gateway in the default namespace. (The moment we do this, Gen3 goes completely offline).
 3. **Rewire Gen3**: We intercept the gen3-core-route and rewrite its YAML to point across the cluster boundary directly at the kube-system namespace.
 4. **Wire Grafana**: We deploy the Grafana route, pointing it to kube-system as well.
+
+**27/05/2026**
+* Grafana dashboard now points to a local host on the same IP: 146.141.240.78.
+* This needs to get routed via an *A Record* but this should be contacted through Wits ICT
+* Security must be added such that we have `HTTPS` - this can be the `wits-tls-secret` on the cluster, which is the same certifications for the webiste. Grafana dashboard should be tied to Gen3 access.
