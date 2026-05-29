@@ -66,7 +66,7 @@ kubectl apply -f traefik/051-httproute.yaml
 
 # 4. Initialise the localised environment using standard Helm charts
 # Ensure values.yaml references the correct remote schema.json URL
-helm upgrade --install gen3 ./gen3 -f gen3/values.yaml
+helm upgrade gen3-dev gen3/gen3 -f values.yaml -f versions.yaml
 
 ```
 
