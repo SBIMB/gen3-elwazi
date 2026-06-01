@@ -19,10 +19,16 @@ spec:
   - name: web
     port: 8080
     protocol: HTTP
+    allowedRoutes:
+      namespaces:
+        from: All
   - name: websecure
     port: 8443
     protocol: HTTPS
+    allowedRoutes:
+      namespaces:
+        from: All
     tls:
       mode: Terminate
       certificateRefs:
-      - name: gen3-certs
+      - name: wits-tls-secret
