@@ -1,0 +1,41 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: dummy_file
+title: Dummy File
+type: object
+category: data_file
+description: A dummy file to stop the portal from crashing.
+links:
+  - name: subjects
+    backref: dummy_files
+    label: pertains_to
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+required:
+  - type
+  - submitter_id
+  - file_name
+  - file_size
+  - data_format
+  - data_type
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  
+  type:
+    enum: [dummy_file]
+  submitter_id:
+    type: string
+  file_name:
+    type: string
+  file_size:
+    type: integer
+  data_format:
+    type: string
+  data_type:
+    type: string
+  data_category:       # <-- Here is the exact fix you need!
+    type: string
+  object_id:
+    type: string
+  md5sum:
+    type: string
