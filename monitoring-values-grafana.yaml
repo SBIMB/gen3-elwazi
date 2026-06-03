@@ -1,0 +1,21 @@
+prometheus:
+  prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: "longhorn"
+          resources: 
+            requests:
+              storage: 50Gi
+
+grafana:
+  adminPassword: "Gen3GrafanaAdmin2026!"
+  persistence:
+    enabled: true
+    storageClassName: "longhorn"
+    size: 10Gi 
+
+  env:
+    GF_SERVER_DOMAIN: gen3-dev.core.wits.ac.za
+    GF_SERVER_ROOT_URL: "https://gen3-dev.core.wits.ac.za/grafana/"
+    GF_SERVER_SERVE_FROM_SUB_PATH: "true"

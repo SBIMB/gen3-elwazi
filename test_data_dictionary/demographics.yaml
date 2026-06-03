@@ -1,0 +1,81 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "demographic"
+title: "Demographic"
+type: "object"
+category: "administrative"
+program: "*"
+project: "*"
+description: "SES Indicators"
+additionalProperties: false
+submittable: true
+validators: null
+
+# Demographic to Subject node links
+links:
+  - name: subjects
+    backref: demographic
+    label: member_of
+    target_type: "subject"
+    multiplicity: "one_to_one"
+    required: true 
+    
+required:
+  - submitter_id
+  - type
+  - subjects
+  - sex
+  - ethnicity
+  - home_language
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+
+ 
+  submitter_id:
+    type: "string"
+    description: "Unique identifier for the individual (Individual ID)"
+ 
+  sex:
+    description: "The biological sex of the individual."
+    enum:
+      - "Male"
+      - "Female"
+      - "Other"
+      
+  ethnicity:
+    type: "string"
+    description: "The ethnic or tribal affiliation of the indivial."
+  mother_ethnicity:
+    type: "string"
+    description: "The ethnic or tribal affiliation of the indivial's mother."
+  father_ethnicity:
+    type: "string"
+    description: "The ethnic or tribal affiliation of the indivial's father."
+  mat_gmother_ethnicity: 
+    type: "string"
+    description: "Maternal grandmother ethnicity"
+  mat_gfather_ethnicity: 
+    type: "string"
+    description: "Maternal grandfather ethnicity"
+    
+  home_language:
+    type: "string"
+    description: "The primary language spoken at home"
+  mother_home_language:
+    type: "string"
+    description: "The mother's primary language spoken at home"
+  father_home_language:
+    type: "string"
+    description: "The father's primary language spoken at home"
+
+uniqueKeys:
+ - [id]
+ - [project_id, submitter_id]

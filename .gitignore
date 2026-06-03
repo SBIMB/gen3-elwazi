@@ -32,4 +32,5 @@ gen3-minio-client/gen3minioclient/minio_downloads
 gen3-minio-client/gen3minioclient/output.log
 gen3-minio-client/gen3minioclient/output_manifest_file.tsv
 gen3-minio-client/tests
-gen3-minio-client/data
+gen3-minio-client/datagen3/values.yaml.backup_*
+gen3-elwazi/gen3/values.yaml

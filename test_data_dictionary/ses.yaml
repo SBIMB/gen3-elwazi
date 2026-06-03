@@ -1,0 +1,82 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "socioeconomic"
+title: "Socioeconomic Status"
+type: "object"
+category: "clinical"
+program: "*"
+project: "*"
+description: "Individual-level socioeconomic indicators and employment data."
+additionalProperties: false
+submittable: true
+validators: null
+
+links:
+  - name: subjects
+    backref: socioeconomics
+    label: describes
+    target_type: "subject"
+    multiplicity: "many_to_one" # Many-to-one allows for updates over multiple survey rounds
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+  - currently_working
+  - education_level
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  submitter_id:
+    type: "string"
+
+  currently_working:
+    description: "Is the individual currently employed?"
+    enum:
+      - "Yes"
+      - "No"
+      - "Unknown"
+      - "Refused"
+
+  education_level:
+    description: "Highest level of education completed based on survey categories."
+    type: string
+    enum:
+      - "none"
+      - "incomplete_primary"
+      - "complete_primary"
+      - "incomplete_secondary"
+      - "complete_secondary"
+      - "tertiary_college_university"
+      - "unknown"
+      - "refused"
+      - "not_applicable"
+      - "missing"
+    
+  marital_status:
+    description: "Current marital status"
+    enum:
+      - "single"
+      - "cohabiting"
+      - "married"
+      - "separated"
+      - "divorced"
+      - "widowed"
+      - "refused"
+      - "unknown"
+
+  occupation:
+    type: "string"
+    description: "Primary type of work or occupation."
+
+uniqueKeys:
+ - [id]
+ - [project_id, submitter_id]
