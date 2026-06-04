@@ -38,7 +38,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -118,7 +120,6 @@
     ],
     "required": [
       "type",
-      "programs",
       "code",
       "name",
       "dbgap_accession_number"
@@ -132,7 +133,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "programs": {},
+      "programs": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "code": {
         "type": "string",
         "description": "Short code for the project (e.g., MADIVA-01)"
@@ -217,7 +220,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string"
       },
@@ -951,7 +956,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string"
       },
@@ -1095,7 +1102,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string"
       },
@@ -2554,7 +2563,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -4742,7 +4753,9 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {},
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "submitter_id": {
         "type": "string"
       },
