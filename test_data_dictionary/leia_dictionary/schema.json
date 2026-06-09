@@ -388,7 +388,7 @@
           {
             "type": "integer",
             "minimum": 0,
-            "maximum": 23
+            "maximum": 60
           },
           {
             "type": "integer",
@@ -548,7 +548,52 @@
           "999-missing"
         ]
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
+  },
+  "submission_config.yaml": {
+    "submission_order": [
+      {
+        "node": "project",
+        "path": "mock_data/project.json"
+      },
+      {
+        "node": "subject",
+        "path": "mock_data/subject.json"
+      },
+      {
+        "node": "demographic",
+        "path": "mock_data/demographics.json"
+      },
+      {
+        "node": "socioeconomic",
+        "path": "mock_data/socioeconomic.json"
+      },
+      {
+        "node": "ncd_lab",
+        "path": "mock_data/ncd_lab.json"
+      },
+      {
+        "node": "ncd_vital",
+        "path": "mock_data/ncd_vital.json"
+      },
+      {
+        "node": "NCD_lifestyle_exposure",
+        "path": "mock_data/NCD_lifestyle_exposure.json"
+      },
+      {
+        "node": "medical_history",
+        "path": "mock_data/medical_history.json"
+      }
+    ]
   },
   "_definitions.yaml": {
     "id": "_definitions",
@@ -2525,7 +2570,16 @@
           "999-missing"
         ]
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "vital_signs.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -2893,7 +2947,16 @@
         ],
         "description": "Has the patient taken any medication in the past 12 hours"
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "_terms.yaml": {
     "id": "_terms",
@@ -7206,7 +7269,16 @@
           "999-missing"
         ]
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "core_metadata_collection.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
