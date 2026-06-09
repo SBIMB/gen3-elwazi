@@ -559,42 +559,6 @@
       ]
     ]
   },
-  "submission_config.yaml": {
-    "submission_order": [
-      {
-        "node": "project",
-        "path": "mock_data/project.json"
-      },
-      {
-        "node": "subject",
-        "path": "mock_data/subject.json"
-      },
-      {
-        "node": "demographic",
-        "path": "mock_data/demographics.json"
-      },
-      {
-        "node": "socioeconomic",
-        "path": "mock_data/socioeconomic.json"
-      },
-      {
-        "node": "ncd_lab",
-        "path": "mock_data/ncd_lab.json"
-      },
-      {
-        "node": "ncd_vital",
-        "path": "mock_data/ncd_vital.json"
-      },
-      {
-        "node": "NCD_lifestyle_exposure",
-        "path": "mock_data/NCD_lifestyle_exposure.json"
-      },
-      {
-        "node": "medical_history",
-        "path": "mock_data/medical_history.json"
-      }
-    ]
-  },
   "_definitions.yaml": {
     "id": "_definitions",
     "UUID": {
