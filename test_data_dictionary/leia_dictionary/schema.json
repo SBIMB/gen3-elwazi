@@ -239,12 +239,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -257,12 +257,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -275,14 +275,14 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -111,
-              -222,
-              -333,
-              -444,
-              -888,
-              -999
+              "111-out of range (lower bound)",
+              "222-out of range (upper bound)",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -295,12 +295,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -313,12 +313,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -331,12 +331,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -349,12 +349,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -372,12 +372,12 @@
             "maximum": 23
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -391,12 +391,12 @@
             "maximum": 60
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1207,12 +1207,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1237,12 +1237,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1309,12 +1309,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1448,12 +1448,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1477,12 +1477,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1495,12 +1495,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1513,12 +1513,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1531,12 +1531,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1560,12 +1560,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1589,12 +1589,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1607,12 +1607,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1719,12 +1719,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1831,12 +1831,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1849,12 +1849,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1900,12 +1900,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1918,12 +1918,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1947,12 +1947,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1965,12 +1965,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -1983,12 +1983,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2012,12 +2012,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2030,12 +2030,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2048,12 +2048,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2066,12 +2066,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2095,12 +2095,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2113,12 +2113,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2131,12 +2131,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2160,12 +2160,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2178,12 +2178,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2196,12 +2196,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2214,12 +2214,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2232,12 +2232,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2250,12 +2250,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2268,12 +2268,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2286,12 +2286,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2304,12 +2304,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2322,12 +2322,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2340,12 +2340,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2476,12 +2476,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2503,12 +2503,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2602,12 +2602,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2620,12 +2620,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2638,12 +2638,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2656,12 +2656,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2674,34 +2674,34 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
       },
       "health_rating": {
         "description": "Patient's self-rated health",
-        "type": "integer",
+        "type": "string",
         "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          999
+          "1-Very good",
+          "2-Good",
+          "3-Moderate",
+          "4-Bad",
+          "5-Very bad",
+          "999-missing"
         ]
       },
       "preg": {
-        "type": "integer",
+        "type": "string",
         "enum": [
-          0,
-          1,
-          333
+          "0-no",
+          "1-yes",
+          "333-missing"
         ],
         "description": "Patient is currently pregnant at time of observation with status codes"
       },
@@ -2712,12 +2712,12 @@
             "type": "number"
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2729,12 +2729,12 @@
             "type": "number"
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -2746,169 +2746,156 @@
             "type": "number"
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
       },
       "mens_today": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Patient is currently menstruating at time of observation with status codes"
       },
       "hiv_status_self_rpt": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Patient's self-reported HIV status"
       },
       "fd_eat_drink_12h": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Has the patient eaten or drank anything in the past 12 hours"
       },
       "poor_vision": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Patient's vision"
       },
       "amputation": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of amputation in the patient"
       },
       "body_swelling": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of swelling in the patient"
       },
       "oedema": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of oedema in the patient"
       },
       "diff_brthng_cur": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Difficulty breathing"
       },
       "fever": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of fever in the patient"
       },
       "dehydrated": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of dehydration in the patient"
       },
       "convulsion": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of fits or convulsions in the patient"
       },
       "injury": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Presence of injury in the patient"
       },
       "any_rx_12h": {
-        "type": "integer",
         "enum": [
-          0,
-          1,
-          333,
-          444,
-          888,
-          999
+          "0-no",
+          "1-yes",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Has the patient taken any medication in the past 12 hours"
       }
@@ -4822,12 +4809,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -5432,12 +5419,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -5715,12 +5702,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -5981,12 +5968,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6043,12 +6030,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6313,12 +6300,12 @@
             "maximum": 12
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6332,12 +6319,12 @@
             "maximum": 2050
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6416,12 +6403,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6757,12 +6744,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -6841,12 +6828,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -7057,12 +7044,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
@@ -7161,12 +7148,12 @@
             "minimum": 0
           },
           {
-            "type": "integer",
+            "type": "string",
             "enum": [
-              -333,
-              -444,
-              -888,
-              -999
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
             ]
           }
         ]
