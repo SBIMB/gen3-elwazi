@@ -4641,6 +4641,13 @@
         "format": "date",
         "description": "Best estimate of the date of birth"
       },
+      "sex": {
+        "type": "string",
+        "enum": [
+          "1-Male",
+          "2-Female"
+        ]
+      },
       "dod": {
         "type": "string",
         "format": "date",
