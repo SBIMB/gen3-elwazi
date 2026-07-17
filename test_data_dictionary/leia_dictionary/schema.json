@@ -412,7 +412,7 @@
           "999-missing"
         ]
       },
-      "bil_urine_test_result": {
+      "bil_urine_test_results": {
         "description": "BIL (bilirubin) test result or status",
         "enum": [
           "1-negative",
@@ -492,7 +492,7 @@
           "999-missing"
         ]
       },
-      "urine_uro": {
+      "urine_ubg": {
         "description": "Urine urobilinogen",
         "enum": [
           "0-negative",
@@ -2767,7 +2767,7 @@
         ],
         "description": "Patient is currently menstruating at time of observation with status codes"
       },
-      "hiv_status_self_rpt": {
+      "hiv_status_slf_rpt": {
         "enum": [
           "0-no",
           "1-yes",
@@ -2844,7 +2844,7 @@
         ],
         "description": "Difficulty breathing"
       },
-      "fever": {
+      "fever_cur": {
         "enum": [
           "0-no",
           "1-yes",
@@ -4957,7 +4957,7 @@
           "999-missing"
         ]
       },
-      "hpt_adv_rd_Salt": {
+      "hpt_adv_rd_salt": {
         "description": "Advice to reduce salt intake in the past 30 days.",
         "enum": [
           "0-no",
@@ -5297,7 +5297,7 @@
           "999-missing"
         ]
       },
-      "diab_rx_trad_cur": {
+      "diab_rx_trad_curr": {
         "description": "Are you currently taking any herbal or traditional remedy for your diabetes?",
         "enum": [
           "0-no",
@@ -5418,7 +5418,7 @@
           "999-missing"
         ]
       },
-      "stroke_first_year": {
+      "stroke_year_first": {
         "description": "In what year was your first stroke",
         "anyOf": [
           {
@@ -6298,7 +6298,7 @@
           "888-not applicable"
         ]
       },
-      "mens_last_period_mm": {
+      "mens_last_period_month": {
         "description": "Date of last period (mm)",
         "anyOf": [
           {
@@ -6317,7 +6317,7 @@
           }
         ]
       },
-      "mens_last_period_yyyy": {
+      "mens_last_period_year": {
         "description": "Date of last period (yyyy)",
         "anyOf": [
           {
@@ -6336,7 +6336,7 @@
           }
         ]
       },
-      "att_clnic_pub_ever": {
+      "att_clinic_pub_ever": {
         "description": "Attended public clinic",
         "enum": [
           "0-no",
@@ -6347,7 +6347,7 @@
           "999-missing"
         ]
       },
-      "att_clnic_priv_3m": {
+      "att_clinic_priv_3m": {
         "description": "Attended private clinic in the last 3 months",
         "enum": [
           "0-no",
@@ -6358,7 +6358,7 @@
           "999-missing"
         ]
       },
-      "att_clnic_public_3m": {
+      "att_clinic_public_3m": {
         "description": "Attended public clinic in the last 3 months",
         "enum": [
           "0-no",
