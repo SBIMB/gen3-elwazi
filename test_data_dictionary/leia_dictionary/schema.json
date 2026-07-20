@@ -4644,8 +4644,9 @@
       "sex": {
         "type": "string",
         "enum": [
-          "1-Male",
-          "2-Female"
+          "Male",
+          "Female",
+          "Other"
         ]
       },
       "dod": {
