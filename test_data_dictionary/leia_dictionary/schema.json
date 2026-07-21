@@ -50,40 +50,164 @@
         "enum": [
           "Male",
           "Female",
-          "Other"
+          "Other",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "ethnicity": {
-        "type": "string",
-        "description": "The ethnic or tribal affiliation of the indivial."
+        "description": "The ethnic or tribal affiliation of the indivial.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "mother_ethnicity": {
-        "type": "string",
-        "description": "The ethnic or tribal affiliation of the indivial's mother."
+        "description": "The ethnic or tribal affiliation of the indivial's mother.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "father_ethnicity": {
-        "type": "string",
-        "description": "The ethnic or tribal affiliation of the indivial's father."
+        "description": "The ethnic or tribal affiliation of the indivial's father.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "mat_gmother_ethnicity": {
-        "type": "string",
-        "description": "Maternal grandmother ethnicity"
+        "description": "Maternal grandmother ethnicity",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "mat_gfather_ethnicity": {
-        "type": "string",
-        "description": "Maternal grandfather ethnicity"
+        "description": "Maternal grandfather ethnicity",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "home_language": {
-        "type": "string",
-        "description": "The primary language spoken at home"
+        "description": "The primary language spoken at home",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "mother_home_language": {
-        "type": "string",
-        "description": "The mother's primary language spoken at home"
+        "description": "The mother's primary language spoken at home",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "father_home_language": {
-        "type": "string",
-        "description": "The father's primary language spoken at home"
+        "description": "The father's primary language spoken at home",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "0-no",
+              "1-yes",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       }
     },
     "uniqueKeys": [
@@ -361,7 +485,21 @@
       },
       "pi_acr": {
         "type": "number",
-        "description": "ACR (albumin:creatinine ratio)"
+        "description": "ACR (albumin:creatinine ratio)",
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "specimen_taken_h": {
         "description": "Time of day blood specimen taken (24 hour clock), hours",
@@ -419,6 +557,9 @@
           "2-1+",
           "3-2+",
           "4-3+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -427,6 +568,9 @@
         "enum": [
           "0-negative",
           "1-positive",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -440,6 +584,9 @@
           "5-1.020",
           "6-1.025",
           "7-1.030",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -451,6 +598,9 @@
           "7-7",
           "8-8",
           "9-9",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -461,6 +611,9 @@
           "2-1+",
           "3-2+",
           "4-3+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -469,6 +622,9 @@
         "enum": [
           "0-negative",
           "1-positive",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -479,6 +635,9 @@
           "2-1+",
           "3-2+",
           "4-3+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -489,6 +648,9 @@
           "2-1+",
           "3-2+",
           "4-3+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -500,6 +662,9 @@
           "2-2+",
           "3-3+",
           "4-4+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -511,6 +676,9 @@
           "2-2+",
           "3-3+",
           "4-4+",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -977,7 +1145,11 @@
           "Yes",
           "No",
           "Unknown",
-          "Refused"
+          "Refused",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "education_level": {
@@ -990,10 +1162,10 @@
           "incomplete_secondary",
           "complete_secondary",
           "tertiary_college_university",
-          "unknown",
-          "refused",
-          "not_applicable",
-          "missing"
+          "333-unknown",
+          "444-refused",
+          "888-not_applicable",
+          "999-missing"
         ]
       },
       "marital_status": {
@@ -1006,12 +1178,29 @@
           "divorced",
           "widowed",
           "refused",
-          "unknown"
+          "unknown",
+          "444-refused",
+          "888-not_applicable",
+          "999-missing"
         ]
       },
       "occupation": {
         "type": "string",
-        "description": "Primary type of work or occupation."
+        "description": "Primary type of work or occupation.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       }
     },
     "uniqueKeys": [
@@ -1128,7 +1317,10 @@
         "enum": [
           "0-no",
           "1-yes",
-          "333-don't know"
+          "333-don't know",
+          "444-refused",
+          "888-not_applicable",
+          "999-missing"
         ]
       },
       "trad_rx_12m": {
@@ -1140,6 +1332,8 @@
           "3-more than three times",
           "4- not in the last 12 months",
           "333-don't know",
+          "444-refused",
+          "888-not_applicable",
           "999-missing"
         ]
       },
@@ -1149,7 +1343,9 @@
           "0-no",
           "1-yes",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "adv_stp_alcohol": {
@@ -1158,7 +1354,9 @@
           "0-no",
           "1-yes",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "adv_ex": {
@@ -1167,7 +1365,9 @@
           "0-no",
           "1-yes",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "adv_wt_loss": {
@@ -1176,7 +1376,9 @@
           "0-no",
           "1-yes",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "adv_change_diet": {
@@ -1185,7 +1387,9 @@
           "0-no",
           "1-yes",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "sex_ever": {
@@ -1226,7 +1430,10 @@
           "4-Too afraid to get HIV\"",
           "5-Prioritise study",
           "996-Other",
-          "888-Not Applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "sex_partners_24m": {
@@ -1298,7 +1505,11 @@
           "2-Knowing whether or not the partner is having sex with other people besides you",
           "3-Feeling I have to have sex (not because I want to) because the partner took me to restaurants and/or bought me gifts",
           "4-Feeling I have to have sex (not because I want to) because I am married to the partner or in a committed relationship",
-          "5-Feeling sexually or physically attracted to that partner"
+          "5-Feeling sexually or physically attracted to that partner",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "sex_partners_no_ever": {
@@ -1325,6 +1536,7 @@
           "1-There was some circumstance which forced me to have sex at that age",
           "2-I chose to start having sex at that age",
           "3-I refuse to answer",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -1370,7 +1582,10 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
-          "888-Not Applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "tobac_daily": {
@@ -1393,7 +1608,10 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
-          "888-Not Applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "tobac_smkls_ever": {
@@ -1437,7 +1655,10 @@
           "2-once per week",
           "3-Once a months",
           "4-when gets a chance",
-          "888-Not Applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "tobac_start_age": {
@@ -1684,7 +1905,10 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "alco_freq_12m": {
@@ -1696,7 +1920,10 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "alco_freq_30d": {
@@ -1708,7 +1935,10 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "alco_num_7d": {
@@ -1736,7 +1966,10 @@
           "2-1-2",
           "3-3-4",
           "4-5 or more",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "alco_bing_y": {
@@ -1756,7 +1989,11 @@
           "1-Usually with meals",
           "2-Sometimes with meals",
           "3-Rarely with meals",
-          "4-Never with meals"
+          "4-Never with meals",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "alco_hangov": {
@@ -1878,7 +2115,11 @@
           "3-Once",
           "4-2 to 3 times",
           "5-4 to 5 times",
-          "6-More than 5 times"
+          "6-More than 5 times",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "sugar_add": {
@@ -2382,7 +2623,11 @@
           "5-Less than once a month",
           "6-2 to 3 times a year",
           "7-Once a year",
-          "8-Never"
+          "8-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_chips_freq": {
@@ -2396,7 +2641,11 @@
           "6-2 to 3 times a month",
           "7-Once a month",
           "8-Less than once a month",
-          "9-Never"
+          "9-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_mandazi": {
@@ -2410,7 +2659,11 @@
           "6-2 to 3 times a month",
           "7-Once a month",
           "8-Less than once a month",
-          "9-Never"
+          "9-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_samosa": {
@@ -2424,7 +2677,11 @@
           "6-2 to 3 times a month",
           "7-Once a month",
           "8-Less than once a month",
-          "9-Never"
+          "9-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_fried_chicken": {
@@ -2438,7 +2695,11 @@
           "6-2 to 3 times a month",
           "7-Once a month",
           "8-Less than once a month",
-          "9-Never"
+          "9-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_fried_fish": {
@@ -2452,7 +2713,11 @@
           "6-2 to 3 times a month",
           "7-Once a month",
           "8-Less than once a month",
-          "9-Never"
+          "9-Never",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_oil_type": {
@@ -2465,7 +2730,10 @@
           "5-other",
           "6-None in particular",
           "7-None used",
-          "333-Don\u2019t know"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "fd_meals_out_home_ave": {
@@ -2492,7 +2760,11 @@
           "1-None",
           "2-Mild",
           "3-Severe",
-          "4-Extreme"
+          "4-Extreme",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "avg_sleep": {
@@ -2693,6 +2965,9 @@
           "3-Moderate",
           "4-Bad",
           "5-Very bad",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
           "999-missing"
         ]
       },
@@ -2700,8 +2975,10 @@
         "type": "string",
         "enum": [
           "0-no",
-          "1-yes",
-          "333-missing"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ],
         "description": "Patient is currently pregnant at time of observation with status codes"
       },
@@ -4646,31 +4923,103 @@
         "enum": [
           "Male",
           "Female",
-          "Other"
+          "Other",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "dod": {
-        "type": "string",
-        "format": "date",
-        "description": "Best estimate of the date of death"
+        "description": "Best estimate of the date of death",
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "Male",
+              "Female",
+              "Other",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "date_into_dsa": {
-        "type": "string",
-        "format": "date",
-        "description": "Date the individual entered the study area"
+        "description": "Date the individual entered the study area",
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "date_out_of_dsa": {
-        "type": "string",
-        "format": "date",
-        "description": "Date the individual exited the study area"
+        "description": "Date the individual exited the study area",
+        "anyOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "mother_id": {
-        "type": "string",
-        "description": "Unique identifier for the individual's mother."
+        "description": "Unique identifier for the individual's mother.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       },
       "father_id": {
-        "type": "string",
-        "description": "Unique identifier for the individual's father."
+        "description": "Unique identifier for the individual's father.",
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
+        ]
       }
     },
     "uniqueKeys": [
@@ -4806,7 +5155,10 @@
           "2-two",
           "3-three",
           "4-more than three",
-          "888-Not Applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "births": {
@@ -4856,7 +5208,10 @@
           "2-1 to 5 yrs",
           "3-6 to 10 yrs",
           "4-> 10 yrs",
-          "333-don't know"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "hpt_preg": {
@@ -5108,7 +5463,10 @@
           "2-1 to 5 yrs",
           "3-6 to 10 yrs",
           "4-> 10 yrs",
-          "888-Not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-Not applicable",
+          "999-missing"
         ]
       },
       "diab_rx_ever": {
@@ -5811,7 +6169,10 @@
         "enum": [
           "1-Relieved",
           "2-Not relieved",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "angina_xp_leftarm": {
@@ -6122,7 +6483,9 @@
           "3-6 to 10 years",
           "4-longer than 10 years",
           "333-don't know",
-          "888-Not Applicable"
+          "444-refused",
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "chol_rx_ever": {
@@ -6550,7 +6913,9 @@
           "1-younger than 18 years old",
           "2-18 years or older",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "kidney_bladder_inf_freq": {
@@ -6559,7 +6924,9 @@
           "1-once",
           "2-more than once",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "kidney_stones_ever": {
@@ -6579,7 +6946,9 @@
           "1-younger than 18 years old",
           "2-18 years or older",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "kidney_stones_freq_cal": {
@@ -6588,7 +6957,9 @@
           "1-once",
           "2-more than once",
           "333-don't know",
-          "888-not applicable"
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "kidney_stones_fh": {
@@ -6686,7 +7057,10 @@
           "2-6 months to 1 year ago",
           "3-More than a year ago",
           "4-Never tested",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "hiv_care": {
@@ -7070,7 +7444,10 @@
           "3-1 to 13",
           "4-14 to 18",
           "5 More than 18",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "circumcision_where": {
@@ -7079,7 +7456,10 @@
           "1-Initiation",
           "2-Hospital",
           "3-Other",
-          "888-not applicable"
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "obes_mom": {
@@ -7204,7 +7584,11 @@
         "enum": [
           "0-TB",
           "1-cancer",
-          "2-other"
+          "2-other",
+          "333-don't know",
+          "444-refused",
+          "888-not applicable",
+          "999-missing"
         ]
       },
       "chron_rx_cur": {
