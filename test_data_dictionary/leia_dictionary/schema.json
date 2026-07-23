@@ -1120,9 +1120,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects",
-      "currently_working",
-      "education_level"
+      "subjects"
     ],
     "systemProperties": [
       "id",
@@ -1184,12 +1182,11 @@
           "999-missing"
         ]
       },
-      "occupation": {
-        "type": "string",
-        "description": "Primary type of work or occupation.",
+      "education_years": {
+        "description": "Years of education",
         "anyOf": [
           {
-            "type": "string"
+            "type": "number"
           },
           {
             "type": "string",
