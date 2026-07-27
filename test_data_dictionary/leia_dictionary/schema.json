@@ -2932,7 +2932,8 @@
           "1-Stop or slow down",
           "2-Carry on after taking a pain relieving medicine that dissolves in your mouth",
           "3-Carry on walking",
-          "888-Not Applicable"
+          "888-Not Applicable",
+          "999-missing"
         ]
       },
       "angina_stand": {
