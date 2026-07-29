@@ -350,6 +350,9 @@
       "submitter_id": {
         "type": "string"
       },
+      "source": {
+        "type": "string"
+      },
       "obs_date": {
         "type": "string",
         "format": "date",
@@ -1900,6 +1903,9 @@
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
+        "type": "string"
+      },
+      "source": {
         "type": "string"
       },
       "obs_date": {
@@ -4439,6 +4445,9 @@
       "submitter_id": {
         "type": "string"
       },
+      "source": {
+        "type": "string"
+      },
       "obs_date": {
         "type": "string",
         "format": "date",
@@ -5393,6 +5402,9 @@
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
+      },
+      "source": {
+        "type": "string"
       },
       "obs_date": {
         "type": "string",
