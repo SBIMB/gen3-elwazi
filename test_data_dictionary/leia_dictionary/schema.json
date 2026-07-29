@@ -4582,7 +4582,6 @@
         ]
       },
       "pi_acr": {
-        "type": "number",
         "description": "ACR (albumin:creatinine ratio)",
         "anyOf": [
           {
@@ -4802,7 +4801,7 @@
           "999-missing"
         ]
       },
-      "oedema": {
+      "oedema_lvl": {
         "description": "Severity of oedema in the patient",
         "enum": [
           "1-mild",
@@ -5653,7 +5652,7 @@
           "888-not applicable",
           "999-missing"
         ],
-        "description": "Presence of oedema in the patient"
+        "description": "Presence of pedal oedema in the patient"
       },
       "diff_brthng_cur": {
         "enum": [
