@@ -4602,7 +4602,7 @@
         "description": "Time of day blood specimen taken (24 hour clock), hours",
         "anyOf": [
           {
-            "type": "integer",
+            "type": "number",
             "minimum": 0,
             "maximum": 23
           },
@@ -4614,6 +4614,9 @@
               "888-not applicable",
               "999-missing"
             ]
+          },
+          {
+            "type": "null"
           }
         ]
       },
@@ -4621,9 +4624,9 @@
         "description": "Time of day blood specimen taken (24 hour clock), minutes",
         "anyOf": [
           {
-            "type": "integer",
+            "type": "number",
             "minimum": 0,
-            "maximum": 60
+            "maximum": 59
           },
           {
             "type": "string",
@@ -4633,6 +4636,9 @@
               "888-not applicable",
               "999-missing"
             ]
+          },
+          {
+            "type": "null"
           }
         ]
       },
