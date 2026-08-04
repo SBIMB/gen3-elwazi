@@ -5248,7 +5248,7 @@
         "description": "Is the individual currently employed?",
         "enum": [
           "1-yes",
-          "2-no",
+          "0-no",
           "333-don't know",
           "444-refused",
           "888-not applicable",
@@ -5526,6 +5526,7 @@
         "type": "string",
         "enum": [
           "0-no",
+          "1-yes",
           "333-don't know",
           "444-refused",
           "888-not applicable",
