@@ -5244,6 +5244,11 @@
       "submitter_id": {
         "type": "string"
       },
+      "obs_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date of observation"
+      },
       "currently_working": {
         "description": "Is the individual currently employed?",
         "enum": [
