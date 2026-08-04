@@ -1,0 +1,16 @@
+SELECT 'individuals' AS table_name, COUNT(*) AS row_count 
+FROM individuals 
+WHERE individual_id = 'BXMCM'
+
+UNION ALL
+
+SELECT 'ncdindicators' AS table_name, COUNT(*) AS row_count 
+FROM ncdindicators 
+WHERE individual_id = 'BXMCM'
+
+UNION ALL
+
+SELECT 'individualsesindicators' AS table_name, COUNT(*) AS row_count 
+FROM individualsesindicators 
+WHERE individual_id = 'BXMCM';
+

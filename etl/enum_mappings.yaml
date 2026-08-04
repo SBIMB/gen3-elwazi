@@ -1,0 +1,2707 @@
+nodes:
+  demographic.yaml:
+    sex:
+      1: 1-Male
+      2: 2-Female
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    ethnicity:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mother_ethnicity:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    father_ethnicity:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mat_gmother_ethnicity:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mat_gfather_ethnicity:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    home_language:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mother_home_language:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    father_home_language:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  ncd_lifestyle.yaml:
+    trad_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not_applicable
+      999: 999-missing
+    trad_rx_12m:
+      0: 0-once
+      1: 1-twice
+      2: 2-three
+      3: 3-more than three times
+      4: 4- not in the last 12 months
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not_applicable
+      999: 999-missing
+    adv_stp_smk:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    adv_stp_alcohol:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    adv_ex:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    adv_wt_loss:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    adv_change_diet:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_age_first:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_never_reason:
+      1: 1-Too young
+      2: 2-Religious beliefs
+      3: 3-Waiting to marry
+      4: 4-Too afraid to get HIV"
+      5: 5-Prioritise study
+      996: 996-Other
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    sex_partners_24m:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_4_money_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_4_money_condom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_violence:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_violence_nocondom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_importance_choose_partner:
+      1: 1-Knowing whether or not the partner has HIV
+      2: 2-Knowing whether or not the partner is having sex with other people besides
+        you
+      3: 3-Feeling I have to have sex (not because I want to) because the partner
+        took me to restaurants and/or bought me gifts
+      4: 4-Feeling I have to have sex (not because I want to) because I am married
+        to the partner or in a committed relationship
+      5: 5-Feeling sexually or physically attracted to that partner
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_partners_no_ever:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sex_choose_start:
+      1: 1-There was some circumstance which forced me to have sex at that age
+      2: 2-I chose to start having sex at that age
+      3: 3-I refuse to answer
+      888: 888-not applicable
+      999: 999-missing
+    sex_no_condom_hiv_person:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_freq:
+      1: 1-Daily
+      2: 2-5-6 days per week
+      3: 3-1-4 days per week
+      4: 4-1-3 days per month
+      5: 5-Less than once per month
+      6: 6-when I get a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    tobac_daily:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_freq_30d:
+      1: 1-Daily
+      2: 2-5-6 days per week
+      3: 3-1-4 days per week
+      4: 4-1-3 days per month
+      5: 5-Less than once per month
+      6: 6-when I get a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    tobac_smkls_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_smkls_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_smkls_daily:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_smkls_freq_cat:
+      0: 0-daily
+      1: 1-2 to 3 x per week
+      2: 2-once per week
+      3: 3-Once a months
+      4: 4-when gets a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    tobac_start_age:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_start_age_cat:
+      1: 1-younger than 18 years old
+      2: 2-18 years or older
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_c_cig:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_c_snf:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_c_pi:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_age_stp:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tobac_p_daily:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    smk_start_yrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    smk_stop:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    smk_stop_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    smk_stop_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_30d:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_type:
+      1: 1-beer
+      2: 2-wine
+      3: 3-spirits
+      4: 4-home brew
+      5: 5-other
+      444: 444-refused
+      333: 333-don't know
+      888: 888-not applicable
+      999: 999-missing
+    alco_freq:
+      1: 1-Daily
+      2: 2-5-6 days per week
+      3: 3-1-4 days per week
+      4: 4-1-3 days per month
+      5: 5-Less than once per month
+      6: 6-when I get a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_freq_12m:
+      1: 1-Daily
+      2: 2-5-6 days per week
+      3: 3-1-4 days per week
+      4: 4-1-3 days per month
+      5: 5-Less than once per month
+      6: 6-when I get a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_freq_30d:
+      1: 1-Daily
+      2: 2-5-6 days per week
+      3: 3-1-4 days per week
+      4: 4-1-3 days per month
+      5: 5-Less than once per month
+      6: 6-when I get a chance
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_num_7d:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_num_drnk:
+      1: 1-Less than 1
+      2: 2-1-2
+      3: 3-3-4
+      4: 4-5 or more
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_bing_y:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_with_meals_30d:
+      1: 1-Usually with meals
+      2: 2-Sometimes with meals
+      3: 3-Rarely with meals
+      4: 4-Never with meals
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_hangov:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_cutdown:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alco_last_take:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    drug_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    drugs_injected:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    alcohol_drugs_fam:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    drnk_suc:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    drnk_juice:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    soft_drink_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    water_freq:
+      1: 1- Never
+      2: 2-Less than once
+      3: 3-Once
+      4: 4-2 to 3 times
+      5: 5-4 to 5 times
+      6: 6-More than 5 times
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sugar_add:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sugar_tea_spoon:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    sugar_per_day:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vpa:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vpa_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vpa_hrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vpa_minutes:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_mpa:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_mpa_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_mpa_hrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_mpa_minutes:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_mvpa:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_sitting_or_standing:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_walk_bicycle_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_walk_bicycle_hrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_walk_bicycle_min:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vigorous_sports:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vigorous_sports_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_vigorous_sports_min:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_moderate_sports_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_moderate_sports_hrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_moderate_sports_min:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_sitting_min:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    actv_sleeping_hrs:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_fruit_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_fruitservings:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_veg_days:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_veg_servings:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_veg_salt_cooking:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_veg_salt_eating:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_red_meat_freq:
+      1: 1-Daily
+      2: 2-5 to 6 days per week
+      3: 3-1 to 4 days per week
+      4: 4-1 to 3 days per week
+      5: 5-Less than once a month
+      6: 6-2 to 3 times a year
+      7: 7-Once a year
+      8: 8-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_chips_freq:
+      1: 1-More than once a day
+      2: 2-Once daily
+      3: 3-5 to 6 days a week
+      4: 4-3 to 4 days a week
+      5: 5-1 to 2 times a week
+      6: 6-2 to 3 times a month
+      7: 7-Once a month
+      8: 8-Less than once a month
+      9: 9-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_mandazi:
+      1: 1-More than once a day
+      2: 2-Once daily
+      3: 3-5 to 6 days a week
+      4: 4-3 to 4 days a week
+      5: 5-1 to 2 times a week
+      6: 6-2 to 3 times a month
+      7: 7-Once a month
+      8: 8-Less than once a month
+      9: 9-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_samosa:
+      1: 1-More than once a day
+      2: 2-Once daily
+      3: 3-5 to 6 days a week
+      4: 4-3 to 4 days a week
+      5: 5-1 to 2 times a week
+      6: 6-2 to 3 times a month
+      7: 7-Once a month
+      8: 8-Less than once a month
+      9: 9-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_fried_chicken:
+      1: 1-More than once a day
+      2: 2-Once daily
+      3: 3-5 to 6 days a week
+      4: 4-3 to 4 days a week
+      5: 5-1 to 2 times a week
+      6: 6-2 to 3 times a month
+      7: 7-Once a month
+      8: 8-Less than once a month
+      9: 9-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_fried_fish:
+      1: 1-More than once a day
+      2: 2-Once daily
+      3: 3-5 to 6 days a week
+      4: 4-3 to 4 days a week
+      5: 5-1 to 2 times a week
+      6: 6-2 to 3 times a month
+      7: 7-Once a month
+      8: 8-Less than once a month
+      9: 9-Never
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_oil_type:
+      1: 1-Vegetable oil
+      2: 2-Lard or suet
+      3: 3-Butter or ghee
+      4: 4-Margarine
+      5: 5-other
+      6: 6-None in particular
+      7: 7-None used
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_meals_out_home_ave:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    work_difficulty:
+      1: 1-None
+      2: 2-Mild
+      3: 3-Severe
+      4: 4-Extreme
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    avg_sleep:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    pesticide_xp:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    pesticide_xp_region:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  medical_history.yaml:
+    contracep:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    preg_num_cat:
+      0: 0-none
+      1: 1-one
+      2: 2-two
+      3: 3-three
+      4: 4-more than three
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    births:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bp_measured_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_duration:
+      1: 1-< 1 yr
+      2: 2-1 to 5 yrs
+      3: 3-6 to 10 yrs
+      4: 4-> 10 yrs
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_preg:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_trad_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_rx_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_adv_rd_salt:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_adv_wt_loss_30d:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_adv_stp_smk_30d:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_adv_ex_30d:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_fhx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hpt_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_hx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_duration:
+      1: 1-<year
+      2: 2-1 to 5 yrs
+      3: 3-6 to 10 yrs
+      4: 4-> 10 yrs
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not applicable
+      999: 999-missing
+    diab_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_pills:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_insu:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_insu_today:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_insu_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_insu_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_wt_loss:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_diet:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_phy_act:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_adv_wt_loss:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_adv_stp_smk:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_adv_ex:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_trad_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_trad_curr:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_measured:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_fhx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_other_fam:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diab_rx_other_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_year_first:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_trans_isc_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_wkness:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_numb:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_paralysis_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    vision_problem:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_blind:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_hl_vis:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_undstn:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_verbal:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_rx_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_rx_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stoke_interfer_daily_activity:
+      0: 0-Not at all
+      1: 1-A little
+      2: 2-A lot
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_fhx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    stroke_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    asthma_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    asthma_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    asthma_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_diag_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_rx_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_rx_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_walk_uphill:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_walk_ordinarily:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_do_when_pain:
+      1: 1-Stop or slow down
+      2: 2-Carry on after taking a pain relieving medicine that dissolves in your
+        mouth
+      3: 3-Carry on walking
+      888: 888-Not Applicable
+      999: 999-missing
+    angina_stand:
+      1: 1-Relieved
+      2: 2-Not relieved
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_xp_leftarm:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_xp_lowerchest:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_xp_upperchest:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_symptoms_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_fhx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    angina_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fail:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fail_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fail_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fail_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_atck_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_atck_year_diagnosed:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_atck_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_atck_rx_current:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_atck_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_other_diag_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fhx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hrt_fam_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_dur:
+      1: 1-< 1 year
+      2: 2-1 to 5 years
+      3: 3-6 to 10 years
+      4: 4-longer than 10 years
+      333: 333-don't know
+      444: 444-refused
+      888: 888-Not Applicable
+      999: 999-missing
+    chol_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_2w:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_trad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_wt_loss:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_diet:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_phy_act:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_rx_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_fam:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chol_fam_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mens_stop_days:
+      0: 0-1 or 2 days ago
+      1: 1-3 or more days ago
+      333: 333-don't know
+      888: 888-not applicable
+      999: 999-missing
+    mens_last_period_month:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mens_last_period_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    att_clinic_pub_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    att_clinic_priv_3m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    att_clinic_public_3m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_heard:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_low_func:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_disease_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_diag_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_rx:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_test_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_dur:
+      1: 1-less than one year
+      2: 2-1 to 5 years
+      3: 3-6 to 10 years
+      4: 4-longer than 10 years
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_fh:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_fail_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_bladder_inf_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_bladder_inf_age:
+      1: 1-younger than 18 years old
+      2: 2-18 years or older
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_bladder_inf_freq:
+      1: 1-once
+      2: 2-more than once
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_age_cal:
+      1: 1-younger than 18 years old
+      2: 2-18 years or older
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_freq_cal:
+      1: 1-once
+      2: 2-more than once
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_fh:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_parents:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_sibling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_children:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_stones_other:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    kidney_problems:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_counselled:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_tested:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_tested_when_c:
+      1: 1-In the last 6 months
+      2: 2-6 months to 1 year ago
+      3: 3-More than a year ago
+      4: 4-Never tested
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_care:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_rx_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_rx_trad_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_rx_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_rx_trad_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    tb_counsel:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_any_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_any_diag_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_brst_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_cerv_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_prost_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_other_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_other_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_cerv_mother:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_prost_father:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    canc_breast_mother:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    std_trichomonas_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    std_genital_herpes:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    std_syphilis:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    std_chancroid:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    std_pid:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bil_test_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bil_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bil_rx_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bil_rx_freq:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    circumcised:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    circumcised_age:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    circumcised_when:
+      1: 1-Birth
+      2: 2-Infant (less 1 year old)
+      3: 3-1 to 13
+      4: 4-14 to 18
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    circumcision_where:
+      1: 1-Initiation
+      2: 2-Hospital
+      3: 3-Other
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    obes_mom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    obes_dad:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    malaria_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    malaria_ever_12m:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    thyroid_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    liver_dis_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    liver_dis_diag_year:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    pp_neur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_diet_change:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chron_rx_ever:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chron_other_name:
+      0: 0-TB
+      1: 1-cancer
+      2: 2-other
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    chron_rx_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    seizure:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  ncd_lab.yaml:
+    poc_hb:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    insulin_fasting:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bg_mmol_fst:
+      111: 111-out of range (lower bound)
+      222: 222-out of range (upper bound)
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bg_mmol_random:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    ldl_mmol:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hdl_mmol:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    trigs_mmol:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    pi_acr:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    specimen_taken_h:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    specimen_taken_m:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_test_result:
+      0: 0-no
+      1: 1-yes
+      2: 2-indeterminate
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bil_urine_test_results:
+      1: 1-negative
+      2: 2-1+
+      3: 3-2+
+      4: 4-3+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_preg_tst:
+      0: 0-negative
+      1: 1-positive
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_sg:
+      1: 1-1.000
+      2: 2-1.005
+      3: 3-1.010
+      4: 4-1.015
+      5: 5-1.020
+      6: 6-1.025
+      7: 7-1.030
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_ph:
+      5: 5-5
+      6: 6-6
+      7: 7-7
+      8: 8-8
+      9: 9-9
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_leuk:
+      1: 1-negative
+      2: 2-1+
+      3: 3-2+
+      4: 4-3+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_nit:
+      0: 0-negative
+      1: 1-positive
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_pro:
+      1: 1-negative
+      2: 2-1+
+      3: 3-2+
+      4: 4-3+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_ket:
+      1: 1-negative
+      2: 2-1+
+      3: 3-2+
+      4: 4-3+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_ubg:
+      0: 0-negative
+      1: 1-1+
+      2: 2-2+
+      3: 3-3+
+      4: 4-4+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    urine_ery:
+      0: 0-negative
+      1: 1-1+
+      2: 2-2+
+      3: 3-3+
+      4: 4-4+
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    schistosom:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    anaemia:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    oedema_lvl:
+      1: 1-mild
+      2: 2-moderate
+      3: 3-severe
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  socioeconomic.yaml:
+    currently_working:
+      1: 1-yes
+      2: 2-no
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    education_level:
+      0: 0-none
+      1: 1-incomplete_primary
+      2: 2-complete_primary
+      3: 3-incomplete_secondary
+      4: 4-complete_secondary
+      5: 5-tertiary_college_university
+      333: 333-unknown
+      444: 444-refused
+      888: 888-not_applicable
+      999: 999-missing
+    marital_status:
+      1: 1-single
+      2: 2-cohabiting
+      3: 3-married
+      4: 4-separated
+      5: 5-divorced
+      6: 6-widowed
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not_applicable
+      999: 999-missing
+    education_years:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  ncd_vital.yaml:
+    height_cm:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    weight_kg:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    waist_cm:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bmi:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hip_cm:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    health_rating:
+      1: 1-Very good
+      2: 2-Good
+      3: 3-Moderate
+      4: 4-Bad
+      5: 5-Very bad
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    preg:
+      0: 0-no
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    pulse:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bp_sys:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    bp_dia:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mens_today:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    hiv_status_slf_rpt:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fd_eat_drink_12h:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    poor_vision:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    amputation:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    body_swelling:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    oedema:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    diff_brthng_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    fever_cur:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    dehydrated:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    convulsion:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    injury:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    any_rx_12h:
+      0: 0-no
+      1: 1-yes
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+  subject.yaml:
+    sex:
+      1: 1-Male
+      2: 2-Female
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    dod:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    date_into_dsa:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    date_out_of_dsa:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    mother_id:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+    father_id:
+      333: 333-don't know
+      444: 444-refused
+      888: 888-not applicable
+      999: 999-missing
+global:
+  missing_codes:
+    -333: 333
+    -444: 444
+    -777: 777
+    -888: 888
+    -999: 999
+    -111: 111
+    -222: 222

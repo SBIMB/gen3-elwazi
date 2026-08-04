@@ -1,0 +1,18 @@
+{
+  "*type": "project", 
+  "date_collected": null, 
+  "support_source": null, 
+  "support_id": null, 
+  "availability_type": null, 
+  "investigator_affiliation": null, 
+  "submitter_id": null, 
+  "*name": null, 
+  "investigator_name": null, 
+  "project_id": null, 
+  "availability_mechanism": null, 
+  "*code": null, 
+  "programs": {
+    "name": null
+  }, 
+  "*dbgap_accession_number": null
+}

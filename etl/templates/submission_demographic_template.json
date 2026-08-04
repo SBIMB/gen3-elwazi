@@ -1,0 +1,17 @@
+{
+  "mat_gmother_ethnicity": null, 
+  "*type": "demographic", 
+  "father_home_language": null, 
+  "*home_language": null, 
+  "*submitter_id": null, 
+  "father_ethnicity": null, 
+  "*ethnicity": null, 
+  "*sex": null, 
+  "project_id": null, 
+  "mother_ethnicity": null, 
+  "mat_gfather_ethnicity": null, 
+  "mother_home_language": null, 
+  "*subjects": {
+    "submitter_id": null
+  }
+}

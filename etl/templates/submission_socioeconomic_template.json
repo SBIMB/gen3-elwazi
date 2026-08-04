@@ -1,0 +1,12 @@
+{
+  "marital_status": null, 
+  "education_level": null, 
+  "project_id": null, 
+  "*submitter_id": null, 
+  "currently_working": null, 
+  "*subjects": {
+    "submitter_id": null
+  }, 
+  "education_years": null, 
+  "*type": "socioeconomic"
+}

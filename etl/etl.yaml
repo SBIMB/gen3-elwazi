@@ -1,0 +1,272 @@
+etl:
+  etlMapping:
+    mappings:
+      - name: subject
+        doc_type: subject
+        type: aggregator
+        root: subject
+        props:
+          - name: submitter_id
+          - name: project_id
+          - name: auth_resource_path
+          - name: hdss_name
+          - name: dob
+        flatten_props:
+          - path: demographic
+            props:
+              - name: sex
+                src: sex
+              - name: ethnicity
+                src: ethnicity
+              - name: home_language
+                src: home_language
+        aggregated_props:
+          - name: _demographic_count
+            path: demographic
+            fn: count
+          - name: _ncd_lab_count
+            path: NCD_labs
+            fn: count
+          - name: _ncd_vital_count
+            path: NCD_vitals
+            fn: count
+
+          # Vitals categories
+          - name: bp_sys
+            path: NCD_vitals
+            src: bp_sys
+            fn: max
+          - name: bmi
+            path: NCD_vitals
+            src: bmi
+            fn: max
+          - name: pulse
+            path: NCD_vitals
+            src: pulse
+            fn: max
+          - name: health_rating
+            path: NCD_vitals
+            src: health_rating
+            fn: set
+
+          # Labs
+          - name: hiv_test_result
+            path: NCD_labs
+            src: hiv_test_result
+            fn: set
+          - name: bg_mmol_fst
+            path: NCD_labs
+            src: bg_mmol_fst
+            fn: max
+          - name: hdl_mmol
+            path: NCD_labs
+            src: hdl_mmol
+            fn: max
+          - name: ldl_mmol
+            path: NCD_labs
+            src: ldl_mmol
+            fn: max
+          - name: insulin_fasting
+            path: NCD_labs
+            src: insulin_fasting
+            fn: max
+          - name: urine_sg
+            path: NCD_labs
+            src: urine_sg
+            fn: set
+          - name: urine_ph
+            path: NCD_labs
+            src: urine_ph
+            fn: set
+          - name: urine_leuk
+            path: NCD_labs
+            src: urine_leuk
+            fn: set
+          - name: urine_nit
+            path: NCD_labs
+            src: urine_nit
+            fn: set
+          - name: urine_pro
+            path: NCD_labs
+            src: urine_pro
+            fn: set
+          - name: urine_ket
+            path: NCD_labs
+            src: urine_ket
+            fn: set
+          - name: urine_uro
+            path: NCD_labs
+            src: urine_uro
+            fn: set
+          - name: urine_ery
+            path: NCD_labs
+            src: urine_ery
+            fn: set
+          - name: pi_acr
+            path: NCD_labs
+            src: pi_acr
+            fn: max
+
+          # Lifestyle and Exposure
+          - name: actv_sleeping_hrs
+            path: NCD_lifestyle_exposures
+            src: actv_sleeping_hrs
+            fn: max
+          - name: alco_freq
+            path: NCD_lifestyle_exposures
+            src: alco_freq
+            fn: set
+  
+          # Medical history 
+          - name: hpt_ever
+            path: medical_histories
+            src: hpt_ever
+            fn: set
+          - name: stroke_ever
+            path: medical_histories
+            src: stroke_ever
+            fn: set
+          - name: vision_problem
+            path: medical_histories
+            src: vision_problem
+            fn: set
+          - name: asthma_ever
+            path: medical_histories
+            src: asthma_ever
+            fn: set
+          - name: contracep
+            path: medical_histories
+            src: contracep
+            fn: set
+          - name: hpt_12m
+            path: medical_histories
+            src: hpt_12m
+            fn: set
+          - name: hpt_rx_current
+            path: medical_histories
+            src: hpt_rx_current
+            fn: set
+          - name: hpt_rx_ever
+            path: medical_histories
+            src: hpt_rx_ever
+            fn: set
+          - name: diab_rx_ever
+            path: medical_histories
+            src: diab_rx_ever
+            fn: set
+          - name: diab_rx_current
+            path: medical_histories
+            src: diab_rx_current
+            fn: set
+          - name: diab_fhx
+            path: medical_histories
+            src: diab_fhx
+            fn: set
+          - name: stroke_rx_ever
+            path: medical_histories
+            src: stroke_rx_ever
+            fn: set
+          - name: stroke_rx_trad
+            path: medical_histories
+            src: stroke_rx_trad
+            fn: set
+          - name: stroke_fhx
+            path: medical_histories
+            src: stroke_fhx
+            fn: set
+          - name: angina_rx_ever
+            path: medical_histories
+            src: angina_rx_ever
+            fn: set
+          - name: hrt_fail_rx_ever
+            path: medical_histories
+            src: hrt_fail_rx_ever
+            fn: set
+          - name: hrt_fail_rx_trad
+            path: medical_histories
+            src: hrt_fail_rx_trad
+            fn: set
+          - name: hrt_atck_rx_ever
+            path: medical_histories
+            src: hrt_atck_rx_ever
+            fn: set
+          - name: hrt_atck_rx_current
+            path: medical_histories
+            src: hrt_atck_rx_current
+            fn: set
+          - name: hrt_atck_rx_trad
+            path: medical_histories
+            src: hrt_atck_rx_trad
+            fn: set
+          - name: hrt_fhx
+            path: medical_histories
+            src: hrt_fhx
+            fn: set
+          - name: chol_rx_trad
+            path: medical_histories
+            src: chol_rx_trad
+            fn: set
+          - name: chol_rx_ever
+            path: medical_histories
+            src: chol_rx_ever
+            fn: set
+          - name: chol_fam
+            path: medical_histories
+            src: chol_fam
+            fn: set
+          - name: att_clnic_pub_ever
+            path: medical_histories
+            src: att_clnic_pub_ever
+            fn: set
+          - name: att_clnic_priv_3m
+            path: medical_histories
+            src: att_clnic_priv_3m
+            fn: max
+          - name: att_clnic_public_3m
+            path: medical_histories
+            src: att_clnic_public_3m
+            fn: max
+          - name: kidney_rx
+            path: medical_histories
+            src: kidney_rx
+            fn: set
+          - name: kidney_fail_fh
+            path: medical_histories
+            src: kidney_fail_fh
+            fn: set
+          - name: kidney_stones_fh
+            path: medical_histories
+            src: kidney_stones_fh
+            fn: set
+          - name:  hiv_counselled
+            path: medical_histories
+            src:  hiv_counselled
+            fn: set
+          - name:  hiv_rx_ever
+            path: medical_histories
+            src:  hiv_rx_ever
+            fn: set
+          - name:  hiv_rx_trad_cur
+            path: medical_histories
+            src:  hiv_rx_trad_cur
+            fn: set
+          - name:  tb_rx_ever
+            path: medical_histories
+            src:  tb_rx_ever
+            fn: set
+          - name:  canc_brst_ever
+            path: medical_histories
+            src:  canc_brst_ever
+            fn: set
+          - name:  canc_prost_ever
+            path: medical_histories
+            src:  canc_prost_ever
+            fn: set
+          - name:  canc_other_ever
+            path: medical_histories
+            src:  canc_other_ever
+            fn: set
+          - name:  canc_other_rx_ever
+            path: medical_histories
+            src:  canc_other_rx_ever
+            fn: set

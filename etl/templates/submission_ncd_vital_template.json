@@ -1,0 +1,33 @@
+{
+  "bp_sys": null, 
+  "hiv_status_slf_rpt": null, 
+  "dehydrated": null, 
+  "hip_cm": null, 
+  "health_rating": null, 
+  "convulsion": null, 
+  "poor_vision": null, 
+  "preg": null, 
+  "fd_eat_drink_12h": null, 
+  "height_cm": null, 
+  "weight_kg": null, 
+  "mens_today": null, 
+  "*subjects": {
+    "submitter_id": null
+  }, 
+  "bp_dia": null, 
+  "bmi": null, 
+  "amputation": null, 
+  "any_rx_12h": null, 
+  "injury": null, 
+  "source": null, 
+  "pulse": null, 
+  "oedema": null, 
+  "waist_cm": null, 
+  "project_id": null, 
+  "diff_brthng_cur": null, 
+  "obs_date": null, 
+  "body_swelling": null, 
+  "*type": "ncd_vital", 
+  "*submitter_id": null, 
+  "fever_cur": null
+}

@@ -1,0 +1,17 @@
+{
+  "*type": "subject", 
+  "projects": {
+    "code": null, 
+    "submitter_id": null
+  }, 
+  "*hdss_name": null, 
+  "*submitter_id": null, 
+  "dod": null, 
+  "sex": null, 
+  "project_id": null, 
+  "father_id": null, 
+  "mother_id": null, 
+  "dob": null, 
+  "date_out_of_dsa": null, 
+  "date_into_dsa": null
+}

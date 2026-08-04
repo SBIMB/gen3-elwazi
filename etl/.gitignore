@@ -1,0 +1,12 @@
+# Ignore raw datasets
+raw/
+
+# Ignore massive generated Gen3 payloads
+payloads/
+
+# Ignore all Gen3 API keys (including credentials(2).json)
+credentials*.json
+
+# Ignore standard Python cache and Mac hidden files
+__pycache__/
+.DS_Store

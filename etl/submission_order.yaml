@@ -1,0 +1,18 @@
+submission_order:
+  - node: "subject"
+    path: "payloads/payload_subject.json"
+  - node: "demographic"
+    path: "payloads/payload_demographic.json"
+  - node: "ncd_lab"
+    path: "payloads/payload_ncd_lab.json"
+  - node: "socioeconomic"
+    path: "payloads/payload_socioeconomic.json"
+  - node: "ncd_lifestyle_exposure"
+    path: "payloads/payload_ncd_lifestyle.json"
+  - node: "ncd_vital"
+    path: "payloads/payload_ncd_vital.json"
+  - node: "medical_history"
+    path: "payloads/payload_medical_history.json"
+  # - node: "core_metadata_collection"
+  #   path: "core_metadata_collection.tsv"
+
