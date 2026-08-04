@@ -38,6 +38,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -131,6 +132,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "programs": {},
       "code": {
         "type": "string",
         "description": "Short code for the project (e.g., MADIVA-01)"
@@ -215,6 +217,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string"
       },
@@ -948,6 +951,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string"
       },
@@ -1091,6 +1095,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string"
       },
@@ -2549,6 +2554,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string",
         "description": "Unique identifier for the individual (Individual ID)"
@@ -4736,6 +4742,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {},
       "submitter_id": {
         "type": "string"
       },
@@ -7232,6 +7239,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "projects": {},
       "type": {
         "enum": [
           "core_metadata_collection"
