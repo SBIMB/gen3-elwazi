@@ -3448,7 +3448,7 @@
         "description": "Date of last period (mm)",
         "anyOf": [
           {
-            "type": "integer",
+            "type": "number",
             "minimum": 1,
             "maximum": 12
           },
@@ -3467,7 +3467,7 @@
         "description": "Date of last period (yyyy)",
         "anyOf": [
           {
-            "type": "integer",
+            "type": "number",
             "minimum": 1900,
             "maximum": 2050
           },
