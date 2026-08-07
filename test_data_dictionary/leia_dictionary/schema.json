@@ -478,6 +478,7 @@
           "3-Waiting to marry",
           "4-Too afraid to get HIV\"",
           "5-Prioritise study",
+          "6-Other",
           "996-Other",
           "333-don't know",
           "444-refused",
@@ -730,13 +731,21 @@
       },
       "tobac_start_age_cat": {
         "description": "Age started regular tobacco use (including cigarettes, pipes, cigars, snuff or chewing tobacco)",
-        "enum": [
-          "1-younger than 18 years old",
-          "2-18 years or older",
-          "333-don't know",
-          "444-refused",
-          "888-not applicable",
-          "999-missing"
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "1-younger than 18 years old",
+              "2-18 years or older",
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
         ]
       },
       "tobac_c_cig": {
@@ -969,6 +978,7 @@
           "4-1-3 days per month",
           "5-Less than once per month",
           "6-when I get a chance",
+          "7-stopped drinking",
           "333-don't know",
           "444-refused",
           "888-not applicable",
@@ -1655,7 +1665,10 @@
         "description": "Do you add salt to your food when you are eating?",
         "enum": [
           "0-no",
-          "1-yes",
+          "1-yes, most of the time",
+          "2-yes, some of the time",
+          "3-yes, but in rare cases",
+          "4-never",
           "333-don't know",
           "444-refused",
           "888-not applicable",
@@ -3883,6 +3896,7 @@
         "enum": [
           "0-no",
           "1-yes",
+          "3-unknown",
           "333-don't know",
           "444-refused",
           "888-not applicable",
@@ -4181,8 +4195,9 @@
       "bil_rx_freq": {
         "description": "How many times have you received treatment",
         "enum": [
-          "0-no",
-          "1-yes",
+          "1-once",
+          "2-2 to 5 times",
+          "3-more than 5 times",
           "333-don't know",
           "444-refused",
           "888-not applicable",
@@ -4225,7 +4240,7 @@
           "2-Infant (less 1 year old)",
           "3-1 to 13",
           "4-14 to 18",
-          "5 More than 18",
+          "5-More than 18",
           "333-don't know",
           "444-refused",
           "888-not applicable",
