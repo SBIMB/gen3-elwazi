@@ -1079,11 +1079,19 @@
       },
       "alco_last_take": {
         "description": "When last did you take an alcoholic drink",
-        "enum": [
-          "333-don't know",
-          "444-refused",
-          "888-not applicable",
-          "999-missing"
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "333-don't know",
+              "444-refused",
+              "888-not applicable",
+              "999-missing"
+            ]
+          }
         ]
       },
       "drug_ever": {
