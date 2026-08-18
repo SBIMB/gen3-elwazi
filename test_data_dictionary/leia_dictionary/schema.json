@@ -61,6 +61,9 @@
         "description": "The ethnic or tribal affiliation of the individual.",
         "anyOf": [
           {
+            "type": "number"
+          },
+          {
             "type": "string"
           },
           {
@@ -79,6 +82,9 @@
       "mother_ethnicity": {
         "description": "The ethnic or tribal affiliation of the individual's mother.",
         "anyOf": [
+          {
+            "type": "number"
+          },
           {
             "type": "string"
           },
@@ -99,6 +105,9 @@
         "description": "The ethnic or tribal affiliation of the individual's father.",
         "anyOf": [
           {
+            "type": "number"
+          },
+          {
             "type": "string"
           },
           {
@@ -118,6 +127,9 @@
         "description": "Maternal grandmother ethnicity",
         "anyOf": [
           {
+            "type": "number"
+          },
+          {
             "type": "string"
           },
           {
@@ -136,6 +148,9 @@
       "mat_gfather_ethnicity": {
         "description": "Maternal grandfather ethnicity",
         "anyOf": [
+          {
+            "type": "number"
+          },
           {
             "type": "string"
           },
