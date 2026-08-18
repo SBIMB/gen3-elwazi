@@ -58,13 +58,10 @@
         ]
       },
       "ethnicity": {
-        "description": "The ethnic or tribal affiliation of the indivial.",
+        "description": "The ethnic or tribal affiliation of the individual.",
         "anyOf": [
           {
             "type": "string"
-          },
-          {
-            "type": ""
           },
           {
             "type": "string",
@@ -80,7 +77,7 @@
         ]
       },
       "mother_ethnicity": {
-        "description": "The ethnic or tribal affiliation of the indivial's mother.",
+        "description": "The ethnic or tribal affiliation of the individual's mother.",
         "anyOf": [
           {
             "type": "string"
@@ -99,7 +96,7 @@
         ]
       },
       "father_ethnicity": {
-        "description": "The ethnic or tribal affiliation of the indivial's father.",
+        "description": "The ethnic or tribal affiliation of the individual's father.",
         "anyOf": [
           {
             "type": "string"
