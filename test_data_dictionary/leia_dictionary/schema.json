@@ -325,7 +325,7 @@
   },
   "ncd_lifestyle.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "ncd_lifestyle_exposure",
+    "id": "ncd_lifestyle",
     "title": "NCD Lifestyle and Exposure",
     "type": "object",
     "category": "clinical",
