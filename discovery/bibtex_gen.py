@@ -26,7 +26,7 @@ def generate_tags(entry):
         if kw_lower in study_sites:
             tags.append({"name": kw.title(), "category": "Study Site"})
         elif kw_lower in data_types:
-            tags.append|({"name": kw.title(), "category": "Data Type"})
+            tags.append({"name": kw.title(), "category": "Data Type"})
         else:
             tags.append({"name": kw.capitalize(), "category": "Research Area"})
 
