@@ -1,0 +1,11 @@
+FROM quay.io/cdis/heal-notebooks:combined_tutorials__latest
+
+USER jovyan
+
+RUN mkdir -p /home/jovyan/MADIVA_Demo
+
+COPY example_analysis.ipynb /home/jovyan/MADIVA_Demo/
+
+USER root
+RUN chown -R jovyan:users /home/jovyan/MADIVA_Demo
+USER jovyan
