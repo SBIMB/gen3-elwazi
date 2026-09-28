@@ -243,3 +243,6 @@ These are dev-time artifacts currently baked into the script that are worth reso
 - **No logging of dropped rows.** The `dropna(subset=exact_matches, how='all')` step in the template function silently discards fully-empty records — useful to know the count for QA, especially before a demo.
 - Some standardisations have been assumed and do not directly match the codebook, namely in the handling of `null` values.
 ---
+
+### Note
+Several cleaning processes were required for the MADIVA data. This included the ones mentioned above as well as several smaller individual values that were abnormal and did not adhere to the data dictionary. S

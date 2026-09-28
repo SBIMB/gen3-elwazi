@@ -11,7 +11,7 @@ This document outlines the step-by-step procedure required to extract, clean, an
    If there have been any upstream changes to the Gen3 data dictionary, pull the latest schemas into your environment so the ETL process reflects current definitions.
 
 3. **Build the Enum Mapping Config**
-   Execute the schema crawler to generate the `enum_mappings.yaml` file. This automatically extracts valid enums from `schema.json` and configures the global negative-sentinel rules.
+   Execute the schema crawler to generate the `enum_mappings.yaml` file. This automatically extracts valid enums from `schema.json` and configures the global negative-sentinel rules, such as ```999-missing```.
    ```bash
    python build_mappings.py
    ```
@@ -33,3 +33,10 @@ This document outlines the step-by-step procedure required to extract, clean, an
 
 7. **Update the Frontend**
    As required, push any necessary configuration updates to GitOps, the portal services, or the ETL mappings to reflect the newly submitted data models.
+
+---
+### Note 
+To ensure a seamless upload of subject metadata, which spanned around 2 million individual ```json``` records, the ingestion process can be completed via the **cluster**. 
+
+Copy the payload ready files securely (```scp```) and run the bash script: ```submit_etl.sh``` via ```sbatch submit_etl.sh``` which begins the ingestion process.
+
