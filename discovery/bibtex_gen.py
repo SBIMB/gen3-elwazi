@@ -38,7 +38,7 @@ def generate_tags(entry):
 
 github_bib_url = "https://raw.githubusercontent.com/SBIMB/gen3-elwazi/refs/heads/dev/discovery/journals.bib"
 endpoint = "https://gen3-dev.core.wits.ac.za"
-auth = Gen3Auth(endpoint, refresh_file="credentials(2).json")
+auth = Gen3Auth(endpoint, refresh_file="credentials3.json")
 mds = Gen3Metadata(auth_provider=auth)
 
 print("Fetching BibTex from {github_bib_url}...")
