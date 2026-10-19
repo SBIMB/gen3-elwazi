@@ -548,6 +548,66 @@
       ]
     ]
   },
+  "visit.yaml": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "visit",
+    "title": "Visit",
+    "type": "object",
+    "category": "clinical",
+    "program": "*",
+    "project": "*",
+    "description": "Longitudinal clinic visits",
+    "additionalProperties": false,
+    "submittable": true,
+    "validators": null,
+    "links": [
+      {
+        "name": "subjects",
+        "backref": "visit",
+        "label": "refers_to",
+        "target_type": "subject",
+        "multiplicity": "many_to_one",
+        "required": true
+      }
+    ],
+    "required": [
+      "submitter_id",
+      "type",
+      "subjects",
+      "visit_date"
+    ],
+    "systemProperties": [
+      "id",
+      "project_id",
+      "state",
+      "created_datetime",
+      "updated_datetime"
+    ],
+    "properties": {
+      "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
+      "visit_date": {
+        "description": "The date of the clinical visit or observation.",
+        "type": "string"
+      },
+      "visit_type": {
+        "description": "The category of the visit.",
+        "type": "string",
+        "enum": [
+          "baseline",
+          "follow-up",
+          "unscheduled",
+          "999-missing"
+        ]
+      },
+      "days_to_visit": {
+        "description": "Number of days from the baseline/enrollment date.",
+        "type": "integer"
+      }
+    }
+  },
   "ncd_lifestyle.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "ncd_lifestyle",
@@ -562,10 +622,10 @@
     "validators": null,
     "links": [
       {
-        "name": "subjects",
+        "name": "visit",
         "backref": "NCD_lifestyle_exposures",
         "label": "describes",
-        "target_type": "subject",
+        "target_type": "visit",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -2138,10 +2198,10 @@
     "submittable": true,
     "links": [
       {
-        "name": "subjects",
+        "name": "visit",
         "backref": "medical_histories",
         "label": "describes",
-        "target_type": "subject",
+        "target_type": "visit",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -4680,10 +4740,10 @@
     "validators": null,
     "links": [
       {
-        "name": "subjects",
+        "name": "visit",
         "backref": "NCD_labs",
         "label": "describes",
-        "target_type": "subject",
+        "target_type": "visit",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -5476,10 +5536,10 @@
     "validators": null,
     "links": [
       {
-        "name": "subjects",
+        "name": "visit",
         "backref": "socioeconomics",
         "label": "describes",
-        "target_type": "subject",
+        "target_type": "visit",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -5645,10 +5705,10 @@
     "validators": null,
     "links": [
       {
-        "name": "subjects",
+        "name": "visit",
         "backref": "NCD_vitals",
         "label": "describes",
-        "target_type": "subject",
+        "target_type": "visit",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -7677,6 +7737,47 @@
         "cde_id": 3137957,
         "cde_version": 1.0,
         "term_url": "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=3137957&version=1.0"
+      }
+    }
+  },
+  "unaligned_reads.yaml": {
+    "id": "unaligned_reads",
+    "title": "Unaligned Reads",
+    "type": "object",
+    "nodeType": "data_file",
+    "category": "data_file",
+    "description": "Raw unaligned sequencing reads in FASTQ format.",
+    "links": [
+      {
+        "name": "subjects",
+        "backref": "unaligned_reads",
+        "label": "derived_from",
+        "target_type": "subject",
+        "multiplicity": "many_to_one",
+        "required": true
+      }
+    ],
+    "required": [
+      "submitter_id",
+      "type",
+      "file_name",
+      "file_size",
+      "md5sum",
+      "object_id",
+      "data_format",
+      "data_type",
+      "data_category"
+    ],
+    "properties": {
+      "$ref": "_definitions.yaml#/data_file_properties",
+      "data_format": {
+        "type": "string"
+      },
+      "data_type": {
+        "type": "string"
+      },
+      "data_category": {
+        "type": "string"
       }
     }
   },
