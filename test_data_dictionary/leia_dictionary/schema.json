@@ -631,7 +631,7 @@
     "validators": null,
     "links": [
       {
-        "name": "visit",
+        "name": "visits",
         "backref": "NCD_lifestyle_exposures",
         "label": "describes",
         "target_type": "visit",
@@ -653,7 +653,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
+      "visits": {
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
@@ -2207,7 +2207,7 @@
     "submittable": true,
     "links": [
       {
-        "name": "visit",
+        "name": "visits",
         "backref": "medical_histories",
         "label": "describes",
         "target_type": "visit",
@@ -2229,7 +2229,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
+      "visits": {
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
@@ -4749,7 +4749,7 @@
     "validators": null,
     "links": [
       {
-        "name": "visit",
+        "name": "visits",
         "backref": "NCD_labs",
         "label": "describes",
         "target_type": "visit",
@@ -4771,7 +4771,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
+      "visits": {
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
@@ -5545,7 +5545,7 @@
     "validators": null,
     "links": [
       {
-        "name": "visit",
+        "name": "visits",
         "backref": "socioeconomics",
         "label": "describes",
         "target_type": "visit",
@@ -5567,7 +5567,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
+      "visits": {
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
@@ -5714,7 +5714,7 @@
     "validators": null,
     "links": [
       {
-        "name": "visit",
+        "name": "visits",
         "backref": "NCD_vitals",
         "label": "describes",
         "target_type": "visit",
@@ -5736,7 +5736,7 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
-      "subjects": {
+      "visits": {
         "$ref": "_definitions.yaml#/to_one"
       },
       "submitter_id": {
