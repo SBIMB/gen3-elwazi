@@ -642,7 +642,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects"
+      "visits"
     ],
     "systemProperties": [
       "id",
@@ -2218,7 +2218,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects"
+      "visits"
     ],
     "systemProperties": [
       "id",
@@ -4760,7 +4760,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects"
+      "visits"
     ],
     "systemProperties": [
       "id",
@@ -5556,7 +5556,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects"
+      "visits"
     ],
     "systemProperties": [
       "id",
@@ -5725,7 +5725,7 @@
     "required": [
       "submitter_id",
       "type",
-      "subjects"
+      "visits"
     ],
     "systemProperties": [
       "id",
