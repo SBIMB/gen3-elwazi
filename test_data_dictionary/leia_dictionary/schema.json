@@ -606,7 +606,16 @@
         "description": "Number of days from the baseline/enrollment date.",
         "type": "integer"
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "project_id",
+        "submitter_id"
+      ]
+    ]
   },
   "ncd_lifestyle.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
