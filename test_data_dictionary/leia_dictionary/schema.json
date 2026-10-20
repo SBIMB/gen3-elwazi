@@ -5545,10 +5545,10 @@
     "validators": null,
     "links": [
       {
-        "name": "visits",
+        "name": "subjects",
         "backref": "socioeconomics",
         "label": "describes",
-        "target_type": "visit",
+        "target_type": "subject",
         "multiplicity": "many_to_one",
         "required": true
       }
@@ -5556,7 +5556,7 @@
     "required": [
       "submitter_id",
       "type",
-      "visits"
+      "subjects"
     ],
     "systemProperties": [
       "id",
