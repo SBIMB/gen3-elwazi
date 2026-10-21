@@ -7778,7 +7778,10 @@
       "data_category"
     ],
     "properties": {
-      "$ref": "_definitions.yaml#/data_file_properties",
+      "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "subjects": {
+        "$ref": "_definitions.yaml#/to_one"
+      },
       "data_format": {
         "type": "string"
       },
@@ -7788,7 +7791,15 @@
       "data_category": {
         "type": "string"
       }
-    }
+    },
+    "uniqueKeys": [
+      [
+        "id"
+      ],
+      [
+        "submitter_id"
+      ]
+    ]
   },
   "subject.yaml": {
     "$schema": "http://json-schema.org/draft-04/schema#",
