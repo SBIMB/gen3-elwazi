@@ -7779,6 +7779,18 @@
     ],
     "properties": {
       "$ref": "_definitions.yaml#/ubiquitous_properties",
+      "file_name": {
+        "type": "string"
+      },
+      "file_size": {
+        "type": "integer"
+      },
+      "md5sum": {
+        "type": "string"
+      },
+      "object_id": {
+        "type": "string"
+      },
       "subjects": {
         "$ref": "_definitions.yaml#/to_one"
       },
