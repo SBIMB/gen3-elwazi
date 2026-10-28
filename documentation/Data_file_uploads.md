@@ -1,147 +1,166 @@
-# Gen3 Bulk Data Upload: Standard Operating Procedure (SOP)
+# Gen3 Bulk Data Upload
 
-This document outlines the end-to-end process for uploading large-scale datasets (e.g., Terabytes of FASTQ files) from a high-performance computing (HPC) cluster into a Gen3 Data Commons.
+This document outlines the end-to-end process for uploading large-scale datasets (e.g., Terabytes of FASTQ/BAM files) from the cluster into Gen3. 
 
-This guide assumes you are working in a Linux terminal and using the SLURM job scheduler.
+Specifically, this file looks at the custom process for interfacing with the local storage bucket, using the **AWIGEN-Microbiome** dataset.
 
 ## Prerequisites: Configuring the `gen3-client`
 
-Before you can upload any data, you must authenticate the `gen3-client` with your specific Gen3 Data Commons environment. This is done by downloading an API key and creating a local profile.
+Before uploading any data, authenticating the `gen3-client` is required - this is likely to have been completed already if any metadata is uploaded.
 
-### 1. Download Your API Key
+### 1. Download API Key
 
-1. Log into your Gen3 Data Portal via your web browser (e.g., `https://gen3-dev.core.wits.ac.za`).
-2. Navigate to the **Profile** page (usually found in the top right corner menu).
+1. Log into the Gen3 Data Portal via a web browser.
+2. Navigate to the **Profile** page.
 3. Click **Create API Key**.
-4. A prompt will appear with your Key ID and API Key. Click **Download json** to save the file to your computer. It will download as `credentials.json`.
-5. Transfer this `credentials.json` file to your HPC cluster (e.g., into your `gen3-elwazi` folder) using SCP, SFTP, or your cluster's web interface.
+4. Click **Download json** to save the file (`credentials.json`).
+5. Transfer this `credentials.json` file to cluster using ```scp``` or ```rsync```.
 
 ### 2. Configure the Client Profile
 
-In your cluster terminal, use the downloaded `credentials.json` to configure a profile. A profile securely stores your authentication tokens so you don't have to provide the key every time you run a command.
-
-Run the following configuration command in the directory where your `gen3-client` executable is located:
+In cluster terminal, use the downloaded `credentials.json` to configure a secure profile:
 
 ```bash
 ./gen3-client configure --profile=madiva --cred=credentials.json --apiendpoint=https://gen3-dev.core.wits.ac.za
 ```
-*(Note: Replace `madiva` with whatever you want to name your profile, and update the `--apiendpoint` to match your specific Gen3 portal URL).*
 
-**Success Indicator:** The terminal will confirm that your profile has been successfully configured. The client will securely store this configuration in a hidden folder at `~/.gen3/`.
+*(Note: Replace `madiva` with relevant preferred profile name, and update the `--apiendpoint` to match the portal URL).*
 
----
+## Phase 1: Dictionary Configuration 
 
-## Phase 1: Generating the Data Manifest
+*(Note: This step is being included as it was part of the latest deployment process - typical structures of deplpoyment would have this planned out and configured already.)*
 
-Before uploading data to Gen3, you must calculate the exact file size and MD5 hash for every file. This metadata is required later to link the files to clinical subjects in the Gen3 graph database (Sheepdog).
+Before generating metadata, the Gen3 data dictionary must be configured to accept the exact properties you intend to submit.
 
-Because calculating MD5 hashes for massive files takes a long time, we use a bash script to parallelize the work and submit it to a compute node.
+1. **Update Dictionary YAML:** Open `data_file.yaml` and ensure `file_name`, `file_size`, `md5sum`, and `object_id` are explicitly defined within the `properties` block.
+2. **Recompile and Upload:** Go about the normal process of pushing to Github and redeploying the `sheepdog` and `peregrine` deployments. This process is described in detail in **Data_dictionary.md**.
+
+## Phase 2: Generating the Data Manifest
+
+Before mapping data in Gen3, the MD5 hash and exact file size must be calculated. This step is necessary since AWS services automatically do this and feed it into the Gen3 client. The local bucket does not.
+
+*Note: For multipart uploads to local MinIO storage (like our 1.4 TB dataset), the MinIO `ETag` is NOT a valid MD5 hash. You must compute the true MD5 hash on the HPC cluster using the raw files.*
 
 ### 1. Create the Manifest Script
-
-Create a script named `generate_manifest.sh` that will scan your data directory and calculate hashes in parallel.
-
-
-#### Find all files and process them using multiple CPU cores
-
-
-Make the script executable:
+Use`generate_manifest.sh` to parallelise MD5 hashing. This script handles spaces in filenames securely.
 
 ```bash
-chmod +x generate_manifest.sh
+#!/bin/bash
+# Find all files and process them using multiple CPU cores on a single node
+find /path/to/data -type f -name "*.fastq.gz" -print0 | xargs -0 -n 1 -P 8 -I {} sh -c 'echo "\"{}\",$(stat -c%s \"{}\"),$(md5sum \"{}\" | cut -d" " -f1)"' > manifest.csv
 ```
+Make the script executable: `chmod +x generate_manifest.sh`
 
 ### 2. Submit the Manifest Job to SLURM
 
-Create a wrapper script to run the manifest generation on a compute node so it doesn't overload your user interface (UI) node.
+Submit the script via a SLURM wrapper (`sbatch submit_manifest.sh`). 
 
-```bash
-nano submit_manifest.sh
-```
+## Phase 3: Testing & Bulk Data Upload
 
-Paste the following SLURM configuration. **Note:** Ensure `--cpus-per-task` matches the `CORES` variable in your script.
+### 1. Test the Network Path
 
-
-Submit the job and monitor it:
-
-```bash
-sbatch submit_manifest.sh
-squeue -u $USER
-tail -f manifest.csv
-```
-
-## Phase 2: Testing the `gen3-client`
-
-Before submitting a multi-terabyte upload, always test a single small file to ensure your `gen3-client` is authenticated and the network paths are open.
-
-Run the `gen3-client` `upload` command, pointing it directly to one file. You must include `./` before the command if the executable is in your current folder.
+Always test a single file to ensure valid `gen3-client` authentication:
 
 ```bash
 ./gen3-client upload --profile=madiva --upload-path=/path/to/your/data/test_file.fastq.gz
 ```
+*Success Indicator:* The terminal prints a newly minted GUID (e.g., `PREFIX/1234-abcd-...`). **Note: `PREFIX/` is the literal prefix string configured in Indexd, not a placeholder.**
 
-**Success Indicators:**
+### 2. The Bulk Upload
+This is necessary to push the physical files into local MinIO storage and generate their corresponding placeholder records in the Indexd database.
 
-1. The terminal displays a progress bar reaching 100%.
-2. The terminal prints a success message containing a newly minted GUID (e.g., `PREFIX/1234-abcd-...`).
-3. You can find the file listed as "Ready" in the Gen3 Data Portal.
-
-## Phase 3: The Bulk Data Upload
-
-Once the test is successful, you can upload the entire directory. The `gen3-client` is designed in Go, meaning it automatically manages its own multi-threading and file chunking.
-
-### 1. Create the Upload Job Script
-
-Create a new SLURM script for the bulk upload.
+Submit a SLURM job to upload the entire directory. 
 
 ```bash
-nano submit_upload.sh
+./gen3-client upload-multiple --profile=madiva --upload-path=/path/to/your/data/
 ```
 
-Paste the following configuration. We request 2 CPUs, which is plenty for the network management threads.
 
+## Phase 3: Clinical ID Mapping & Orphan Handling
+Link the newly generated file IDs to their corresponding clinical patient records, and safely separate out any unmapped files.
 
-### 2. Submit and Monitor the Upload
+Run the  custom Python mapping script `tsv_gen.py` to parse Awigen IDs from the FASTQ filenames and perform an inner join against the stage2 clinical metadata.
 
-Submit the job to the cluster:
+* Mapped Files: Proceed to Phase 4.
 
-```bash
-sbatch submit_upload.sh
-```
+* Orphan Files: Files lacking clinical metadata (e.g., 717 unmapped files) must be isolated. Do not submit these to Sheepdog, as they will cause database validation errors. Leave their Indexd records as-is for future archival, or explicitly delete them via the Indexd API.
 
-You can monitor the live upload progress bars by tailing the SLURM output file:
+## Phase 4: Extracting GUIDs & Mapping Clinical Data
 
-```bash
-tail -f upload_progress_<JOB_ID>.out
-```
+When files upload successfully to local MinIO storage, Indexd generates "blank" database records. This step fills in the missing hashes and file sizes in the database, for Sheepdog to accept them.
 
-## Phase 4: Extracting GUIDs for Metadata Mapping
+### 1. Extract the GUIDs
 
-When files upload successfully, they sit in the storage bucket as "orphans." The Gen3 frontend portal will show their file sizes as "generating..." until you link these files to clinical patients using a Data Node TSV.
-
-To build this TSV, you need the permanent GUIDs that the system generated during the upload. The `gen3-client` saves these securely in a hidden file called `succeeded_log.json`.
-
-### 1. Parse the JSON Log
-
-Use the `jq` command-line tool to extract just the filenames and their new GUIDs, saving them to a clean text file:
+The `gen3-client` saves permanent GUIDs in a hidden log. Extract them (verify the JSON structure of ghd `succeeded_log.json` first, as it may be a map keyed by file path rather than a flat array):
 
 ```bash
+# Example jq for flat array structure
 jq -r '.[] | [.file_name, .object_id] | @tsv' ~/.gen3/succeeded_log.json > extracted_guids.tsv
 ```
 
-### 2. Build the Sheepdog TSV
+### 2. Map to Clinical IDs & Handle Orphans (`tsv_gen.py`)
 
-You now have two critical files:
+Using a custom Python script, perform an inner join between the `manifest.csv` (sizes/hashes), `extracted_guids.tsv` (Indexd GUIDs), and the clinical metadata mapping sheet (e.g., `stage2`).
 
-1. `manifest.csv` (Contains `file_name`, `file_size`, and `md5`)
-2. `extracted_guids.tsv` (Contains `file_name` and `object_id`/GUID)
+*   **Mapped Files:** Generate a JSON array for files with matching clinical IDs. Format parent links correctly (e.g., `"subjects": [{"submitter_id": "AWIGEN_ID"}]`). Save as `submission_files_node.json`. (JSON is preferred over TSV to bypass frontend parser issues with empty `type` columns and dot-notation link failures).
+*   **Orphan Files:** Files lacking clinical metadata (e.g., the 717 unmapped files from the Microbiome data) will remain in MinIO with blank Indexd records. **Do not attempt to submit orphans to Sheepdog**, as this will trigger graph validation errors. 
 
-**Next Steps:**
+Need to document project's policy for archiving or deleting these records!
 
-1. Download both files to your local computer.
-2. Merge them in Excel (or Python/R) matching by the `file_name`.
-3. Add a column for your clinical IDs (e.g., `samples.submitter_id`).
-4. Add a column for the Gen3 node type (e.g., `type: submitted_unaligned_reads`).
-5. Save as a TSV and upload it to the Data Submission portal (Sheepdog).
+## Phase 5: Patching Indexd Blank Records
 
-Once Sheepdog processes the TSV, your files are officially linked to the clinical data, and the Gen3 frontend will update to display the correct file sizes and hashes!
+On local k3s clusters without AWS Lambda triggers, Indexd records remain in a "blank" state (`size: null`, `hashes: {}`). Sheepdog will reject the JSON payload until these fields are populated.
+
+### Execution Strategy: The Indexd `PUT` Update
+
+Run a Python script utilising the Gen3 internal API to populate the blank records.
+
+**Critical Requirements for the Script:**
+1.  **Record Revision (`rev`):** Query the Indexd record first to obtain its current `rev` string. The update request must be formatted as `PUT /index/blank/<guid>?rev=<rev>`.
+2.  **Authorisation (`authz`):** Explicitly set the field (e.g., `["/programs/MADIVA/projects/Agincourt"]`). If `authz` is left empty (`[]`), subsequent file downloads via Fence will fail due to lacking permissions.
+3.  **URL Encoding:** The Gen3 API router breaks on the unencoded forward slash in the GUID. You must URL-encode the GUID (`urllib.parse.quote(guid, safe="")`) for all API requests.
+
+### Verification Gate (CRITICAL)
+Before proceeding to Sheepdog submission, verify that exactly zero blank records remain among your mapped GUIDs. Run an automated check comparing your submission GUID list against the Indexd database to confirm `hashes` and `size` are populated. Proceeding with a single blank record will crash the submission.
+
+
+## Phase 6: API Sheepdog Submission
+
+Use the Sheepdog API directly via a Python script (`submit_metadata.py`) rather than the Data Portal UI. This is to avoid overwhelming the frontend and ensuring no data submission errors. Sheepdog will now link the correct subjects to the correct file IDs.
+
+### Direct API Submission
+
+Submit the `submission_files_node.json` payload using HTTP `PUT` requests. `PUT` acts idempotently, updating existing nodes safely. 
+
+```python
+submit_url = f"{COMMONS_URL}/api/v0/submission/{PROGRAM}/{PROJECT}/"
+# WARNING: Do not use verify=False in production. Point to your institutional CA bundle.
+requests.put(submit_url, headers=headers, json=chunk, verify='/path/to/ca-bundle.crt')
+```
+*Note: The access token generated from your credentials expires quickly. For long, chunked submissions, ensure your script includes logic to refresh the token dynamically.* CHECK!
+
+## Phase 7: ETL & Frontend Configuration
+
+Even though the files are successfully mapped in the PostgreSQL graph, the frontend Data Explorer (Guppy) cannot see them until the data is flattened into Elasticsearch and explicitly whitelisted.
+
+### 1. Update ETL Mappings (`etl-mappings-v2.yaml`)
+
+Add the new data node to the ETL mappings. The `root` property must perfectly match the literal node ID defined in the data dictionary (e.g., `submitted_unaligned_reads`).
+
+### 2. Whitelist in Guppy (`values.yaml`)
+
+*   Add the new index to Guppy's `indices` array in `values.yaml`.
+*   Append the array config to the `configIndex` string. **Do not use spaces after commas** (e.g., `"subject-array-config,unaligned_reads-array-config"`).
+
+### 3. Update Portal UI (`gitops.json`)
+
+Append a new configuration block to the `explorerConfig` array in the`gitops` section of `values.yaml` to render the actual "Data Files" tab.
+
+### 4. Final Rollout
+
+Restart the frontend services to clear cached schemas and render the new data:
+
+```bash
+kubectl rollout restart deployment/guppy
+kubectl rollout restart deployment/portal-deployment
+```

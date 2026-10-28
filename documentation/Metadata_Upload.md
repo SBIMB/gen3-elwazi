@@ -1,6 +1,6 @@
 # Data Upload Pipeline
 
-This document outlines the step-by-step procedure required to extract, clean, and submit a new batch of data to the Gen3 portal. 
+This document outlines the step-by-step procedure required to extract, clean, and submit a new batch of patient metadata to the Gen3 portal. Metadata in this case is defined as any kind of patient data records. This excludes data files, such as specific genomic data (e.g. .bam or .fastq).
 
 ## Execution Steps
 

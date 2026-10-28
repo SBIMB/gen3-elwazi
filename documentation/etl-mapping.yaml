@@ -1,0 +1,3 @@
+kubectl create configmap etl-mapping --from-file=etlMapping.yaml=etl-mappings-v2-fixed.yaml -o yaml --dry-run=client | kubectl apply -f -
+kubectl create job --from=cronjob/etl-cronjob manual-etl-run-v6
+kubectl logs -f job/manual-etl-run-v6 -c tube
