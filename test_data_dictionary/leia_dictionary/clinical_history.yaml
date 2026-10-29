@@ -1,0 +1,2168 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "medical_history"
+title: "Medical History"
+type: "object"
+category: "clinical"
+program: "*"
+project: "*"
+description: "Self-reported medical history, diagnoses, family history, and current treatments for non-communicable diseases (NCDs)."
+additionalProperties: false
+submittable: true
+
+links:
+  - name: subjects
+    backref: medical_histories
+    label: describes
+    target_type: "subject"
+    multiplicity: "many_to_one"
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  
+  subjects: {}
+  
+  submitter_id:
+    type: "string"
+
+  obs_date:
+    type: "string"
+    format: "date"
+    description: "Date of interview / Observation date"
+
+  contracep:
+    description: "Use of contraception"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  preg_num_cat:
+    description: "Number of pregnancies"
+    enum:
+      - "0-none"
+      - "1-one"
+      - "2-two"
+      - "3-three"
+      - "4-more than three"
+      - "888-Not Applicable"
+
+  births:
+    description: "Number of live births"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  bp_measured_ever:
+    description: "Have you ever had your blood pressure measured by a doctor, nurse or other health worker?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_ever:
+    description: "History of hypertension diagnosis by a medical doctor"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  hpt_duration:
+    description: "How long in days have you had high BP"
+    enum:
+      - "1-< 1 yr"
+      - "2-1 to 5 yrs"
+      - "3-6 to 10 yrs"
+      - "4-> 10 yrs"
+      - "333-don't know"
+
+  hpt_preg:
+    description: "Ever had high blood pressure during pregnancy"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_12m:
+    description: "Newly diagnosed with Hypertension in last 12 months? / Have you been told in the past 12 months for the first time?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_current:
+    description: "Currently on treatment for hypertension? / Receiving medicine from clinic for hypertension at time of interview"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_ever:
+    description: "Ever been treated for hypertension? Medication include: Hydrochlorothiazide, Nifedipine, Enalapril"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_2w:
+    description: "Taken drugs for high blood pressure (medication) during the last 2 weeks"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_12m:
+    description: "Taken drugs for high blood pressure (medication) during the last 12 months"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_trad_ever:
+    description: "Have you ever seen a traditional healer/herbalist for raised blood pressure / hypertension?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for hypertension?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_rx_other:
+    description: "Are you currently receiving any other treatments for hypertension?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  hpt_adv_rd_Salt:
+    description: "Advice to reduce salt intake in the past 30 days."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_adv_wt_loss_30d:
+    description: "Advice to lose weight in the past 30 days."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_adv_stp_smk_30d:
+    description: "Advice to stop smoking in the past 30 days."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_adv_ex_30d:
+    description: "Advice to start or do more exercise in the past 30 days."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_fhx:
+    description: "Family history of high blood pressure (mother, father or blood sibling diagnosed and or treated for high blood pressure)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_other:
+    description: "Other family member(s) have hypertension"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_parents:
+    description: "Parents ever had or currently have hypertension?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_mom:
+    description: "History of high blood pressure in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_dad:
+    description: "History of high blood pressure in father"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_sibling:
+    description: "Brother or sister has(have) or ever had hypertension"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hpt_children:
+    description: "Child(ren) has/have hypertension"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_hx:
+    description: "Ever been diagnosed with diabetes?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_12m:
+    description: "Newly diagnosed with diabetes in last 12 months?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_duration:
+    description: "How long have you had raised blood sugar / diabetes?"
+    enum:
+      - "1-<year"
+      - "2-1 to 5 yrs"
+      - "3-6 to 10 yrs"
+      - "4-> 10 yrs"
+      - "888-Not applicable"
+
+  diab_rx_ever:
+    description: "Ever been treated for diabetes? medication include: Metformin"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_current:
+    description: "Receiving medicine from clinic for diabetes mellitus at the time of interview"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_pills:
+    description: "Pills for diabetes treatment?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_insu:
+    description: "Insulin for diabetes treatment?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_insu_today:
+    description: "Today, have you taken insulin or other drugs (medication) that have been prescribed by a doctor, a nurse or other health worker for raised blood glucose?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  diab_insu_2w:
+    description: "Insulin during the last two weeks."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_insu_12m:
+    description: "Insulin during the last twelve months"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_wt_loss:
+    description: "Diabetes treatment using weight loss"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_diet:
+    description: "Diabetes treatment using diet"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_phy_act:
+    description: "Diabetes treatment using physical activity"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_other:
+    description: "Have you used any drugs or injections for diabetes prescribed by a doctor, nurse or other health worker in the last two weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_2w:
+    description: "Drugs for diabetes (medication) that you have taken by mouth during the last two weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_12m:
+    description: "Drugs for diabetes (medication) that you have taken by mouth during the last twelve months?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_adv_wt_loss:
+    description: "Advice or treatment to lose weight during the last twelve months."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_adv_stp_smk:
+    description: "Advice or treatment to stop smoking during the last twelve months."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_adv_ex:
+    description: "Advice to start or do more exercise during the last twelve months."
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_trad_ever:
+    description: "Have you ever seen a traditional healer/herbalist for raised blood sugar or diabetes?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_trad_cur:
+    description: "Are you currently taking any herbal or traditional remedy for your diabetes?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_measured:
+    description: "Have you ever had your blood sugar measured by a doctor, nurse or other health workers?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_fhx:
+    description: "Family history of diabetes (mother, father or blood sibling diagnosed and or treated for diabetes)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_parents:
+    description: "Parents ever had or currently have diabetes?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_mom:
+    description: "Mother diabetic?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_dad:
+    description: "Father diabetic?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+
+  diab_sibling:
+    description: "Brother or sister has(have) or ever had diabetes"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_children:
+    description: "Child(ren) has/have diabetes"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_other_fam:
+    description: "Other family member(s) has diabetes"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  diab_rx_other_2w:
+    description: "Have you used any drugs or injections for diabetes prescribed by a doctor, nurse or other health worker in the last two weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_ever:
+    description: "ever Had stroke / Self reported stroke status(healthcare professional)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_first_year:
+    description: "In what year was your first stroke"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  stroke_trans_isc_ever:
+    description: "Ever diagnosed with ministroke or transient ischemic attack "
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_wkness:
+    description: "Stroke: Weakness one side?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_numb:
+    description: "Stroke: Numbness one side?  /  Have you ever had, for more than 24 hours, sudden onset of loss of feeling on one side of your body without anything having happened to you immediately before?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_paralysis_ever:
+    description: "Have you ever suffered from sudden onset of paralysis or weakness in your arms or legs on one side of your body for more than 24 hours?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  vision_problem:
+    description: "Loss of vision"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_blind:
+    description: "Stroke: Loss of vision"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_hl_vis:
+    description: "Stroke: Loss of half vision"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_undstn:
+    description: "Stroke: Loss of ability to understand?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_verbal:
+    description: "Stroke: Loss of ability to express verbal/writing?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_rx_ever:
+    description: "Ever received stroke medication"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_rx_2w:
+    description: "Receiving stroke medication in the last 2 weeks"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_rx_12m:
+    description: "Have you been taking any medications or other treatment for it during the last 12 months?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_rx_current:
+    description: "Are you currently on treatment to prevent a further stroke prescribed by a doctor, nurse or other healthcare worker?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for a stroke?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  stoke_interfer_daily_activity:
+    description: "Does this stroke or its complications interfere not at all, a little, or a lot with your daily activities?"
+    enum: 
+      - "0-Not at all"
+      - "1-A little"
+      - "2-A lot"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable" 
+      - "999-missing"
+
+
+  stroke_fhx:
+    description: "Has member of family with stroke"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_parents:
+    description: "Parents ever had or currently have stroke?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_sibling:
+    description: "Brother or sister has(have) or ever had stroke"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_children:
+    description: "Child(ren) has/have stroke"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  stroke_other:
+    description: "Other family member(s) has stroke"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  asthma_ever:
+    description: "Do you have or ever had asthma or airway disease? / History of asthma diagnosis by a medical doctor"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  asthma_mom:
+    description: "History of asthma in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  asthma_dad:
+    description: "History of asthma in father"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_ever:
+    description: "Self-reported Angina status / Angina"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+
+  angina_diag_year:
+    description: "In what year was your first stroke"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  angina_rx_ever:
+    description: "Have you ever been treated for angina?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_rx_current:
+    description: "Receiving angina medication"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_rx_2w:
+    description: "Have you been taking any medications or other treatment for it during the last 2 weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_rx_12m:
+    description: "Have you been taking any medication or other treatment for it during the last 12 months?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for your angina (chest pain due to heart disease)?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_walk_uphill:
+    description: "During the last 12 months, have you experienced any pain or discomfort in your chest when you walk uphill or hurry?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_walk_ordinarily:
+    description: "During the last 12 months, have you experienced any pain or discomfort in your chest when you walk at an ordinary pace or on level ground"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_do_when_pain:
+    description: "What do you do if you get the pain or discomfort when you are walking?"
+    enum:
+      - "1-Stop or slow down"
+      - "2-Carry on after taking a pain relieving medicine that dissolves in your mouth" 
+      - "3-Carry on walking"
+      - "888-Not Applicable"
+
+
+  angina_stand:
+    description: "If you stand still, what happens to the pain or discomfort?"
+    enum:
+    - "1-Relieved"
+    - "2-Not relieved"
+    - "888-not applicable"
+
+
+  angina_xp_leftarm:
+    description: "Do you usually experience the pain or discomfort, left arm?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_xp_lowerchest:
+    description: "Do you usually experience the pain or discomfort, lower chest?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_xp_upperchest:
+    description: "Do you usually experience the pain or discomfort, upper chest?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_symptoms_2w:
+    description: "Have you experienced the angina symptoms in the last 2 weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_fhx:
+    description: "Has member of family with chest pain or angina"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_parents:
+    description: "Parents have angina?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_sibling:
+    description: "Brother or sister has(have) or ever had angina"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_children:
+    description: "Child(ren) has/have angina"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  angina_other:
+    description: "Other family member(s) has angina"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_fail:
+    description: "Ever been told by a doctor, nurse, or other healthcare worker that participant  has \ had heart failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+
+  hrt_fail_rx_ever:
+    description: "Ever received heart failure medication"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_fail_rx_current:
+    description: "Currently receiving heart failure medication prescribed by a doctor"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_fail_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for heart failure?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_atck_ever:
+    description: "Heart attack / Diagnosed with heart attack"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_atck_year_diagnosed:
+    description: "Year diagnosed with Heart attack"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+
+  hrt_atck_rx_ever:
+    description: "Have you ever received medication for heart attack?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_atck_rx_current:
+    description: "receiving heart attack medication"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_atck_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for heart attack?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  hrt_other:
+    description: "Ever diagnosed with any other heart disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_other_diag_year:
+    description: "Year diagnosed with any other heart disease"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  hrt_fhx:
+    description: "Family history of heart disease (mother, father or blood sibling diagnosed and or treated for heart disease)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_parents:
+    description: "Parents have heart disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_sibling:
+    description: "Brother or sister has (have) or ever had heart disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_children:
+    description: "Child(ren) has/have heart disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hrt_fam_other:
+    description: "Other family member(s) has heart disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_ever:
+    description: "Cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_dur:
+    description: "How long have you had raised blood cholesterol?"
+    enum:
+      - "1-< 1 year"
+      - "2-1 to 5 years"
+      - "3-6 to 10 years"
+      - "4-longer than 10 years" 
+      - "333-don't know"
+      - "888-Not Applicable"
+
+  chol_rx_ever:
+    description: "Ever been treated for high Cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_cur:
+    description: "Are you currently taking medicine for high blood cholesterol?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_2w:
+    description: "During the past two weeks, have you been treated for raised cholesterol with drugs (medication) prescribed by a doctor, a nurse or other health worker?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_trad:
+    description: "Are you currently taking any herbal or traditional remedy for high cholesterol?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_wt_loss:
+    description: "cholesterol treatment using weight loss"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_diet:
+    description: "cholesterol treatment using diet"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_phy_act:
+    description: "cholesterol treatment using physical activity"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_rx_other:
+    description: "Have you used any drugs or injections for cholesterol prescribed by a doctor, nurse or other health worker in the last two weeks?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_fam:
+    description: "has member of family with high cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_parents:
+    description: "Parents have cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_mom:
+    description: "History of high cholesterol in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_dad:
+    description: "History of high cholesterol in father"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_sibling:
+    description: "Brother or sister has(have) or ever had cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_children:
+    description: "Child(ren) has/have cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chol_fam_other:
+    description: "Other family member(s) has cholesterol"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  mens_stop_days:
+    description: "Days ago stopped menstruation"
+    enum:
+      - "0-1 or 2 days ago"
+      - "1-3 or more days ago"
+      - "333-don't know" 
+      - "888-not applicable"
+
+  mens_last_period_mm:
+    description: "Date of last period (mm)"
+    anyOf:
+      - type: "integer"
+        minimum: 1
+        maximum: 12
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  mens_last_period_yyyy:
+    description: "Date of last period (yyyy)"
+    anyOf:
+      - type: "integer"
+        minimum: 1900
+        maximum: 2050  
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  att_clnic_pub_ever:
+    description: "Attended public clinic"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  att_clnic_priv_3m:
+    description: "Attended private clinic in the last 3 months"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  att_clnic_public_3m:
+    description: "Attended public clinic in the last 3 months"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  kidney_fail_heard:
+    description: "heard of chronic kidney disease/kidney failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_low_func:
+    description: "Has a doctor, nurse, or other healthcare worker ever told you that your kidneys have low function?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_disease_ever:
+    description: "Ever told you that you have kidney disease (kidney failure)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_diag_year:
+    description: "Year diagnosed with any other heart disease"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  kidney_rx:
+    description: "Receiving kidney disease medication"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_test_ever:
+    description: "Has a doctor or other health care worker ever tested your blood for kidney disease?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  kidney_fail_dur:
+    description: "How long have you had kidney disease?"
+    enum: 
+      - "1-less than one year"
+      - "2-1 to 5 years"
+      - "3-6 to 10 years"
+      - "4-longer than 10 years"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_fh:
+    description: "Has member of family with chronic kidney or kidney failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_parents:
+    description: "Parents have kidney failure?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_mom:
+    description: "Mother kidney failure?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_dad:
+    description: "Father kidney failure?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_sibling:
+    description: "Brother or sister has(have) or ever had kidney failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_children:
+    description: "Child(ren) has/have kidney failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_fail_other:
+    description: "Other family member(s) has kidney failure"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_bladder_inf_ever:
+    description: "Ever experienced this or been told by a doctor or other health care worker that you have an infection in your bladder or kidneys"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  kidney_bladder_inf_age:
+    description: "age when bladder or kidney happened"
+    enum: 
+      - "1-younger than 18 years old"
+      - "2-18 years or older"
+      - "333-don't know"
+      - "888-not applicable"
+  
+  kidney_bladder_inf_freq:
+    description: "Frequency of times you experience bladder or kidney disease"
+    enum:
+      - "1-once"
+      - "2-more than once"
+      - "333-don't know"
+      - "888-not applicable"
+  
+  kidney_stones_ever:
+    description: "Ever been told by a doctor or other health care worker that you have a stone/s in your kidney"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_stones_age_cal:
+    description: "Age when this happened"
+    enum: 
+      - "1-younger than 18 years old"
+      - "2-18 years or older"
+      - "333-don't know"
+      - "888-not applicable"
+
+  kidney_stones_freq_cal:
+    description: "Frequency of times you experience kidney stones"
+    enum:
+      - "1-once"
+      - "2-more than once"
+      - "333-don't know"
+      - "888-not applicable"
+
+  kidney_stones_fh:
+    description: "Has any family member ever been told by a doctor or other health care worker that they have kidney stones"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_stones_parents:
+    description: "Parents have kidney stones?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_stones_sibling:
+    description: "Brother or sister has(have) or ever had kidney stones"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_stones_children:
+    description: "Child(ren) has/have kidney stones"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_stones_other:
+    description: "Other family member(s) has kidney stones"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  kidney_problems:
+    description: "Have kidney problems"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hiv_counselled:
+    description: "Have you ever been counselled by a doctor, nurse, ART/HIV counselor, or other health worker on how you can avoid passing on HIV to others?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hiv_tested:
+    description: "Have you ever been tested for HIV?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  hiv_tested_when_c:
+    description: "When were you last tested for HIV (categorical)?"
+    enum:
+      - "1-In the last 6 months"
+      - "2-6 months to 1 year ago" 
+      - "3-More than a year ago" 
+      - "4-Never tested"
+      - "888-not applicable"
+
+  hiv_care:
+    description: "Have you ever accessed an HIV treatment and care program?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hiv_rx_ever:
+    description: "Have you ever received ART prescribed by a doctor, nurse or other healthcare worker?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hiv_rx_cur:
+    description: "Receiving HIV treatment / Are you on anti-HIV medication?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  hiv_rx_trad_cur:
+    description: "Are you currently taking any herbal or traditional remedy for HIV?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_ever:
+    description: "Ever had TB?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_year:
+    description: "Year diagnosed with TB"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  tb_12m:
+    description: "Diagnosed with TB in last 12 months?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_rx_ever:
+    description: "Ever received TB treatment?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_rx_cur:
+    description: "Currently on treatment for TB?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_rx_trad_cur:
+    description: "Are you currently taking any herbal or traditional remedy for TB?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  tb_counsel:
+    description: "Have you ever been counselled by a doctor, nurse, ART/HIV counselor, or other health worker on how you can avoid passing on TB to others?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_any_ever:
+    description: "Ever been diagnosed with cancer of any type?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_any_diag_year:
+    description: "Year diagnosed with cancer"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  canc_brst_ever:
+    description: "Do you have or ever had breast cancer?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_cerv_ever:
+    description: "Do you have or ever had cervical cancer?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_prost_ever:
+    description: "Do you have or ever had prostate cancer?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_other_ever:
+    description: "Ever had other cancers?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_other_rx_ever:
+    description: "Ever received treatment for other cancers"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_cerv_mother:
+    description: "History of cervical cancer in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_prost_father:
+    description: "History of prostate cancer in father"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  canc_breast_mother:
+    description: "History of breast cancer in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  std_trichomonas_ever:
+    description: "Have you been diagnosed with, or have you been treated for a sexually transmitted disease such as  Trichomonas"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  std_genital_herpes:
+    description: "Have you been diagnosed with, or have you been treated for a sexually transmitted disease such as genital herpes"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  std_syphilis:
+    description: "Have you been diagnosed with, or have you been treated for a sexually transmitted disease such as syphilis"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  std_chancroid:
+    description: "Have you been diagnosed with, or have you been treated for a sexually transmitted disease such as chancroid"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  std_pid:
+    description: "Have you been diagnosed with, or have you been treated for a sexually transmitted disease such as PID (Pelvic Inflammatory Disease)"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  bil_test_ever:
+    description: "Ever tested your urine for bilharzia"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  bil_ever:
+    description: "Has a doctor or health worker ever told you that you have bilharzia in your urine?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  bil_rx_cur:
+    description: "Receiving bilharzia treatment"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  bil_rx_freq:
+    description: "How many times have you received treatment"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  circumcised:
+    description: "Has your fore skin been removed (i.e circumcision)?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  circumcised_age: #should this acc for months
+    description: "At what age were you circumcised?"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  circumcised_when:
+    description: "When were you circumcised?"
+    enum:
+      - "1-Birth"
+      - "2-Infant (less 1 year old)"
+      - "3-1 to 13"
+      - "4-14 to 18"
+      - "5 More than 18"
+      - "888-not applicable"
+  
+  circumcision_where:
+    description: "Where were you circumcised?"
+    enum:
+      - "1-Initiation"
+      - "2-Hospital"
+      - "3-Other"
+      - "888-not applicable"
+
+  obes_mom:
+    description: "History of weight problem/obesity in mother"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  obes_dad:
+    description: "History of weight problem/obesity in father"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  malaria_ever:
+    description: "Ever had malaria?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  malaria_ever_12m:
+    description: "Had malaria fever in the last month?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  thyroid_ever:
+    description: "Ever diagnosed thyroid disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  liver_dis_ever:
+    description: "Ever diagnosed liver disease"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  liver_dis_diag_year:
+    description: "At what age were you circumcised?"
+    anyOf:
+      - type: "number"
+        minimum: 0 
+      - type: "integer"
+        enum: [-333, -444, -888, -999]
+
+  pp_neur:
+    description: "Do you have peripheral neuropathy?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  fd_diet_change:
+    description: "Has a doctor, nurse, or other healthcare worker ever told you to change your diet (eg. To eat less sugar)?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  chron_rx_ever:
+    description: "Taken treatment for any other chronic except high blood pressure, diabetes, high cholesterol, kidney disease, kidney stones, urinary tract infection, urinary bilharzia and hiv"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+  
+  chron_other_name: #string??
+    description: "Name of other chronic disease (specify the name(s))"
+    enum:
+      - "0-TB"
+      - "1-cancer"
+      - "2-other"
+
+  chron_rx_cur:
+    description: "Are you currently taking any medication for any other disease except high blood pressure, diabetes, high cholesterol, kidney disease, kidney stones, urinary tract infection, urinary bilharzia and hiv?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"
+
+  seizure:
+    description: Have they had a seizure in the last year (a year fromtoday)?"
+    enum:
+      - "0-no"  
+      - "1-yes"
+      - "333-don't know"
+      - "444-refused"
+      - "888-not applicable"
+      - "999-missing"

@@ -1,0 +1,75 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "subject"
+title: "Subject"
+type: "object"
+category: "administrative"
+program: "*"
+project: "*"
+description: "The individual participant in the MADIVA study."
+additionalProperties: false
+submittable: true
+validators: null
+
+# Subject to Project node links
+links:
+  - name: projects
+    backref: subjects
+    label: member_of
+    target_type: project
+    multiplicity: many_to_one
+    required: true 
+    
+required:
+  - submitter_id
+  - type
+  - hdss_name
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+ $ref: "_definitions.yaml#/ubiquitous_properties"
+
+ projects:
+    $ref: "_definitions.yaml#/to_one_project"
+ submitter_id:
+   type: "string"
+   description: "Unique identifier for the individual (Individual ID)"
+ 
+ hdss_name:
+   description: "The name of the Health and Demographic Surveillance System site"
+   enum: 
+     - "Agincourt"
+     - "Nairobi"
+ dob:
+    type: "string"
+    format: "date"
+    description: "Best estimate of the date of birth"
+ dod:
+    type: "string"
+    format: "date"
+    description: "Best estimate of the date of death"
+
+ date_into_dsa:
+    type: "string"
+    format: "date"
+    description: "Date the individual entered the study area"
+ date_out_of_dsa:
+    type: "string"
+    format: "date"
+    description: "Date the individual exited the study area"
+    
+ mother_id: 
+    type: "string" 
+    description: "Unique identifier for the individual's mother."
+ father_id: 
+    type: "string" 
+    description: "Unique identifier for the individual's father."
+
+uniqueKeys:
+ - [id]
+ - [project_id, submitter_id]    

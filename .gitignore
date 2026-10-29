@@ -11,7 +11,7 @@ gen3/cloud08.core.wits.ac.za.csr
 gen3/cloud08.core.wits.ac.za.key
 gen3/cloud08.core.wits.ac.za.pem
 gen3/cloud05.core.wits.ac.za.pem
-gen3/credentials.json
+**/credentials*.json
 minio/private.key
 minio/public.crt
 gen3-sbimb.com.zip
@@ -34,3 +34,5 @@ gen3-minio-client/gen3minioclient/output_manifest_file.tsv
 gen3-minio-client/tests
 gen3-minio-client/datagen3/values.yaml.backup_*
 gen3-elwazi/gen3/values.yaml
+/etl/payloads/
+/etl/raw

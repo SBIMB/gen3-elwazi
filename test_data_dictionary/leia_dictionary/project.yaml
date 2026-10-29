@@ -1,0 +1,79 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+id: "project"
+title: "Project"
+type: "object"
+category: "administrative"
+program: "*"
+project: "*"
+description: "The top-level administrative node for a specific study."
+additionalProperties: false
+submittable: true
+validators: null
+
+# Project MUST link up to Program
+links:
+  - name: programs
+    backref: projects
+    label: member_of
+    target_type: "program"
+    multiplicity: "many_to_one"
+    required: true
+
+# The fields marked with an asterisk in your JSON template
+required:
+  - type
+  #- programs
+  - code
+  - name
+  - dbgap_accession_number
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  #programs: {}
+  
+  code:
+    type: "string"
+    description: "Short code for the project (e.g., MADIVA-01)"
+
+  name:
+    type: "string"
+    description: "Full name of the project"
+
+  dbgap_accession_number:
+    type: "string"
+    description: "The dbGaP accession number if applicable"
+
+  investigator_name:
+    type: "string"
+  
+  investigator_affiliation:
+    type: "string"
+
+  support_source:
+    type: "string"
+
+  support_id:
+    type: "string"
+
+  availability_type:
+    type: "string"
+
+  availability_mechanism:
+    type: "string"
+
+  date_collected:
+    type: "string"
+    format: "date"
+
+uniqueKeys:
+ - [id]
+ - [code]
+ - [project_id, submitter_id]
