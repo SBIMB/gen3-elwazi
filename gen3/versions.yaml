@@ -34,3 +34,19 @@ revproxy:
   image: 
     repository: quay.io/cdis/nginx
     tag: "2026.04"
+tube: 
+  image:
+    repository: quay.io/cdis/tube
+    tag: "2026.04"
+spark:
+  image:
+    repository: quay.io/cdis/gen3-spark
+    tag: "2022.05"
+wts:
+  image:
+    repository: quay.io/cdis/workspace-token-service
+    tag: "2026.04" 
+metadata:
+  image:
+    repository: quay.io/cdis/metadata-service
+    tag: "2026.08"

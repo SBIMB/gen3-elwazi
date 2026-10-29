@@ -19,3 +19,19 @@ grafana:
     GF_SERVER_DOMAIN: gen3-dev.core.wits.ac.za
     GF_SERVER_ROOT_URL: "https://gen3-dev.core.wits.ac.za/grafana/"
     GF_SERVER_SERVE_FROM_SUB_PATH: "true"
+
+
+kube-state-metrics:
+  resources: 
+    requests: 
+      cpu: 100m
+      memory: 128Mi
+  limits: 
+      cpu: 1000m
+      memory: 512Mi
+  livenessProbe:
+    initialDelaySeconds: 30
+    timeoutSeconds: 15
+  readinessProbe:
+    initialDelaySeconds: 30
+    timeoutSeconds: 15

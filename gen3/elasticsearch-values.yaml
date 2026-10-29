@@ -1,0 +1,43 @@
+clusterName: gen3-elasticsearch
+replicas: 1
+minimumMasterNodes: 1
+singleNode: true
+
+image: "quay.io/cdis/elasticsearch"
+imageTag: "7.10.2"
+
+clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+
+esConfig:
+  elasticsearch.yml: |
+    xpack.security.enabled: false
+    xpack.security.http.ssl.enabled: false
+    xpack.security.transport.ssl.enabled: false
+
+extraEnvs:
+  - name: xpack.security.enabled
+    value: "false"
+  - name: xpack.security.http.ssl.enabled
+    value: "false"
+  - name: xpack.security.transport.ssl.enabled
+    value: "false"
+  - name: ELASTIC_USERNAME
+    value: "elastic"
+  - name: ELASTIC_PASSWORD
+    value: "dummy-password"
+
+
+protocol: http
+
+persistence:
+  enabled: true
+  size: 10Gi
+  storageClassName: longhorn
+
+resources: 
+  requests:
+    cpu: "500m"
+    memory: "1Gi"
+  limits:
+    cpu: "1"
+    memory: "2Gi"
